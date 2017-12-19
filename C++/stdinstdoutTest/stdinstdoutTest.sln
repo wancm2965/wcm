@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "stdinstdoutTest", "stdinstdoutTest\stdinstdoutTest.vcproj", "{7C471ED1-4582-4548-964A-C6A14CEF6C83}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Slaver", "Slaver\Slaver.vcproj", "{56367A8C-31E4-4D4B-9A40-C7EB7059CAD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C471ED1-4582-4548-964A-C6A14CEF6C83}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7C471ED1-4582-4548-964A-C6A14CEF6C83}.Debug|Win32.Build.0 = Debug|Win32
+		{7C471ED1-4582-4548-964A-C6A14CEF6C83}.Release|Win32.ActiveCfg = Release|Win32
+		{7C471ED1-4582-4548-964A-C6A14CEF6C83}.Release|Win32.Build.0 = Release|Win32
+		{56367A8C-31E4-4D4B-9A40-C7EB7059CAD5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{56367A8C-31E4-4D4B-9A40-C7EB7059CAD5}.Debug|Win32.Build.0 = Debug|Win32
+		{56367A8C-31E4-4D4B-9A40-C7EB7059CAD5}.Release|Win32.ActiveCfg = Release|Win32
+		{56367A8C-31E4-4D4B-9A40-C7EB7059CAD5}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

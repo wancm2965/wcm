@@ -16,6 +16,8 @@
 #include <stdio.h>  
 #include <stdlib.h>  
 #include <time.h>  
+#include <string>
+using namespace std;
 
 #define BOX_FTYP 0x66747970  
 #define MDAT_BOX 0x6D646174  
@@ -778,9 +780,10 @@ int main( void )
 	char filename[256];  
 
 	printf("please input mp4 filename:");  
-	scanf("%s", filename);  
-
-	if((p = fopen(filename,"r")) == NULL)  
+	scanf("%s", filename);
+	std::string strFile = "E:\\git\\wcm\\C++\\AnalysisMP4File\\Debug\\12.mp4";
+	//filename = "E:\\git\\wcm\\C++\\AnalysisMP4File\\Debug\\11.mp4";
+	if((p = fopen(strFile.c_str(),"r")) == NULL)  
 	{  
 		printf("open fail\n");  
 		return -1;  

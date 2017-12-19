@@ -1,0 +1,14 @@
+﻿生成启动时间为 2017/9/12 星期二 下午 5:35:55。
+     1>项目“E:\git\wcm\C++\TestReadFile\TestReadFile\TestReadFile.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\TestReadFile.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt TestReadFile.cpp
+         TestReadFile.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\git\wcm\C++\TestReadFile\Debug\TestReadFile.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\git\wcm\C++\TestReadFile\Debug\TestReadFile.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\git\wcm\C++\TestReadFile\Debug\TestReadFile.lib" /MACHINE:X86 Debug\stdafx.obj
+         Debug\TestReadFile.obj
+         TestReadFile.vcxproj -> E:\git\wcm\C++\TestReadFile\Debug\TestReadFile.exe
+     1>已完成生成项目“E:\git\wcm\C++\TestReadFile\TestReadFile\TestReadFile.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.30
