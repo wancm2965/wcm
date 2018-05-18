@@ -1,0 +1,12 @@
+识别
+{"apikey":"test_channel_01","recnum":"3","threshold":"0.8","datatype":"stream","dataparam":{},"netecso_type" : "CNetecReceiver","audioid" : "105796401","videoid":"54245920","nodeid" : "0-77E4F1-F0380CB3@jx","natip" : "192.168.0.157","natport" : "51506","localip" : "192.168.0.157","localport" : "58897","mcuid" : "MCU-001@jx","mcuip" :"192.168.1.209","mcuport" : "4222"}
+
+http://192.168.0.234:8088/ai/startrecogntion
+图片识别
+{"apikey":"test_channel_01","recnum":"1","threshold":"0.7","datatype":"pic","dataparam":{"recdata":"2","datalen":"3","width":"1920","height":"1080"}}
+
+
+http://192.168.0.234:8088/ai/facecollect
+
+采集
+{"user_id":"wcm","data":"3","datalen":"2","width":"1920","height":"1080","aligned":"0"}
