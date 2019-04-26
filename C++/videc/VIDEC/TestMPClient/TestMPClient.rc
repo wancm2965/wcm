@@ -1,0 +1,255 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\TestMPClient.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\TestMPClient.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TESTMPCLIENT_DIALOG DIALOGEX 0, 0, 419, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "TestMPClient"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Capture1",IDC_BUTTON_CLIENT_CAPTURE,10,46,44,18
+    PUSHBUTTON      "Stop",IDC_BUTTON_CLIENT_CAPTURE_STOP,55,46,38,18
+    EDITTEXT        IDC_EDIT_CLIENT_CAPTURE,10,71,213,16,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_RECV2,10,115,213,16,ES_AUTOHSCROLL
+    PUSHBUTTON      "Player1",IDC_BUTTON_CLIENT_RECEIVE,10,91,44,18
+    PUSHBUTTON      "Stop",IDC_BUTTON_CLIENT_RECEIVE_STOP,55,91,38,18
+    EDITTEXT        IDC_EDIT_SERVER,55,4,49,16,ES_AUTOHSCROLL
+    RTEXT           "服务器地址：",IDC_STATIC,11,7,43,8
+    PUSHBUTTON      "Connect",IDC_BUTTON_NETWORK,179,162,38,18,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_DEVID,146,208,59,16,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    RTEXT           "设备ID：",IDC_STATIC,135,216,27,8,NOT WS_VISIBLE
+    PUSHBUTTON      "Record",IDC_BUTTON_CLIENT_RECEIVE_Record,116,114,38,18,NOT WS_VISIBLE
+    PUSHBUTTON      "Stop Record",IDC_BUTTON_CLIENT_RECEIVE_STOP_Record,163,114,61,18,NOT WS_VISIBLE
+    PUSHBUTTON      "A_S",IDC_BUTTON_CLIENT_CAPTURE_SEND_AUDIO_SEND,201,203,17,18,NOT WS_VISIBLE
+    PUSHBUTTON      "V_S",IDC_BUTTON_CLIENT_CAPTURE_SEND_VIDEO_START,201,203,17,18,NOT WS_VISIBLE
+    PUSHBUTTON      "A_C",IDC_BUTTON_CLIENT_CAPTURE_SEND_AUDIO_CLOSE,201,203,17,18,NOT WS_VISIBLE
+    PUSHBUTTON      "V_C",IDC_BUTTON_CLIENT_CAPTURE_SEND_VIDEO_CLOSE,201,203,17,18,NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_AUDIO_CODE,94,25,129,109,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OpenMIC",IDC_BUTTON_CLIENT_OPEN_MIC,10,23,44,18
+    PUSHBUTTON      "CloseMIC",IDC_BUTTON_CLIENT_CLOSE_MIC,55,23,38,18
+    LTEXT           "控制发送：",IDC_STATIC,177,211,41,8,NOT WS_VISIBLE
+    PUSHBUTTON      "Capture2",IDC_BUTTON_CLIENT_CAPTURE2,10,135,44,18
+    PUSHBUTTON      "Stop",IDC_BUTTON_CLIENT_CAPTURE_STOP2,55,135,38,18
+    EDITTEXT        IDC_EDIT_CLIENT_CAPTURE2,10,159,213,16,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_EDIT_RECV3,10,208,213,16,ES_AUTOHSCROLL
+    PUSHBUTTON      "Player2",IDC_BUTTON_CLIENT_RECEIVE2,10,182,44,18
+    PUSHBUTTON      "Stop",IDC_BUTTON_CLIENT_RECEIVE_STOP2,55,182,38,18
+    EDITTEXT        IDC_EDIT_DEVID1,94,48,17,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DEVID3,94,137,17,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FRAMERATE,113,48,17,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FRAMERATE2,113,137,17,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BITRATE,132,48,20,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BITRATE2,132,137,20,16,ES_AUTOHSCROLL
+    CONTROL         "强制编码",IDC_CHECK_ENCODE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,106,7,38,10
+    CONTROL         "图像去噪",IDC_CHECK_DENOISE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,146,7,38,10
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDVERT,232,8,1,216
+    EDITTEXT        IDC_EDIT_SERVER2,281,4,128,16,ES_AUTOHSCROLL
+    PUSHBUTTON      "呼叫",IDC_BUTTON_H323CALL,242,91,38,18
+    PUSHBUTTON      "挂断",IDC_BUTTON_H323HANGUP,285,91,38,18
+    PUSHBUTTON      "接收",IDC_BUTTON_H323ACCEPT,130,206,38,18,NOT WS_VISIBLE
+    RTEXT           "呼叫地址：",IDC_STATIC,246,7,34,8
+    PUSHBUTTON      "设置",IDC_BUTTON_H323CAPTURE,371,91,38,18
+    PUSHBUTTON      "打开",IDC_BUTTON_H323STOP,139,206,38,18,NOT WS_VISIBLE
+    PUSHBUTTON      "辅流",IDC_BUTTON_H323SECOND,328,91,38,18
+    EDITTEXT        IDC_EDIT_DEVID2,242,48,17,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FRAMERATE3,261,48,17,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BITRATE3,280,48,26,16,ES_AUTOHSCROLL
+    LISTBOX         IDC_LIST1,243,115,167,109,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_LOCALIP,282,25,58,16,ES_AUTOHSCROLL
+    RTEXT           "本地地址：",IDC_STATIC,246,27,34,8
+    EDITTEXT        IDC_EDIT_PORT1,346,25,22,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PORT2,373,25,36,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DEVID4,242,71,17,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WIDTH,153,48,20,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEIGHT,174,48,20,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_WIDTH2,153,137,20,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEIGHT2,174,137,20,16,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_NETTYPE1,196,50,28,109,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_NETTYPE2,196,139,28,109,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_H323NETTYPE1,310,50,47,109,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_H323SIZE1,362,50,47,109,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_FRAMERATE4,261,71,17,16,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_BITRATE4,280,71,26,16,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_H323NETTYPE2,310,72,47,109,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_H323SIZE2,362,72,47,109,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_FRAMETYPE1,94,95,35,109,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_FRAMETYPE2,94,187,35,109,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "自动分辨率",IDC_CHECK_AUTOSIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,186,7,42,10
+    PUSHBUTTON      "拍照",IDC_BUTTON_CAPTURE_BMP1,201,91,22,18
+    PUSHBUTTON      "拍照",IDC_BUTTON_CAPTURE_BMP2,201,183,22,18
+    PUSHBUTTON      "轮询",IDC_BUTTON_VIDEOPOLL1,145,91,22,18
+    PUSHBUTTON      "轮询",IDC_BUTTON_VIDEOPOLL2,145,183,22,18
+    PUSHBUTTON      "录像",IDC_BUTTON_CAPTURE_RECORD,173,91,22,18
+    PUSHBUTTON      "录像",IDC_BUTTON_CAPTURE_RECORD2,173,183,22,18
+END
+
+IDD_DIALOG_VIDEO DIALOGEX 0, 0, 317, 186
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "TestMPClient.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "TestMPClient.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TESTMPCLIENT_DIALOG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_DIALOG_VIDEO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\TestMPClient.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

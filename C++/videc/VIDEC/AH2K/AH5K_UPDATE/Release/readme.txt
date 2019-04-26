@@ -1,0 +1,1 @@
+需要安装vcredist_x86 .exe(vs2008版本)才能运行AH5K_UPDATE.exe程序

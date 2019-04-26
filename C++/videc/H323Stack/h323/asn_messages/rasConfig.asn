@@ -1,0 +1,88 @@
+RAS-CONFIGURATION ::=
+
+BEGIN
+
+-- This ASN.1 file contains the settings of the RAS configuration
+
+IMPORTS
+        TransportAddress,
+        EndpointType,
+        AliasAddress,
+        GatekeeperIdentifier,
+        VendorIdentifier,
+        TimeToLive,
+        AlternateTransportAddresses
+    FROM H323-MESSAGES
+        ListeningAddress
+    FROM Q931-CONFIGURATION;
+
+
+
+-- ***********************************************************************************************
+--
+--                                  RAS related configuration
+--
+-- ***********************************************************************************************
+
+RASConfiguration ::= SEQUENCE
+{
+    disableRAS                  NULL OPTIONAL,
+    responseTimeOut             INTEGER(1..200),
+    gatekeeper                  NULL OPTIONAL,
+    manualRAS                   NULL OPTIONAL,
+    altEpModifySetup            NULL OPTIONAL,
+    maxFail                     INTEGER(1..200) OPTIONAL,
+    allowCallsWhenNonReg        NULL OPTIONAL,
+    manualRegistration          NULL OPTIONAL,
+    manualDiscovery             SEQUENCE
+    {
+        defaultGatekeeper           TransportAddress OPTIONAL,
+        defaultGatekeeperName       SEQUENCE
+        {
+            gkName                      OCTET STRING SIZE(1..256),
+            gkPort                      INTEGER (0..65535) OPTIONAL,
+            queryType                   DnsQueryType
+        } OPTIONAL
+    } OPTIONAL,
+    registrationInfo            SEQUENCE
+    {
+        terminalType                EndpointType,
+        terminalAlias               SEQUENCE OF AliasAddress OPTIONAL,
+        gatekeeperIdentifier        GatekeeperIdentifier  OPTIONAL,
+        endpointVendor              VendorIdentifier OPTIONAL,
+        timeToLive                  TimeToLive OPTIONAL
+    } OPTIONAL,
+    rasMulticastAddress         TransportAddress OPTIONAL,
+    rasPort                     INTEGER (0..65535) OPTIONAL,
+    ...
+    compare15bitRasCrv          NULL OPTIONAL, --default 16 bit
+    maxRetries                  INTEGER(1..200) OPTIONAL, -- default 3
+    maxMulticastTTL             INTEGER(0..200) OPTIONAL,--default 20
+    overlappedSending           NULL OPTIONAL,   -- default not used
+    preGrantedArqUse            PreGrantedArqUse OPTIONAL,   -- default not used
+    alternateTransportAddresses AlternateTransportAddresses OPTIONAL,
+    dontRegisterOnTimeout       NULL OPTIONAL,
+    supportAltGK                NULL OPTIONAL,
+    preTimeToLiveRegistration   INTEGER (1..240) OPTIONAL, -- in seconds, defaults to 1
+    multipleRASAddresses        SEQUENCE OF ListeningAddress OPTIONAL,
+}
+
+
+PreGrantedArqUse ::= CHOICE
+{
+    direct          NULL,
+    routed          NULL
+}
+
+
+
+DnsQueryType ::= CHOICE
+{
+    dnsTypeIpv4     NULL,
+    dnsTypeIpv6     NULL,
+    dnsTypeSrvIpv4  NULL,
+    dnsTypeSrvIpv6  NULL
+}
+
+
+END

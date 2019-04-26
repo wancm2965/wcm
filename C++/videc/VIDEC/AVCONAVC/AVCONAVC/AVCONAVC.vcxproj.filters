@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="MediaFile">
+      <UniqueIdentifier>{d0327076-70e1-4fdc-8251-0a36520d2042}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{d2144886-7165-4c29-a749-e2322ca8ccd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AVPullPlayer">
+      <UniqueIdentifier>{16ba4f25-31df-402e-af30-6075373917d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="VideoDraw">
+      <UniqueIdentifier>{d12c49cf-c83f-42d6-93d9-89d52cdbdfca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaFile\AudioSampleGrabber.h">
+      <Filter>MediaFile</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaFile\PCMConvert.h">
+      <Filter>MediaFile</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaFile\XAutoLock.h">
+      <Filter>MediaFile</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaFile\XCritSec.h">
+      <Filter>MediaFile</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaFile\XListPtr.h">
+      <Filter>MediaFile</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaFile\MediaFile.h">
+      <Filter>MediaFile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\AVCONAVC\AVCONAVC.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\AVCONAVC\AVCONAVC_Export.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\AVCONAVC\AVCONAVC_MediaFile.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaFile\VideoDecoder.h">
+      <Filter>MediaFile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\AVCONAVC\AVCONAVC_AudioFile.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaFile\AudioFile.h">
+      <Filter>MediaFile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\AVCONAVC\avpullplayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="AVPullPlayer\AVCONPullPlayer.h">
+      <Filter>AVPullPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="AVPullPlayer\ASYNCIO.H">
+      <Filter>AVPullPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="AVPullPlayer\ASYNCRDR.H">
+      <Filter>AVPullPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="AVPullPlayer\FileReader.h">
+      <Filter>AVPullPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="AVPullPlayer\MemStream.h">
+      <Filter>AVPullPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="AVPullPlayer\TCPSocket.h">
+      <Filter>AVPullPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoDraw\VideoDraw.h">
+      <Filter>VideoDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoDraw\VideoDrawFilter.h">
+      <Filter>VideoDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="VideoDraw\VideoDrawPin.h">
+      <Filter>VideoDraw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\AVCONAVC\AVCONAVC_VideoDraw.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="MediaFile\NullRender.h">
+      <Filter>MediaFile</Filter>
+    </ClInclude>
+    <ClInclude Include="DecNewWrapper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AVCONAVC.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaFile\AudioSampleGrabber.cpp">
+      <Filter>MediaFile</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaFile\PCMConvert.cpp">
+      <Filter>MediaFile</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaFile\XAutoLock.cpp">
+      <Filter>MediaFile</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaFile\XCritSec.cpp">
+      <Filter>MediaFile</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaFile\XListPtr.cpp">
+      <Filter>MediaFile</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaFile\MediaFile.cpp">
+      <Filter>MediaFile</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaFile\VideoDecoder.cpp">
+      <Filter>MediaFile</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaFile\AudioFile.cpp">
+      <Filter>MediaFile</Filter>
+    </ClCompile>
+    <ClCompile Include="AVPullPlayer\AVCONPullPlayer.cpp">
+      <Filter>AVPullPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="AVPullPlayer\Asyncio.cpp">
+      <Filter>AVPullPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="AVPullPlayer\ASYNCRDR.CPP">
+      <Filter>AVPullPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="AVPullPlayer\FileReader.cpp">
+      <Filter>AVPullPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="AVPullPlayer\TCPSocket.cpp">
+      <Filter>AVPullPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoDraw\VideoDraw.cpp">
+      <Filter>VideoDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoDraw\VideoDrawFilter.cpp">
+      <Filter>VideoDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoDraw\VideoDrawPin.cpp">
+      <Filter>VideoDraw</Filter>
+    </ClCompile>
+    <ClCompile Include="MediaFile\NullRender.cpp">
+      <Filter>MediaFile</Filter>
+    </ClCompile>
+    <ClCompile Include="DecNewWrapper.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AVCONAVC.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

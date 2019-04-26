@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3460850F-3EAA-4DD3-8505-7E74FC672691}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AVCONAVC</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AVCONAVC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)demuxer\Demuxers;$(SolutionDir)common\DSUtilLite;$(SolutionDir)common\includes;$(SolutionDir)common\baseclasses;$(DXSDK_DIR)Include;$(SolutionDir)ffmpeg;../../../include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../../lib/Debug;$(SolutionDir)bin_$(PlatformName)d\lib;$(SolutionDir)common\lib\$(PlatformName);$(SolutionDir)bin_$(PlatformName)d;$(SolutionDir)thirdparty\lib32</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Comctl32.lib;version.lib;strmbasd.lib;dsutild.lib;LAVSplitter.lib;LAVAudio.lib;LAVVideo.lib;demuxersd.lib;libavformat-lav.a;libavutil-lav.a;libavcodec-lav.a;libz.a;libgcc.a;libmingwex.a;ws2_32.lib;Msacm32.lib;libswscale-lav.a;libavfilter-lav.a;d3d9.lib;dmoguids.lib;libopencore-amrnb.a;libopencore-amrwb.a;libspeex.a;libx264.a;VIDECFRE.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(ProjectDir)/../../../lib/$(Configuration)/AVCONAVC.lib</ImportLibrary>
+      <OutputFile>$(ProjectDir)/../../../bin/$(Configuration)/AVCONAVC.dll</OutputFile>
+      <ProgramDatabaseFile>$(ProjectDir)/../../../bin/$(Configuration)/$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;AVCONAVC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)demuxer\Demuxers;$(SolutionDir)common\DSUtilLite;$(SolutionDir)common\includes;$(SolutionDir)common\baseclasses;$(DXSDK_DIR)Include;$(SolutionDir)ffmpeg;../../../include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../../lib/x64d;$(SolutionDir)bin_$(PlatformName)d\lib;$(SolutionDir)common\lib\$(PlatformName)d;$(SolutionDir)bin_$(PlatformName)d;$(SolutionDir)thirdparty\lib64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>MSVCRTD.lib;strmbasd.lib;libgcc.a;libmingwex.a;libmingw32.a;Comctl32.lib;version.lib;dsutild.lib;LAVSplitter.lib;LAVAudio.lib;LAVVideo.lib;demuxersd.lib;libavformat.a;libavutil.a;libavcodec.a;libz.a;libswscale.a;libavfilter.a;d3d9.lib;dmoguids.lib;libamrnb.a;libamrwb.a;libspeex.a;libx264.a;libfaac.a;libgsm.a;libogg.a;libtheoradec.a;libtheoraenc.a;libmp3lame.a;xvidcore.a;libswresample.a;libpostproc.a;ws2_32.lib;Msacm32.lib;libbluray.lib;winmm.lib;VIDECFRE.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>../../../lib/x64d/AVCONAVC.lib</ImportLibrary>
+      <OutputFile>../../../bin/x64d/AVCONAVC.dll</OutputFile>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <ProgramDatabaseFile>../../../bin/x64d/$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AVCONAVC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)demuxer\Demuxers;$(SolutionDir)common\DSUtilLite;$(SolutionDir)common\includes;$(SolutionDir)common\baseclasses;$(DXSDK_DIR)Include;$(SolutionDir)ffmpeg;../../../include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Comctl32.lib;version.lib;strmbase.lib;dsutil.lib;LAVSplitter.lib;LAVAudio.lib;LAVVideo.lib;demuxers.lib;libavformat-lav.a;libavutil-lav.a;libavcodec-lav.a;libz.a;libgcc.a;libmingwex.a;ws2_32.lib;Msacm32.lib;libswscale-lav.a;libavfilter-lav.a;d3d9.lib;dmoguids.lib;libopencore-amrnb.a;libopencore-amrwb.a;libspeex.a;libx264.a;VIDECFRE.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../lib/Release;$(SolutionDir)bin_$(PlatformName)\lib;$(SolutionDir)common\lib\$(PlatformName);$(SolutionDir)bin_$(PlatformName);$(SolutionDir)thirdparty\lib32</AdditionalLibraryDirectories>
+      <ImportLibrary>$(ProjectDir)/../../../lib/$(Configuration)/AVCONAVC.lib</ImportLibrary>
+      <OutputFile>$(ProjectDir)/../../../bin/$(Configuration)/AVCONAVC.dll</OutputFile>
+      <AdditionalOptions>/FORCE:MULTIPLE /SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+      <ProgramDatabaseFile>$(ProjectDir)/../../../bin/$(Configuration)/$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;AVCONAVC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./;$(SolutionDir)demuxer\Demuxers;$(SolutionDir)common\DSUtilLite;$(SolutionDir)common\includes;$(SolutionDir)common\baseclasses;$(DXSDK_DIR)Include;$(SolutionDir)ffmpeg;../../../include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>strmbase.lib;strmiids.lib;libgcc.a;libmingwex.a;Comctl32.lib;version.lib;dsutil.lib;LAVSplitter.lib;LAVAudio.lib;LAVVideo.lib;demuxers.lib;libavformat.a;libavutil.a;libavcodec.a;libz.a;libswscale.a;libavfilter.a;d3d9.lib;dmoguids.lib;libamrnb.a;libamrwb.a;libspeex.a;libx264.a;libfaac.a;libgsm.a;libogg.a;libtheoradec.a;libtheoraenc.a;libmp3lame.a;xvidcore.a;libswresample.a;libpostproc.a;ws2_32.lib;Msacm32.lib;libbluray.lib;winmm.lib;VIDECFRE.lib;MSVCRT.lib;libmingw32.a;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../../lib/x64r;$(SolutionDir)bin_$(PlatformName)r\lib;$(SolutionDir)common\lib\$(PlatformName)r;$(SolutionDir)bin_$(PlatformName)r;$(SolutionDir)thirdparty\lib64</AdditionalLibraryDirectories>
+      <ImportLibrary>../../../lib/x64r/AVCONAVC.lib</ImportLibrary>
+      <OutputFile>../../../bin/x64r/AVCONAVC.dll</OutputFile>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <ProgramDatabaseFile>../../../bin/x64r/$(TargetName).pdb</ProgramDatabaseFile>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\AVCONAVC\AVCONAVC.h" />
+    <ClInclude Include="..\..\..\include\AVCONAVC\AVCONAVC_AudioFile.h" />
+    <ClInclude Include="..\..\..\include\AVCONAVC\AVCONAVC_Export.h" />
+    <ClInclude Include="..\..\..\include\AVCONAVC\AVCONAVC_MediaFile.h" />
+    <ClInclude Include="..\..\..\include\AVCONAVC\AVCONAVC_VideoDraw.h" />
+    <ClInclude Include="..\..\..\include\AVCONAVC\avpullplayer.h" />
+    <ClInclude Include="AVPullPlayer\ASYNCIO.H" />
+    <ClInclude Include="AVPullPlayer\ASYNCRDR.H" />
+    <ClInclude Include="AVPullPlayer\AVCONPullPlayer.h" />
+    <ClInclude Include="AVPullPlayer\FileReader.h" />
+    <ClInclude Include="AVPullPlayer\MemStream.h" />
+    <ClInclude Include="AVPullPlayer\TCPSocket.h" />
+    <ClInclude Include="DecNewWrapper.h" />
+    <ClInclude Include="MediaFile\AudioFile.h" />
+    <ClInclude Include="MediaFile\AudioSampleGrabber.h" />
+    <ClInclude Include="MediaFile\MediaFile.h" />
+    <ClInclude Include="MediaFile\NullRender.h" />
+    <ClInclude Include="MediaFile\PCMConvert.h" />
+    <ClInclude Include="MediaFile\VideoDecoder.h" />
+    <ClInclude Include="MediaFile\XAutoLock.h" />
+    <ClInclude Include="MediaFile\XCritSec.h" />
+    <ClInclude Include="MediaFile\XListPtr.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="VideoDraw\VideoDraw.h" />
+    <ClInclude Include="VideoDraw\VideoDrawFilter.h" />
+    <ClInclude Include="VideoDraw\VideoDrawPin.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AVCONAVC.cpp" />
+    <ClCompile Include="AVPullPlayer\Asyncio.cpp" />
+    <ClCompile Include="AVPullPlayer\ASYNCRDR.CPP" />
+    <ClCompile Include="AVPullPlayer\AVCONPullPlayer.cpp" />
+    <ClCompile Include="AVPullPlayer\FileReader.cpp" />
+    <ClCompile Include="AVPullPlayer\TCPSocket.cpp" />
+    <ClCompile Include="DecNewWrapper.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="MediaFile\AudioFile.cpp" />
+    <ClCompile Include="MediaFile\AudioSampleGrabber.cpp" />
+    <ClCompile Include="MediaFile\MediaFile.cpp" />
+    <ClCompile Include="MediaFile\NullRender.cpp" />
+    <ClCompile Include="MediaFile\PCMConvert.cpp" />
+    <ClCompile Include="MediaFile\VideoDecoder.cpp" />
+    <ClCompile Include="MediaFile\XAutoLock.cpp" />
+    <ClCompile Include="MediaFile\XCritSec.cpp" />
+    <ClCompile Include="MediaFile\XListPtr.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VideoDraw\VideoDraw.cpp" />
+    <ClCompile Include="VideoDraw\VideoDrawFilter.cpp" />
+    <ClCompile Include="VideoDraw\VideoDrawPin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AVCONAVC.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

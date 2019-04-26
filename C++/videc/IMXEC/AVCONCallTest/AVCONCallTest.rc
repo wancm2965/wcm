@@ -1,0 +1,283 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\AVCONCallTest.rc2""  // ??è? Microsoft Visual C++ ?¨¤?§?è?-|¨???¨￠?§o???\r\n"
+    "#include ""l.CHS\\afxres.rc""      // ?¨¤?§o?¨￠??¨￠?§|?t\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\AVCONCallTest.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_AVCONCALL_DIALOG DIALOGEX 0, 0, 471, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "AVCONCall"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "呼叫(&C)...",IDC_BUTTON_MAKE_CALL,414,7,50,14
+    PUSHBUTTON      "接受(&A)",IDC_BUTTON_ACCEPT_CALL,414,21,50,14
+    PUSHBUTTON      "挂断(&H)",IDC_BUTTON_HANGUP_CALL,414,36,50,14
+    PUSHBUTTON      "音频设置...",IDC_BUTTON_AUDIO_SETTING,414,65,50,14
+    PUSHBUTTON      "视频设置...",IDC_BUTTON_VIDEO_SETTING,414,80,50,14
+    CONTROL         "自动应答(&S)",IDC_CHECK_AUTO_ANSWER,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,414,159,50,14
+    LTEXT           "",IDC_STATIC_STATUS,7,176,458,11,0,WS_EX_STATICEDGE
+END
+
+IDD_DIALOG_CALL DIALOGEX 0, 0, 251, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "呼叫"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,140,47,50,14
+    PUSHBUTTON      "取消",IDCANCEL,195,47,50,14
+    LTEXT           "对方帐号：",IDC_STATIC,7,10,41,8
+    EDITTEXT        IDC_EDIT_USERID,95,7,150,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_VIDEO DIALOGEX 0, 0, 316, 185
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_AUDIO_SETTING DIALOGEX 0, 0, 280, 110
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "音频设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "输出设备：",IDC_STATIC,7,10,41,8
+    COMBOBOX        IDC_COMBO_SPK,82,8,191,119,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "输入设备：",IDC_STATIC,7,26,41,8
+    COMBOBOX        IDC_COMBO_MIC,82,24,191,162,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "回音消除",IDC_CHECK_AEC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,82,46,48,10
+    CONTROL         "静音检测",IDC_CHECK_VAD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,215,46,48,10
+    CONTROL         "自动增控制",IDC_CHECK_AGC,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,82,60,56,10
+    CONTROL         "噪音消除",IDC_CHECK_NS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,215,60,48,10
+    DEFPUSHBUTTON   "确定",IDOK,171,89,50,14
+    PUSHBUTTON      "取消",IDCANCEL,223,89,50,14
+END
+
+IDD_DIALOG_VIDEO_SETTING DIALOGEX 0, 0, 316, 105
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "视频设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_DEV,104,16,201,196,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_FRAMERATE,104,31,201,223,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BITRATE,104,47,201,208,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_FORMAT,104,62,201,193,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确定",IDOK,205,84,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,84,50,14
+    LTEXT           "视频设备：",IDC_STATIC,11,17,84,8
+    LTEXT           "视频帧率：",IDC_STATIC,11,33,84,8
+    LTEXT           "视频码流：",IDC_STATIC,11,49,84,8
+    LTEXT           "视频格式：",IDC_STATIC,11,64,84,8
+END
+
+IDD_DIALOG_LOGIN DIALOGEX 0, 0, 190, 89
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "登录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,77,68,50,14
+    PUSHBUTTON      "取消",IDCANCEL,131,68,50,14
+    LTEXT           "服务器地址：",IDC_STATIC,7,10,49,8
+    CONTROL         "",IDC_SERVER_IP,"SysIPAddress32",WS_TABSTOP,82,7,100,15
+    LTEXT           "用户帐号：",IDC_STATIC,7,29,41,8
+    EDITTEXT        IDC_EDIT_USERID,81,25,100,14,ES_AUTOHSCROLL
+    LTEXT           "用户密码：",IDC_STATIC,7,47,41,8
+    EDITTEXT        IDC_EDIT_PASSWORD,81,43,100,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,1,830
+ PRODUCTVERSION 1,0,1,830
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "AVCON"
+            VALUE "FileDescription", "AVCON Call"
+            VALUE "FileVersion", "1.0.1.20100830"
+            VALUE "InternalName", "AVCONCallTest.exe"
+            VALUE "LegalCopyright", "(C) AVCON。保留所有权利。"
+            VALUE "OriginalFilename", "AVCONCallTest.exe"
+            VALUE "ProductName", "AVCON"
+            VALUE "ProductVersion", "1.0.1.20100830"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_AVCONCALL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 464
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_DIALOG_CALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_DIALOG_VIDEO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_DIALOG_AUDIO_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 273
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_DIALOG_VIDEO_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 98
+    END
+
+    IDD_DIALOG_LOGIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 183
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 82
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\AVCONCallTest.rc2"  // ??è? Microsoft Visual C++ ?¨¤?§?è?-|¨???¨￠?§o???
+#include "l.CHS\afxres.rc"      // ?¨¤?§o?¨￠??¨￠?§|?t
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

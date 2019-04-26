@@ -1,0 +1,36 @@
+MUI_386_OBJECTS= \
+    $(_OBJ_DIR)\i386\dm64.res
+
+386_OBJECTS= \
+    $(_OBJ_DIR)\i386\dm64.res \
+    $(_OBJ_DIR)\i386\dm64driver.obj \
+    $(_OBJ_DIR)\i386\dm64device.obj \
+    $(_OBJ_DIR)\i386\dm64queue.obj
+
+MUI_IA64_OBJECTS= \
+    $(_OBJ_DIR)\ia64\dm64.res
+
+IA64_OBJECTS= \
+    $(_OBJ_DIR)\ia64\dm64.res \
+    $(_OBJ_DIR)\ia64\dm64driver.obj \
+    $(_OBJ_DIR)\ia64\dm64device.obj \
+    $(_OBJ_DIR)\ia64\dm64queue.obj
+
+MUI_AMD64_OBJECTS= \
+    $(_OBJ_DIR)\amd64\dm64.res
+
+AMD64_OBJECTS= \
+    $(_OBJ_DIR)\amd64\dm64.res \
+    $(_OBJ_DIR)\amd64\dm64driver.obj \
+    $(_OBJ_DIR)\amd64\dm64device.obj \
+    $(_OBJ_DIR)\amd64\dm64queue.obj
+
+MUI_ARM_OBJECTS= \
+    $(_OBJ_DIR)\arm\dm64.res
+
+ARM_OBJECTS= \
+    $(_OBJ_DIR)\arm\dm64.res \
+    $(_OBJ_DIR)\arm\dm64driver.obj \
+    $(_OBJ_DIR)\arm\dm64device.obj \
+    $(_OBJ_DIR)\arm\dm64queue.obj
+

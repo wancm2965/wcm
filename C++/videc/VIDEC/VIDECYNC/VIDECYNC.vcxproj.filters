@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D3DRender.cpp" />
+    <ClCompile Include="HPAVC\HPAVC.cpp" />
+    <ClCompile Include="pipeline_decode.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="SyncPlayer.cpp" />
+    <ClCompile Include="VIDECYNCAPP.cpp" />
+    <ClCompile Include="Util\XThreadBase.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\XListPtr.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\XCritSec.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\XAutoLock.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\vm\atomic.cpp">
+      <Filter>common\src\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\vm\shared_object.cpp">
+      <Filter>common\src\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\vm\thread.cpp">
+      <Filter>common\src\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\vm\time.cpp">
+      <Filter>common\src\vm</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\base_allocator.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\d3d_allocator.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\d3d_device.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\d3d11_allocator.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\d3d11_device.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\general_allocator.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\mfx_buffering.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\mfx_plugin_uids.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\sample_utils.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\sysmem_allocator.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+    <ClCompile Include="common\src\vpp_ex.cpp">
+      <Filter>common\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D3DRender.h" />
+    <ClInclude Include="HPAVC\HPAVC.h" />
+    <ClInclude Include="pipeline_decode.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="VIDECYNCAPI.h" />
+    <ClInclude Include="VIDECYNCAPP.h" />
+    <ClInclude Include="Util\XListPtr.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\XCritSec.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\XAutoLock.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\XThreadBase.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\VIDEC_Header.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\vm\atomic_defs.h">
+      <Filter>common\include\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\vm\file_defs.h">
+      <Filter>common\include\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\vm\so_defs.h">
+      <Filter>common\include\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\vm\strings_defs.h">
+      <Filter>common\include\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\vm\thread_defs.h">
+      <Filter>common\include\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\vm\time_defs.h">
+      <Filter>common\include\vm</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\base_allocator.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\current_date.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\d3d_allocator.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\d3d_device.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\d3d11_allocator.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\d3d11_device.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\general_allocator.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\hw_device.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\mfx_buffering.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\mfx_plugin_uids.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\mfx_samples_config.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\sample_defs.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\sample_utils.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\surface_auto_lock.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\sysmem_allocator.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+    <ClInclude Include="common\include\vpp_ex.h">
+      <Filter>common\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VIDECYNC.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="VIDECYNC.def" />
+    <None Include="res\VIDECYNC.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{331a9259-3e57-40d9-b37a-f4f82527fd4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{45a59fb2-89a4-4611-9afa-1bc6d9be4036}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\include">
+      <UniqueIdentifier>{24c73492-afbc-44e8-b7c1-fb6516ebf00b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\src">
+      <UniqueIdentifier>{3d155e6e-2f1e-4b34-9bb5-7852bbdd124b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\include\vm">
+      <UniqueIdentifier>{f68eec93-7e06-4e95-a2a6-ad3bcef129a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common\src\vm">
+      <UniqueIdentifier>{a223aefc-9e52-4ea8-b055-6965a8c6f573}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

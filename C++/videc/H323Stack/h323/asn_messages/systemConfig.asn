@@ -1,0 +1,130 @@
+H323-SYSTEM-CONFIGURATION ::=
+
+BEGIN
+
+-- This ASN.1 file contains the settings of the main stack's configuration (system tree)
+
+
+
+
+-- ***********************************************************************************************
+--
+--                                  Main stack configuration
+--                                  The SYSTEM tree
+--
+-- ***********************************************************************************************
+
+SystemConfiguration ::= SEQUENCE
+{
+    manualStart             NULL OPTIONAL,
+    pdlName                 OCTET STRING OPTIONAL,
+    cidAssociate            NULL OPTIONAL,
+    delimiter               OCTET STRING (SIZE(1)) OPTIONAL,
+    allocations             SEQUENCE
+    {
+        vtPoolSize              INTEGER(0..2147483647) OPTIONAL,
+        vtNodeCount             INTEGER(0..2147483647) OPTIONAL,
+        channels                INTEGER(0..2147483647) OPTIONAL,
+        chanDescs               INTEGER(0..2147483647) OPTIONAL,
+        messages                INTEGER(0..2147483647) OPTIONAL,
+        nameChans               INTEGER(0..2147483647) OPTIONAL,
+        tpktChans               INTEGER(0..2147483647) OPTIONAL,
+        tpktNoBuffers           INTEGER(0..2147483647) OPTIONAL,
+        udpChans                INTEGER(0..2147483647) OPTIONAL,
+        protocols               INTEGER(0..2147483647) OPTIONAL,
+        maxProcs                INTEGER(0..2147483647) OPTIONAL,
+        ...
+        maxBuffSize             INTEGER(0..65536) OPTIONAL,
+        maxPoolSizeInKB         INTEGER(0..4194304) OPTIONAL,
+        maxTcpUnit              INTEGER(0..65536) OPTIONAL, -- default value is 512
+        maxMultiHomedAddresses  INTEGER(1..256) OPTIONAL, -- default value is 1
+        dnsMaxQueries           INTEGER(0..65536) OPTIONAL, -- default value is 20
+        dnsMaxBuffSize          INTEGER(0..65536) OPTIONAL -- default value is 2K
+        dnsQueryBuffSize        INTEGER(0..65536) OPTIONAL -- default value is 1/2K
+        extraConnections        INTEGER(0..65536) OPTIONAL, -- default value is 0
+    } OPTIONAL,
+    ...
+    maxCalls                INTEGER(0..2147483647),
+    maxChannels             INTEGER(0..2147483647),
+    maxRasOutTransactions   INTEGER(0..2147483647) OPTIONAL,
+    maxRasInTransactions    INTEGER(0..2147483647) OPTIONAL,
+    localIPAddress          OCTET STRING (SIZE(4)) OPTIONAL,
+    localAddress            TransportAddress OPTIONAL,
+    defaultScopeId          INTEGER(0..4294967295) OPTIONAL,
+    portFrom                INTEGER(0..65535) OPTIONAL,
+    portTo                  INTEGER(0..65535) OPTIONAL,
+    callPropertyMode        CHOICE
+    {
+        fullProperty            NULL,
+        copySingleMessages      NULL,
+        deleteSingleMessages    NULL,
+        doNotUseProperty        NULL
+    } OPTIONAL,
+    watchdog                SEQUENCE
+    {
+        interval                INTEGER(0..2147483647) OPTIONAL
+                -- Interval of watchdog in seconds
+                -- Setting this to 0 doesn't print watchdog information to the log at all
+    } OPTIONAL,
+    checkParamLength        NULL OPTIONAL,
+    supportEFC              NULL OPTIONAL,
+    dnsSupported            NULL OPTIONAL,
+    dnsMaxServers           INTEGER(1..65536) OPTIONAL, -- default value is 3
+    dnsMaxDomains           INTEGER(1..65536) OPTIONAL -- default value is 3
+    tempSystemParams        TempSystemParams OPTIONAL -- changeable system parameters
+}
+
+
+TransportAddress ::= CHOICE
+{
+        ipAddress       SEQUENCE
+        {
+                ip                      OCTET STRING (SIZE(4)),
+                port                    INTEGER(0..65535)
+        },
+        ipSourceRoute   SEQUENCE
+        {
+                ip                      OCTET STRING (SIZE(4)),
+                port                    INTEGER(0..65535),
+                route                   SEQUENCE OF OCTET STRING (SIZE(4)),
+                routing                 CHOICE
+                {
+                        strict  NULL,
+                        loose   NULL,
+                        ...
+                },
+                ...
+        },
+        ipxAddress      SEQUENCE
+        {
+                node            OCTET STRING (SIZE(6)),
+                netnum          OCTET STRING (SIZE(4)),
+                port            OCTET STRING (SIZE(2))
+        },
+        ip6Address      SEQUENCE
+        {
+                ip              OCTET STRING (SIZE(16)),
+                port            INTEGER(0..65535),
+                ...
+        },
+        netBios                 OCTET STRING (SIZE(16)),
+        nsap                    OCTET STRING (SIZE(1..20)),
+        ...
+}
+
+TempSystemParams ::= SEQUENCE
+{
+    natMode              CHOICE
+    {
+        natModeNoNAT    NULL,
+        natModeNAT      NULL,
+        natModeOnlyNAT  NULL
+    } OPTIONAL,
+    gkInNat             NULL OPTIONAL,
+    dnsTimeOut          INTEGER(0..65536) OPTIONAL, -- default 5 seconds
+    dnsRetries          INTEGER(1..65536) OPTIONAL, -- default 4
+    dnsServers          SEQUENCE OF TransportAddress OPTIONAL,
+    dnsDomains          SEQUENCE OF OCTET STRING (SIZE(1..256)) OPTIONAL
+}
+
+END

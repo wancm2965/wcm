@@ -1,0 +1,12 @@
+LIBRARY exsnmp
+
+DESCRIPTION 'Sample SNMP Extension Agent for Windows NT.'
+
+
+EXPORTS
+  SnmpExtensionClose
+  SnmpExtensionInit
+  SnmpExtensionTrap
+  SnmpExtensionQuery
+  SnmpExtensionInitEx
+

@@ -1,0 +1,16 @@
+; VIDECFRE.def : 声明 DLL 的模块参数。
+
+LIBRARY      "VIDECFRE"
+
+EXPORTS
+          setharddecodercount
+          sethardencodercount
+          setd3ddisplay
+          fresethardalldisable
+          fresetkeyframe
+          fresetlogcore
+          fresetlogmodule
+          frelogcode
+          fresetpoolcount
+          frehelp
+          

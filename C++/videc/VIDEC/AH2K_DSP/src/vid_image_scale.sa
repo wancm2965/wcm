@@ -1,0 +1,464 @@
+			.text
+			.global	_x_image_scale                 
+
+_x_image_scale:	.cproc	a_y, b_yt, a_u, b_ut, a_v, b_vt, a_w, b_h, b_w
+			.reg	a_www, b_hhh, a_ww, a_ww2, b_ww, b_ww2
+			.reg	a_r1:a_r2, b_r1:b_r2
+			.reg	a_addr1
+			
+			mv		.s1	a_w, a_ww					;s,0	
+||			shru	.s2	b_h,1, b_h					;s,0
+			shru	.s2	a_w, 1, a_ww2	
+			mv		.s2	b_w, b_ww					;s,0	
+||			shru	.s1	b_w, 1, b_ww2	
+			shru	.s1	a_w, 4, a_w	
+||			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.l1	a_y, a_addr1				;lsd,0
+
+nextline_y:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_y:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r2			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r1			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			stndw	.d2	b_r1:b_r2, *b_yt			;d,0
+			addk	.s2	8, b_yt						;s,0
+||			sub		.s1	a_www,1, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_y					;s,5		
+			add		.s2	b_yt, b_ww, b_yt				;lsd,0
+			add		.l1	a_addr1, a_ww, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,1, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_y					;s,5
+;;;;;;;;;;;;;;;;;;;;;end y to yt, and start u to ut;;;;;;;;;;;;;;
+
+			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.s1	a_u, a_addr1				;lsd,0
+nextline_u:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_u:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r2			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r1			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			stndw	.d2	b_r1:b_r2, *b_ut			;d,0
+			addk	.s2	8, b_ut					;s,0
+||			sub		.s1	a_www,2, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_u					;s,5		
+			add		.s2	b_ut, b_ww2, b_ut				;lsd,0
+			add		.l1	a_addr1, a_ww2, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,1, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_u					;s,5
+;;;;;;;;;;;;;;;;;;;;;end u to ut, and start v to vt;;;;;;;;;;;;;;
+			
+			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.s1	a_v, a_addr1				;lsd,0
+nextline_v:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_v:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r2			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r1			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			stndw	.d2	b_r1:b_r2, *b_vt			;d,0
+			addk	.s2	8, b_vt					;s,0
+||			sub		.s1	a_www,2, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_v					;s,5		
+			add		.s2	b_vt, b_ww2, b_vt				;lsd,0
+			add		.l1	a_addr1, a_ww2, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,1, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_v					;s,5
+;;;;;;;;;;;;;;;;;;;;;end v to vt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+			
+			.endproc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			.text
+			.global	_x_image_scale_w2h0                 
+
+_x_image_scale_w2h0:	.cproc	a_y, b_yt, a_u, b_ut, a_v, b_vt, a_w, b_h, b_w
+			.reg	a_www, b_hhh, a_ww, a_ww2, b_ww, b_ww2
+			.reg	a_r1:a_r2, b_r1:b_r2
+			.reg	a_addr1
+			
+			mv		.s1	a_w, a_ww					;s,0	
+||			shru	.s2	b_h,1, b_h					;s,0
+			shru	.s2	a_w, 1, a_ww2	
+			mv		.s2	b_w, b_ww					;s,0	
+||			shru	.s1	b_w, 1, b_ww2	
+			shru	.s1	a_w, 4, a_w	
+||			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.l1	a_y, a_addr1				;lsd,0
+
+nextline_y_1:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_y_1:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r2			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r1			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			stndw	.d2	b_r1:b_r2, *b_yt			;d,0
+			addk	.s2	8, b_yt						;s,0
+||			sub		.s1	a_www,1, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_y_1					;s,5		
+			add		.s2	b_yt, b_ww, b_yt				;lsd,0
+			add		.l1	a_addr1, a_ww, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,1, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_y_1					;s,5
+;;;;;;;;;;;;;;;;;;;;;end y to yt, and start u to ut;;;;;;;;;;;;;;
+
+			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.s1	a_u, a_addr1				;lsd,0
+nextline_u_1:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_u_1:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r2			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r1			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			stndw	.d2	b_r1:b_r2, *b_ut			;d,0
+			addk	.s2	8, b_ut					;s,0
+||			sub		.s1	a_www,2, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_u_1					;s,5		
+			add		.s2	b_ut, b_ww2, b_ut				;lsd,0
+			add		.l1	a_addr1, a_ww2, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,2, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_u_1					;s,5
+;;;;;;;;;;;;;;;;;;;;;end u to ut, and start v to vt;;;;;;;;;;;;;;
+			
+			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.s1	a_v, a_addr1				;lsd,0
+nextline_v_1:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_v_1:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r2			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r1			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			stndw	.d2	b_r1:b_r2, *b_vt			;d,0
+			addk	.s2	8, b_vt					;s,0
+||			sub		.s1	a_www,2, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_v_1					;s,5		
+			add		.s2	b_vt, b_ww2, b_vt				;lsd,0
+			add		.l1	a_addr1, a_ww2, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,2, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_v_1					;s,5
+;;;;;;;;;;;;;;;;;;;;;end v to vt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+			
+			.endproc
+
+
+
+			.text
+			.global	_x_image_scale_2t0                 
+
+_x_image_scale_2t0:	.cproc	a_y, b_yt, a_u, b_ut, a_v, b_vt, a_w, b_h, b_w
+			.reg	a_www, b_hhh, a_ww, a_ww2, b_ww, b_ww2
+			.reg	a_r1:a_r2, b_r1:b_r2
+			.reg	a_addr1
+			
+			mv		.s1	a_w, a_ww					;s,0	
+||			shru	.s2	b_h,1, b_h					;s,0
+			shru	.s2	a_w, 1, a_ww2
+			add     .s2 a_ww2,a_w,a_ww2	
+			mv		.s2	b_w, b_ww					;s,0	
+||			shru	.s1	b_w, 1, b_ww2	
+			shru	.s1	a_w, 4, a_w	
+||			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.l1	a_y, a_addr1				;lsd,0
+
+nextline_y_2:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_y_2:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r2			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r1			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			stndw	.d2	b_r1:b_r2, *b_yt			;d,0
+			addk	.s2	8, b_yt						;s,0
+||			sub		.s1	a_www,1, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_y_2					;s,5		
+			add		.s2	b_yt, b_ww, b_yt				;lsd,0
+			add		.l1	a_addr1, a_ww, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,1, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_y_2					;s,5
+;;;;;;;;;;;;;;;;;;;;;end y to yt, and start u to ut;;;;;;;;;;;;;;
+
+			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.s1	a_u, a_addr1				;lsd,0
+nextline_u_2:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_u_2:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r2			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r1			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			stndw	.d2	b_r1:b_r2, *b_ut			;d,0
+			addk	.s2	8, b_ut					;s,0
+||			sub		.s1	a_www,2, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_u_2					;s,5		
+			add		.s2	b_ut, b_ww2, b_ut				;lsd,0
+			add		.l1	a_addr1, a_ww2, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,2, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_u_2					;s,5
+;;;;;;;;;;;;;;;;;;;;;end u to ut, and start v to vt;;;;;;;;;;;;;;
+			
+			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.s1	a_v, a_addr1				;lsd,0
+nextline_v_2:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_v_2:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r2			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			packl4	.l1	a_r1, a_r2, b_r1			;l,0
+||			addk	.s1	8, a_addr1					;s,0
+			stndw	.d2	b_r1:b_r2, *b_vt			;d,0
+			addk	.s2	8, b_vt					;s,0
+||			sub		.s1	a_www,2, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_v_2					;s,5		
+			add		.s2	b_vt, b_ww2, b_vt				;lsd,0
+			add		.l1	a_addr1, a_ww2, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,2, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_v_2					;s,5
+;;;;;;;;;;;;;;;;;;;;;end v to vt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+			
+			.endproc
+
+
+
+
+
+
+			.text
+			.global	_x_image_half_height_422to420                 
+
+_x_image_half_height_422to420:	.cproc	a_y, b_yt, a_u, b_ut, a_v, b_vt, a_w, b_h, b_w
+			.reg	a_www, b_hhh, a_ww, a_ww2, b_ww, b_ww2
+			.reg	a_r1:a_r2, b_r1:b_r2
+			.reg	a_addr1
+			
+			mv		.s1	a_w, a_ww					;s,0	
+||			shru	.s2	b_h,1, b_h					;s,0
+			shru	.s2	a_w, 1, a_ww2
+			add     .s2 a_ww2,a_w,a_ww2	
+			mv		.s2	b_w, b_ww					;s,0	
+||			shru	.s1	b_w, 1, b_ww2	
+			shru	.s1	a_w, 4, a_w	
+||			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.l1	a_y, a_addr1				;lsd,0
+
+nextline_y_3:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_y_3:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+
+
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+
+			sub		.s1	a_www,1, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_y_3					;s,5		
+			add		.s2	b_yt, b_ww, b_yt				;lsd,0
+			add		.l1	a_addr1, a_ww, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,1, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_y_3					;s,5
+;;;;;;;;;;;;;;;;;;;;;end y to yt, and start u to ut;;;;;;;;;;;;;;
+
+			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.s1	a_u, a_addr1				;lsd,0
+nextline_u_3:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_u_3:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+
+
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+				
+			sub		.s1	a_www,2, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_u_3					;s,5		
+			add		.s2	b_ut, b_ww2, b_ut				;lsd,0
+			add		.l1	a_addr1, a_ww2, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,2, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_u_3					;s,5
+;;;;;;;;;;;;;;;;;;;;;end u to ut, and start v to vt;;;;;;;;;;;;;;
+			
+			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.s1	a_v, a_addr1				;lsd,0
+nextline_v_3:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_v_3:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+
+
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+			sub		.s1	a_www,2, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_v_3					;s,5		
+			add		.s2	b_vt, b_ww2, b_vt				;lsd,0
+			add		.l1	a_addr1, a_ww2, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,2, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_v_3					;s,5
+;;;;;;;;;;;;;;;;;;;;;end v to vt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+			
+			.endproc
+
+
+
+
+
+
+
+			.text
+			.global	_x_image_half_height_420to420                 
+
+_x_image_half_height_420to420:	.cproc	a_y, b_yt, a_u, b_ut, a_v, b_vt, a_w, b_h, b_w
+			.reg	a_www, b_hhh, a_ww, a_ww2, b_ww, b_ww2
+			.reg	a_r1:a_r2, b_r1:b_r2
+			.reg	a_addr1
+			
+			mv		.s1	a_w, a_ww					;s,0	
+||			shru	.s2	b_h,1, b_h					;s,0
+			shru	.s2	a_w, 1, a_ww2
+			;add     .s2 a_ww2,a_w,a_ww2	
+			mv		.s2	b_w, b_ww					;s,0	
+||			shru	.s1	b_w, 1, b_ww2	
+			shru	.s1	a_w, 4, a_w	
+||			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.l1	a_y, a_addr1				;lsd,0
+
+nextline_y_4:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_y_4:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+
+
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+
+			sub		.s1	a_www,1, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_y_4					;s,5		
+			add		.s2	b_yt, b_ww, b_yt				;lsd,0
+			add		.l1	a_addr1, a_ww, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,1, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_y_4					;s,5
+;;;;;;;;;;;;;;;;;;;;;end y to yt, and start u to ut;;;;;;;;;;;;;;
+
+			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.s1	a_u, a_addr1				;lsd,0
+nextline_u_4:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_u_4:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+
+
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+				
+			sub		.s1	a_www,2, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_u_4					;s,5		
+			add		.s2	b_ut, b_ww2, b_ut				;lsd,0
+			add		.l1	a_addr1, a_ww2, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,2, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_u_4					;s,5
+;;;;;;;;;;;;;;;;;;;;;end u to ut, and start v to vt;;;;;;;;;;;;;;
+			
+			mv		.s2	b_h, b_hhh					;lsd,0
+||			mv		.s1	a_v, a_addr1				;lsd,0
+nextline_v_4:
+			mv		.l1	a_w, a_www					;lsd,0
+nextpack_v_4:
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+
+
+			ldndw	.d1	*a_addr1, a_r1:a_r2			;d,4
+			stndw	.d2 a_r1:a_r2,*b_yt
+			addk	.s1	8, a_addr1	
+			addk	.s2	8, b_yt
+			sub		.s1	a_www,2, a_www				;lsd,0
+	[a_www]	b		.s1	nextpack_v_4					;s,5		
+			add		.s2	b_vt, b_ww2, b_vt				;lsd,0
+			add		.l1	a_addr1, a_ww2, a_addr1		;lsd,0
+||			sub		.s2	b_hhh,2, b_hhh				;lsd,0
+	[b_hhh]	b		.s2	nextline_v_4					;s,5
+;;;;;;;;;;;;;;;;;;;;;end v to vt;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+			
+			.endproc
+
+
+
+

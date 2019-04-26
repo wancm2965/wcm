@@ -1,0 +1,722 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8E213316-A4AB-417E-A550-1166E6ABD4A2}</ProjectGuid>
+    <RootNamespace>VIDEC</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>Intel C++ Compiler 17.0</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>Intel C++ Compiler 17.0</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)/../../obj/$(Configuration)/VIDEC/</OutDir>
+    <IntDir>$(ProjectDir)/../../obj/$(Configuration)/VIDEC/</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)/../../obj/$(Configuration)/VIDEC/</OutDir>
+    <IntDir>$(ProjectDir)/../../obj/$(Configuration)/VIDEC/</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../obj/Release/VIDEC/VIDEC.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\include;$(WindowsSdkDir)\include;../../include;./;../VIDEC_PreProc;../VIDEC_PostProc;../VIDEC_Convert;../../include/VIDEC;../VIDEC_util;../VIDEC_csp;../VIDEC_x264;../VIDEC_pthreads;../VIDEC_Common;../VIDEC_DShow/include;../VIDEC_DShow/Baseclasses;../VIDEC_avc/inc;../../IMXEC/jthread/src;..\VIDEC_Codecs\IntelMediaSDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;VIDEC_EXPORT;WINVER=0x0501;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>nafxcw.lib;libcmt.lib;strmbasd.lib;strmiids.lib;avc.a;libgcc.a;libmingwex.a;avconavc.lib;libmfx.lib;dxva2.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectDir)/../../bin/$(Configuration)/VIDEC.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../VIDEC_avc/lib;../VIDEC_DShow/lib;../VIDEC_x264;../../lib/Release;..\VIDEC_Codecs\IntelMediaSDK\lib\win32;../VIDEC_DShow/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>nafxcw.lib;libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\VIDEC.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(ProjectDir)/../../bin/$(Configuration)/$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(ProjectDir)/../../lib/$(Configuration)/VIDEC.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command />
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\../obj/Release/VIDEC/VIDEC.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\include;$(WindowsSdkDir)\include;../../include;./;../VIDEC_PreProc;../VIDEC_PostProc;../VIDEC_Convert;../../include/VIDEC;../VIDEC_util;../VIDEC_csp;../VIDEC_x264;../VIDEC_pthreads;../VIDEC_Common;../VIDEC_DShow/include;../VIDEC_DShow/Baseclasses;../VIDEC_avc/inc;../../IMXEC/jthread/src;..\VIDEC_Codecs\IntelMediaSDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;VIDEC_EXPORT;WINVER=0x0501;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>nafxcw.lib;libcmt.lib;strmbasd.lib;strmiids.lib;VIDEC_avc.lib;libxvidcore.lib;avconavc.lib;libmfx.lib;dxva2.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectDir)/../../bin/x64r/VIDEC.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../lib/x64r/;../VIDEC_DShow/lib/x64r/;..\VIDEC_Codecs\IntelMediaSDK\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>nafxcw.lib;libcmtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\VIDEC.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(ProjectDir)/../../bin/x64r/$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(ProjectDir)/../../lib/x64r/VIDEC.lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\../obj/Debug/VIDEC/VIDEC.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\include;$(WindowsSdkDir)\include;../../include;./;../VIDEC_PreProc;../VIDEC_PostProc;../VIDEC_Convert;../../include/VIDEC;../VIDEC_util;../VIDEC_csp;../VIDEC_x264;../VIDEC_pthreads;../VIDEC_Common;../VIDEC_DShow/include;../VIDEC_DShow/Baseclasses;../VIDEC_avc/inc;../../IMXEC/jthread/src;..\VIDEC_Codecs\IntelMediaSDK\include;../VIDEC_avc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;VIDEC_EXPORT;WINVER=0x0501;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Nafxcwd.lib;libcmtd.lib;strmbasd.lib;strmiids.lib;Msacm32.lib;vfw32.lib;avc.a;libgcc.a;libmingwex.a;avconavc.lib;libmfx.lib;dxva2.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectDir)/../../bin/$(Configuration)/VIDEC.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../VIDEC_avc/lib;../VIDEC_DShow/lib;../VIDEC_x264;../../lib/Debug;..\VIDEC_Codecs\IntelMediaSDK\lib\win32;../VIDEC_DShow/lib/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>Nafxcwd.lib;libcmtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\VIDEC.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>$(ProjectDir)/../../lib/$(Configuration)/VIDEC.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ProgramDatabaseFile>$(ProjectDir)/../../bin/$(Configuration)/$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\../obj/Debug/VIDEC/VIDEC.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(DXSDK_DIR)\include;$(WindowsSdkDir)\include;../../include;./;../VIDEC_PreProc;../VIDEC_PostProc;../VIDEC_Convert;../../include/VIDEC;../VIDEC_util;../VIDEC_csp;../VIDEC_x264;../VIDEC_pthreads;../VIDEC_Common;../VIDEC_DShow/include;../VIDEC_DShow/Baseclasses;../VIDEC_avc/inc;../../IMXEC/jthread/src;..\VIDEC_Codecs\IntelMediaSDK\include;../VIDEC_avc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;VIDEC_EXPORT;WINVER=0x0501;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Nafxcwd.lib;libcmtd.lib;strmbasd.lib;strmiids.lib;Msacm32.lib;vfw32.lib;VIDEC_avc.lib;libxvidcore.lib;avconavc.lib;libmfx.lib;dxva2.lib;d3d9.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(ProjectDir)/../../bin/x64d/VIDEC.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>../../lib/x64d/;../VIDEC_DShow/lib/x64d;..\VIDEC_Codecs\IntelMediaSDK\lib\$(Platform);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>Nafxcwd.lib;libcmtd.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ModuleDefinitionFile>.\VIDEC.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(ProjectDir)/../../lib/x64d/VIDEC.lib</ImportLibrary>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <ProgramDatabaseFile>$(ProjectDir)/../../bin/x64d/$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\VIDEC_util\CPUUSAGE.cpp" />
+    <ClCompile Include="..\VIDEC_util\VCapMemMang.cpp" />
+    <ClCompile Include="..\VIDEC_util\XAutoLock.cpp" />
+    <ClCompile Include="..\VIDEC_util\XBitrate.cpp" />
+    <ClCompile Include="..\VIDEC_util\XBitrateExt.cpp" />
+    <ClCompile Include="..\VIDEC_util\XBitrateRTP.cpp" />
+    <ClCompile Include="..\VIDEC_util\XCritSec.cpp" />
+    <ClCompile Include="..\VIDEC_util\XDataPool.cpp" />
+    <ClCompile Include="..\VIDEC_util\XListPtr.cpp" />
+    <ClCompile Include="..\VIDEC_util\XMemcpy.cpp" />
+    <ClCompile Include="..\VIDEC_util\XQueueBuffer.cpp" />
+    <ClCompile Include="..\VIDEC_util\XRTPPacket.cpp" />
+    <ClCompile Include="..\VIDEC_util\XSocket.cpp" />
+    <ClCompile Include="..\VIDEC_util\XSocketTCP.cpp" />
+    <ClCompile Include="..\VIDEC_util\XSocketUDP.cpp" />
+    <ClCompile Include="..\VIDEC_util\XThreadBase.cpp" />
+    <ClCompile Include="..\VIDEC_util\XThreadPool.cpp" />
+    <ClCompile Include="..\VIDEC_util\XUtil.cpp" />
+    <ClCompile Include="..\VIDEC_util\XWorkThread.cpp" />
+    <ClCompile Include="..\VIDEC_Camera\XCameraCap.cpp" />
+    <ClCompile Include="..\VIDEC_Camera\XCameraCapEx.cpp" />
+    <ClCompile Include="..\VIDEC_Camera\XCameraRender.cpp" />
+    <ClCompile Include="..\VIDEC_Camera\XCameraRenderEx.cpp" />
+    <ClCompile Include="..\VIDEC_Common\VIDEC.cpp" />
+    <ClCompile Include="..\VIDEC_Common\VideoDevice.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">EnableFastChecks</BasicRuntimeChecks>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MaxSpeed</Optimization>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="VIDECApp.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">EnableFastChecks</BasicRuntimeChecks>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</BrowseInformation>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">MaxSpeed</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MaxSpeed</Optimization>
+    </ClCompile>
+    <ClCompile Include="..\VIDEC_Codecs\AH400PlayWrapper.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\BaseRTPFrame.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\H263PRTPFrame.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\H263RTPFrame.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\H264RTPFrame.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\IntelCodecWrapper.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\RawFile.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\UserPlayWrapper.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\VBRControl.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\VIDECStreamDecoder.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\VIDECUDAWrapper.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\VIDECYNCWrapper.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\x264enc.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XDecoderFrame.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XDecoderFrameAH400.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XDecoderFrameH263.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XDecoderFrameH264.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XDecoderFrameMPEG4.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XDecoderFrameUser.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XDecoderStream.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XDecoderStreamBase.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XDecoderStreamRTP.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XEncoderFrame.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XEncoderFrameH263.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XEncoderFrameH263P.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XEncoderFrameH264.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XEncoderFrameI264.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XEncoderFrameMPEG4.cpp" />
+    <ClCompile Include="..\VIDEC_Codecs\XEncoderStream.cpp" />
+    <ClCompile Include="..\VIDEC_PostProc\AVDeinterlace.cpp" />
+    <ClCompile Include="..\VIDEC_PostProc\AVDenoise.cpp" />
+    <ClCompile Include="..\VIDEC_PostProc\AVMPlayer.cpp" />
+    <ClCompile Include="..\VIDEC_PostProc\AVPostprocess.cpp" />
+    <ClCompile Include="..\VIDEC_PreProc\ContrastEnhance.cpp">
+      <OpenMPSupport Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</OpenMPSupport>
+      <OpenMPSupport Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</OpenMPSupport>
+      <OpenMPSupport Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</OpenMPSupport>
+      <OpenMPSupport Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</OpenMPSupport>
+    </ClCompile>
+    <ClCompile Include="..\VIDEC_PreProc\OSD.cpp" />
+    <ClCompile Include="..\VIDEC_PreProc\XOSDFilter.cpp" />
+    <ClCompile Include="..\VIDEC_PreProc\XPreProcess.cpp" />
+    <ClCompile Include="..\VIDEC_API\AH2KDev.cpp" />
+    <ClCompile Include="..\VIDEC_API\AH2KDevMgr.cpp" />
+    <ClCompile Include="..\VIDEC_API\AH400Dev.cpp" />
+    <ClCompile Include="..\VIDEC_API\AH400DevMgr.cpp" />
+    <ClCompile Include="..\VIDEC_API\AVIFileWriter.cpp" />
+    <ClCompile Include="..\VIDEC_API\avilib.cpp" />
+    <ClCompile Include="..\Videc_api\AVIWriter.cpp" />
+    <ClCompile Include="..\Videc_api\DCRecord.cpp" />
+    <ClCompile Include="..\VIDEC_API\MKVFileWriter.cpp" />
+    <ClCompile Include="..\VIDEC_API\MP3FileWriter.cpp" />
+    <ClCompile Include="..\VIDEC_API\MP4FileWriter.cpp" />
+    <ClCompile Include="..\VIDEC_API\VideoRTPCall.cpp" />
+    <ClCompile Include="..\Videc_api\XCameraDev.cpp" />
+    <ClCompile Include="..\Videc_api\XCameraDevMgr.cpp" />
+    <ClCompile Include="..\Videc_api\XCapChan.cpp" />
+    <ClCompile Include="..\Videc_api\XCapChanRTP.cpp" />
+    <ClCompile Include="..\VIDEC_API\XImage.cpp" />
+    <ClCompile Include="..\Videc_api\XImageSink.cpp" />
+    <ClCompile Include="..\Videc_api\XImageSource.cpp" />
+    <ClCompile Include="..\VIDEC_API\XImageSourceAH2K.cpp" />
+    <ClCompile Include="..\VIDEC_API\XImageSourceAH400.cpp" />
+    <ClCompile Include="..\Videc_api\XImageSourceCamera.cpp" />
+    <ClCompile Include="..\Videc_api\XPlayChan.cpp" />
+    <ClCompile Include="..\Videc_api\XPlayChanRTP.cpp" />
+    <ClCompile Include="..\VIDEC_API\XResampleSTF.cpp" />
+    <ClCompile Include="..\VIDEC_API\XStreamSink.cpp" />
+    <ClCompile Include="..\VIDEC_API\XStreamSource.cpp" />
+    <ClCompile Include="..\VIDEC_convert\asharp.cpp" />
+    <ClCompile Include="..\VIDEC_convert\PictProp.cpp" />
+    <ClCompile Include="..\VIDEC_convert\SimpleResize.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Disabled</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</InlineFunctionExpansion>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Default</InlineFunctionExpansion>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AnySuitable</InlineFunctionExpansion>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <ClCompile Include="..\VIDEC_convert\VDPWrapper.cpp" />
+    <ClCompile Include="..\VIDEC_convert\VIDEC_convert.cpp" />
+    <ClCompile Include="..\VIDEC_convert\XDenoise.cpp" />
+    <ClCompile Include="..\VIDEC_AH400\XAH400.cpp" />
+    <ClCompile Include="..\VIDEC_Screen\XDCCapture.cpp" />
+    <ClCompile Include="..\VIDEC_Screen\XDCCaptureSlice.cpp" />
+    <ClCompile Include="..\VIDEC_Screen\XScreenCapture.cpp" />
+    <ClCompile Include="..\VIDEC_Screen\XScreenCaptureSlice.cpp" />
+    <ClCompile Include="..\VIDEC_Picture\DShowPicture.cpp" />
+    <ClCompile Include="..\VIDEC_MediaFile\AudioFileCapture.cpp" />
+    <ClCompile Include="..\VIDEC_MediaFile\AVMSMediaFile.cpp" />
+    <ClCompile Include="..\VIDEC_MediaFile\AVMSWrapper.cpp" />
+    <ClCompile Include="..\VIDEC_MediaFile\MediaFileCapture.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\H264Player.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\IYUVDraw.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\LocalVideoWindow.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\MyBitMap.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\SDRDraw.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\SDRDrawFilter.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\SDRDrawPin.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\VideoPlayer.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\VideoPlayerWnd.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\XFramePool.cpp" />
+    <ClCompile Include="..\VIDEC_Wnd\XVideoDisplay.cpp" />
+    <ClCompile Include="..\VIDEC_RTP\H264Frame2RTP.cpp" />
+    <ClCompile Include="..\VIDEC_RTP\RTPBuffer.cpp" />
+    <ClCompile Include="..\VIDEC_RTP\RTPJitterBuffer.cpp" />
+    <ClCompile Include="..\VIDEC_RTP\RTPTick.cpp" />
+    <ClCompile Include="..\VIDEC_RTP\VideoRTPSession.cpp" />
+    <ClCompile Include="..\VIDEC_Transcode\Transcode.cpp" />
+    <ClCompile Include="..\VIDEC_AH2K\AH2KCap.cpp" />
+    <ClCompile Include="..\VIDEC_AH2K\AH2KWrapper.cpp" />
+    <ClCompile Include="..\VIDEC_DVC\DVCCap.cpp" />
+    <ClCompile Include="..\VIDEC_API\DVCDev.cpp" />
+    <ClCompile Include="..\VIDEC_API\DVCDevMgr.cpp" />
+    <ClCompile Include="..\VIDEC_DVC\DVCWrapper.cpp" />
+    <ClCompile Include="..\VIDEC_API\XImageSourceDVC.cpp" />
+    <ClCompile Include="..\VIDEC_ICE\ICEWrapper.cpp" />
+    <ClCompile Include="..\VIDEC_ICE\ImageColorEnhance.cpp" />
+    <ClCompile Include="..\VIDEC_MP\ImageInput.cpp" />
+    <ClCompile Include="..\VIDEC_MP\ImageMixer.cpp" />
+    <ClCompile Include="..\VIDEC_MP\MPScreen.cpp" />
+    <ClCompile Include="..\VIDEC_VQD\VQDThread.cpp" />
+    <ClCompile Include="..\VIDEC_VQD\VQDWrapper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\VIDEC_util\CPUUSAGE.h" />
+    <ClInclude Include="..\VIDEC_util\VCapMemMang.h" />
+    <ClInclude Include="..\VIDEC_util\XAutoLock.h" />
+    <ClInclude Include="..\VIDEC_util\XBitrate.h" />
+    <ClInclude Include="..\VIDEC_util\XBitrateExt.h" />
+    <ClInclude Include="..\VIDEC_util\XBitrateRTP.h" />
+    <ClInclude Include="..\VIDEC_util\XCritSec.h" />
+    <ClInclude Include="..\VIDEC_util\XDataPool.h" />
+    <ClInclude Include="..\VIDEC_util\XListPtr.h" />
+    <ClInclude Include="..\VIDEC_util\XMemcpy.h" />
+    <ClInclude Include="..\VIDEC_util\XQueueBuffer.h" />
+    <ClInclude Include="..\VIDEC_util\XRTPPacket.h" />
+    <ClInclude Include="..\VIDEC_util\XSocket.h" />
+    <ClInclude Include="..\VIDEC_util\XSocketTCP.h" />
+    <ClInclude Include="..\VIDEC_util\XSocketUDP.h" />
+    <ClInclude Include="..\VIDEC_util\XThreadBase.h" />
+    <ClInclude Include="..\VIDEC_util\XThreadPool.h" />
+    <ClInclude Include="..\VIDEC_util\XUtil.h" />
+    <ClInclude Include="..\VIDEC_util\XWorkThread.h" />
+    <ClInclude Include="..\VIDEC_Camera\XCameraCap.h" />
+    <ClInclude Include="..\VIDEC_Camera\XCameraCapEx.h" />
+    <ClInclude Include="..\VIDEC_Camera\XCameraRender.h" />
+    <ClInclude Include="..\VIDEC_Camera\XCameraRenderEx.h" />
+    <ClInclude Include="..\VIDEC_Common\VideoDevice.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="VIDECApp.h" />
+    <ClInclude Include="..\VIDEC_Codecs\AH400PlayWrapper.h" />
+    <ClInclude Include="..\VIDEC_Codecs\AVCONH264Header.h" />
+    <ClInclude Include="..\VIDEC_Codecs\BaseRTPFrame.h" />
+    <ClInclude Include="..\VIDEC_Codecs\H263PRTPFrame.h" />
+    <ClInclude Include="..\VIDEC_Codecs\H263RTPFrame.h" />
+    <ClInclude Include="..\VIDEC_Codecs\H264RTPFrame.h" />
+    <ClInclude Include="..\VIDEC_Codecs\IntelCodecWrapper.h" />
+    <ClInclude Include="..\VIDEC_Codecs\RawFile.h" />
+    <ClInclude Include="..\VIDEC_Codecs\UserPlayWrapper.h" />
+    <ClInclude Include="..\VIDEC_Codecs\VBRControl.h" />
+    <ClInclude Include="..\VIDEC_Codecs\VIDECStreamDecoder.h" />
+    <ClInclude Include="..\VIDEC_Codecs\VIDECUDAWrapper.h" />
+    <ClInclude Include="..\VIDEC_Codecs\VIDECYNCWrapper.h" />
+    <ClInclude Include="..\VIDEC_Codecs\x264enc.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XDecoderFrame.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XDecoderFrameAH400.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XDecoderFrameH263.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XDecoderFrameH264.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XDecoderFrameMPEG4.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XDecoderFrameUser.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XDecoderStream.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XDecoderStreamBase.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XDecoderStreamRTP.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XEncoderFrame.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XEncoderFrameH263.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XEncoderFrameH263P.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XEncoderFrameH264.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XEncoderFrameI264.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XEncoderFrameMPEG4.h" />
+    <ClInclude Include="..\VIDEC_Codecs\XEncoderStream.h" />
+    <ClInclude Include="..\VIDEC_PostProc\AVDeinterlace.h" />
+    <ClInclude Include="..\VIDEC_PostProc\AVDenoise.h" />
+    <ClInclude Include="..\VIDEC_PostProc\AVMPlayer.h" />
+    <ClInclude Include="..\VIDEC_PostProc\AVPostprocess.h" />
+    <ClInclude Include="..\VIDEC_PreProc\ContrastEnhance.h" />
+    <ClInclude Include="..\VIDEC_PreProc\libXPreProc.h" />
+    <ClInclude Include="..\VIDEC_PreProc\OSD.h" />
+    <ClInclude Include="..\VIDEC_PreProc\XOSDFilter.h" />
+    <ClInclude Include="..\VIDEC_PreProc\XPreProcess.h" />
+    <ClInclude Include="..\VIDEC_API\AH2KDev.h" />
+    <ClInclude Include="..\VIDEC_API\AH2KDevMgr.h" />
+    <ClInclude Include="..\VIDEC_API\AH400Dev.h" />
+    <ClInclude Include="..\VIDEC_API\AH400DevMgr.h" />
+    <ClInclude Include="..\VIDEC_API\AVIFileWriter.h" />
+    <ClInclude Include="..\VIDEC_API\avilib.h" />
+    <ClInclude Include="..\Videc_api\AVIWriter.h" />
+    <ClInclude Include="..\Videc_api\DCRecord.h" />
+    <ClInclude Include="..\VIDEC_API\IFileWriter.h" />
+    <ClInclude Include="..\VIDEC_API\IXResample.h" />
+    <ClInclude Include="..\VIDEC_API\largefilter.h" />
+    <ClInclude Include="..\VIDEC_API\MKVFileWriter.h" />
+    <ClInclude Include="..\VIDEC_API\MP3FileWriter.h" />
+    <ClInclude Include="..\VIDEC_API\MP4FileWriter.h" />
+    <ClInclude Include="..\VIDEC_API\smallfilter.h" />
+    <ClInclude Include="..\VIDEC_API\VideoRTPCall.h" />
+    <ClInclude Include="..\Videc_api\XCameraDev.h" />
+    <ClInclude Include="..\Videc_api\XCameraDevMgr.h" />
+    <ClInclude Include="..\Videc_api\XCapChan.h" />
+    <ClInclude Include="..\Videc_api\XCapChanRTP.h" />
+    <ClInclude Include="..\VIDEC_API\XImage.h" />
+    <ClInclude Include="..\Videc_api\XImageSink.h" />
+    <ClInclude Include="..\Videc_api\XImageSource.h" />
+    <ClInclude Include="..\VIDEC_API\XImageSourceAH2K.h" />
+    <ClInclude Include="..\VIDEC_API\XImageSourceAH400.h" />
+    <ClInclude Include="..\Videc_api\XImageSourceCamera.h" />
+    <ClInclude Include="..\Videc_api\XPlayChan.h" />
+    <ClInclude Include="..\Videc_api\XPlayChanRTP.h" />
+    <ClInclude Include="..\VIDEC_API\XResampleSTF.h" />
+    <ClInclude Include="..\VIDEC_API\XStreamSink.h" />
+    <ClInclude Include="..\VIDEC_API\XStreamSource.h" />
+    <ClInclude Include="..\version.h" />
+    <ClInclude Include="..\inc\VIDEC_convert.h" />
+    <ClInclude Include="..\inc\VIDEC_PictProp.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_AH2K.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_AH2KDev.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_AH400.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_AH400Dev.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_AudioFile.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_AVIWriter.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Camera.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_CameraDev.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Codec.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_CodecDef.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Config.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_DC.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_DCRecord.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Decoder.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Device.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Encoder.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Export.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Header.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_HeaderV1.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_IPCamera.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_MediaFile.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Picture.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Player.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_RTPCall.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Screen.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_StreamDecoder.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_VideoWnd.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_VQD.h" />
+    <ClInclude Include="..\VIDEC_convert\asharp.h" />
+    <ClInclude Include="..\VIDEC_convert\PictProp.h" />
+    <ClInclude Include="..\VIDEC_convert\SimpleResize.h" />
+    <ClInclude Include="..\VIDEC_convert\VDPWrapper.h" />
+    <ClInclude Include="..\VIDEC_convert\VDResize.h" />
+    <ClInclude Include="..\VIDEC_convert\XDenoise.h" />
+    <ClInclude Include="..\VIDEC_AH400\XAH400.h" />
+    <ClInclude Include="..\VIDEC_Screen\XDCCapture.h" />
+    <ClInclude Include="..\VIDEC_Screen\XDCCaptureSlice.h" />
+    <ClInclude Include="..\VIDEC_Screen\XScreenCapture.h" />
+    <ClInclude Include="..\VIDEC_Screen\XScreenCaptureSlice.h" />
+    <ClInclude Include="..\VIDEC_Picture\DShowPicture.h" />
+    <ClInclude Include="..\Videc\VIDEC_Picture.h" />
+    <ClInclude Include="..\VIDEC_MediaFile\AudioFileCapture.h" />
+    <ClInclude Include="..\VIDEC_MediaFile\AVMSMediaFile.h" />
+    <ClInclude Include="..\VIDEC_MediaFile\AVMSWrapper.h" />
+    <ClInclude Include="..\VIDEC_MediaFile\MediaFileCapture.h" />
+    <ClInclude Include="..\VIDEC_Wnd\DoubleFrameRate.h" />
+    <ClInclude Include="..\VIDEC_Wnd\H264Player.h" />
+    <ClInclude Include="..\VIDEC_Wnd\IYUVDraw.h" />
+    <ClInclude Include="..\VIDEC_Wnd\LocalVideoWindow.h" />
+    <ClInclude Include="..\VIDEC_Wnd\MyBitMap.h" />
+    <ClInclude Include="..\VIDEC_Wnd\SDRDraw.h" />
+    <ClInclude Include="..\VIDEC_Wnd\SDRDrawFilter.h" />
+    <ClInclude Include="..\VIDEC_Wnd\SDRDrawPin.h" />
+    <ClInclude Include="..\VIDEC_Wnd\VideoDisplay.h" />
+    <ClInclude Include="..\VIDEC_Wnd\VideoPlayer.h" />
+    <ClInclude Include="..\VIDEC_Wnd\VideoPlayerWnd.h" />
+    <ClInclude Include="..\VIDEC_Wnd\XFramePool.h" />
+    <ClInclude Include="..\VIDEC_Wnd\XVideoDisplay.h" />
+    <ClInclude Include="..\VIDEC_RTP\H264Frame2RTP.h" />
+    <ClInclude Include="..\VIDEC_RTP\RTPBuffer.h" />
+    <ClInclude Include="..\VIDEC_RTP\RTPHeader.h" />
+    <ClInclude Include="..\VIDEC_RTP\RTPJitterBuffer.h" />
+    <ClInclude Include="..\VIDEC_RTP\RTPTick.h" />
+    <ClInclude Include="..\VIDEC_RTP\VideoRTPSession.h" />
+    <ClInclude Include="..\VIDEC_Transcode\Transcode.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_Transcode.h" />
+    <ClInclude Include="..\VIDEC_AH2K\AH2KCap.h" />
+    <ClInclude Include="..\VIDEC_AH2K\AH2KWrapper.h" />
+    <ClInclude Include="..\VIDEC_DVC\DVCCap.h" />
+    <ClInclude Include="..\VIDEC_API\DVCDev.h" />
+    <ClInclude Include="..\VIDEC_API\DVCDevMgr.h" />
+    <ClInclude Include="..\VIDEC_DVC\DVCWrapper.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_DVC.h" />
+    <ClInclude Include="..\..\include\VIDEC\VIDEC_DVCDev.h" />
+    <ClInclude Include="..\VIDEC_API\XImageSourceDVC.h" />
+    <ClInclude Include="..\VIDEC_ICE\ICEWrapper.h" />
+    <ClInclude Include="..\VIDEC_ICE\ImageColorEnhance.h" />
+    <ClInclude Include="..\VIDEC_MP\ImageInput.h" />
+    <ClInclude Include="..\VIDEC_MP\ImageMixer.h" />
+    <ClInclude Include="..\VIDEC_MP\MPScreen.h" />
+    <ClInclude Include="..\VIDEC_VQD\VQDThread.h" />
+    <ClInclude Include="..\VIDEC_VQD\VQDWrapper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\VIDEC_convert\x64_convert_asm.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64.exe /DWIN_X64 /Zi /c /Cp /Fl /Fo ../../obj/Debug/x64_convert_asm.asm.obj ../VIDEC_convert/x64_convert_asm.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../../obj/Debug/x64_convert_asm.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64.exe /DWIN_X64 /Zi /c /Cp /Fl /Fo ../../obj/Release/x64_convert_asm.asm.obj ../VIDEC_convert/x64_convert_asm.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../../obj/Release/x64_convert_asm.asm.obj</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\VIDEC_Wnd\X64BilinearAsm.asm">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">ml64.exe /DWIN_X64 /Zi /c /Cp /Fl /Fo ../../obj/Debug/X64BilinearAsm.asm.obj ../VIDEC_Wnd/X64BilinearAsm.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../../obj/Debug/X64BilinearAsm.asm.obj</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ml64.exe /DWIN_X64 /Zi /c /Cp /Fl /Fo ../../obj/Release/X64BilinearAsm.asm.obj ../VIDEC_Wnd/X64BilinearAsm.asm</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../../obj/Release/X64BilinearAsm.asm.obj</Outputs>
+    </CustomBuild>
+    <None Include="VIDEC.def" />
+    <None Include="res\VIDEC.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="VIDEC.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\no_video.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IMXEC\jrtplib\jrtplib.vcxproj">
+      <Project>{b8bd6143-ba5b-47df-b9bb-991f5f6736a6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IMXEC\jthread\jthread.vcxproj">
+      <Project>{96a714ae-be53-4eff-8569-c3809ad4f3b6}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\jpeglib\jpeglib.vcxproj">
+      <Project>{392f7f6e-d844-493e-8d70-5603e45e21bd}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\libmp3lame\libmp3lame.vcxproj">
+      <Project>{e316772f-5d8f-4f2a-8f71-094c3e859d34}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\VIDECINL\VIDECINL.vcxproj">
+      <Project>{d038d673-35ef-499c-94e4-9b74d3917417}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\VIDECMKV\VIDECMKV.vcxproj">
+      <Project>{715d4529-98c3-49de-9950-3b9ecf1e47e0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\VIDECYNC\VIDECYNC.vcxproj">
+      <Project>{75fc3f64-2d93-4f0d-bdab-34b97db78a94}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\VIDEC_csp\VIDEC_csp.vcxproj">
+      <Project>{fd354c47-16b8-4d10-8200-fbf236d49ce5}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\VIDEC_DShow\BaseClasses\baseclasses.vcxproj">
+      <Project>{c14d9535-35e5-4b7f-8614-b772a214eb0b}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\VIDEC_FRE\VIDECFRE.vcxproj">
+      <Project>{ce96f11b-1344-49b3-8c9a-869347c94c16}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

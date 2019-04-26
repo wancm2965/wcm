@@ -1,0 +1,9 @@
+; VIDEC_ax.def : Declares the module parameters for the DLL.
+
+LIBRARY      "VIDEC.ax"
+
+EXPORTS
+	DllGetClassObject PRIVATE
+	DllCanUnloadNow PRIVATE
+	DllRegisterServer PRIVATE
+	DllUnregisterServer PRIVATE

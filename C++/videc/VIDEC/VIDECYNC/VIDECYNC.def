@@ -1,0 +1,28 @@
+; VIDECYNC.def : 声明 DLL 的模块参数。
+
+LIBRARY      "VIDECYNC"
+
+EXPORTS
+	VIDECYNC_Init
+	VIDECYNC_PlayerSetMaxCount
+	VIDECYNC_PlayerTry
+	VIDECYNC_PlayerOpen
+	VIDECYNC_PlayerClose
+	VIDECYNC_PlayerPlayFrame
+	VIDECYNC_PlayerGetWidth
+	VIDECYNC_PlayerGetHeight
+	VIDECYNC_PlayerResize
+	VIDECYNC_PlayerSkipDisplay
+	VIDECYNC_PlayerGetFrameRate	
+	VIDECYNC_PlayerGetShowType
+	VIDECYNC_PlayerCaptureToBMPFile
+	
+	VIDECYNC_D3DPlayerOpen
+	VIDECYNC_D3DPlayerClose
+	VIDECYNC_D3DPlayerPlayFrame
+	VIDECYNC_D3DPlayerRedraw
+	VIDECYNC_D3DPlayerGetWidth
+	VIDECYNC_D3DPlayerGetHeight
+	VIDECYNC_D3DPlayerSkipDisplay
+	VIDECYNC_D3DPlayerGetFrameRate
+	VIDECYNC_D3DPlayerGetShowType

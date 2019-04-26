@@ -101,6 +101,22 @@ void CAIServerTestDemoDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_EDIT5, m_pVerNum);
 	DDX_Control(pDX, IDC_EDIT6, m_pVerthresold);
 	DDX_Control(pDX, IDC_EDIT9, m_pEditServerAPIPath);
+	DDX_Control(pDX, IDC_EDIT11, m_pEditVerPicPath);
+	DDX_Control(pDX, IDC_EDIT12, m_p264verNum);
+	DDX_Control(pDX, IDC_EDIT13, m_p264verthrold);
+	DDX_Control(pDX, IDC_EDIT14, m_p264verAuidoID);
+	DDX_Control(pDX, IDC_EDIT15, m_p264verVideoID);
+	DDX_Control(pDX, IDC_EDIT16, m_p264verNodeID);
+	DDX_Control(pDX, IDC_EDIT22, m_p264verMcuIp);
+	DDX_Control(pDX, IDC_EDIT23, m_p264verMcuPort);
+	DDX_Control(pDX, IDC_EDIT21, m_p264verMcuID);
+	DDX_Control(pDX, IDC_EDIT20, m_p264verLocalport);
+	DDX_Control(pDX, IDC_EDIT19, m_p264verLocalIp);
+	DDX_Control(pDX, IDC_EDIT18, m_p264verNatport);
+	DDX_Control(pDX, IDC_EDIT17, m_p264verNatIp);
+	DDX_Control(pDX, IDC_EDIT10, m_pEditLocalHttpIP);
+	DDX_Control(pDX, IDC_EDIT24, m_pEditStartVerHttpAPI);
+	DDX_Control(pDX, IDC_EDIT25, m_pEditStopVerHttpAPI);
 }
 
 void CAIServerTestDemoDlg::ShowAPIBCKMessage(const char* strBCKMsg)
@@ -113,7 +129,7 @@ void CAIServerTestDemoDlg::ShowAPIBCKMessage(const char* strBCKMsg)
 
 	m_pShowMsg.SetWindowTextW(strOut+strMsg);
 
-	Invalidate();
+	m_pShowMsg.Invalidate();
 }
 
 BEGIN_MESSAGE_MAP(CAIServerTestDemoDlg, CDialogEx)
@@ -125,6 +141,10 @@ BEGIN_MESSAGE_MAP(CAIServerTestDemoDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &CAIServerTestDemoDlg::OnBnClickedButton1)
 	ON_BN_CLICKED(IDC_BUTTON2, &CAIServerTestDemoDlg::OnBnClickedButton2)
 	ON_BN_CLICKED(IDC_BUTTON3, &CAIServerTestDemoDlg::OnBnClickedButton3)
+	ON_BN_CLICKED(IDC_BUTTON4, &CAIServerTestDemoDlg::OnBnClickedButton4)
+	ON_BN_CLICKED(IDC_BUTTON5, &CAIServerTestDemoDlg::OnBnClickedButton5)
+	ON_BN_CLICKED(IDC_BUTTON7, &CAIServerTestDemoDlg::OnBnClickedButton7)
+	ON_BN_CLICKED(IDC_BUTTON6, &CAIServerTestDemoDlg::OnBnClickedButton6)
 END_MESSAGE_MAP()
 
 
@@ -133,7 +153,7 @@ END_MESSAGE_MAP()
 BOOL CAIServerTestDemoDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
-
+	::SetWindowLong(m_hWnd, GWL_STYLE, WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX);
 	// 将“关于...”菜单项添加到系统菜单中。
 
 	// IDM_ABOUTBOX 必须在系统命令范围内。
@@ -292,12 +312,17 @@ void CAIServerTestDemoDlg::OnBnClickedButton2()
 	std::string strWidth;
 	std::string strHeight;
 
+	CString strLocalHttpIp;
+	m_pEditLocalHttpIP.GetWindowTextW(strLocalHttpIp);
+	std::string strLocalHttpIps = U2A(strLocalHttpIp);
+
 	StringBuffer buffer;
 	Writer<StringBuffer> writer(buffer);
 	writer.StartObject();
 	{
 		writer.String("apikey");
-		std::string strapikey = "192.168.0.157:4568";
+		std::string strapikey = strLocalHttpIps;
+		strapikey += ":4568";
 		strapikey += CLBCK;
 		writer.String(strapikey.c_str());
 		writer.String("user_id");
@@ -325,14 +350,14 @@ void CAIServerTestDemoDlg::OnBnClickedButton2()
 	SendCallBackMessage(strHost.c_str(), strSendData.c_str());
 }
 
-//识别
+//图片识别
 void CAIServerTestDemoDlg::OnBnClickedButton3()
 {
 	// TODO:  在此添加控件通知处理程序代码
 
 	std::string strImageData = "";
 	CString strFile;
-	m_pFileEdit.GetWindowTextW(strFile);
+	m_pEditVerPicPath.GetWindowTextW(strFile);
 
 	std::string strFilePath = U2A(strFile);
 
@@ -349,12 +374,18 @@ void CAIServerTestDemoDlg::OnBnClickedButton3()
 	m_pVerthresold.GetWindowTextW(strVerEdthro);
 	std::string strVerthro = U2A(strVerEdthro);
 
+	CString strLocalHttpIp;
+	m_pEditLocalHttpIP.GetWindowTextW(strLocalHttpIp);
+	std::string strLocalHttpIps = U2A(strLocalHttpIp);
+
 	StringBuffer buffer;
 	Writer<StringBuffer> writer(buffer);
 	writer.StartObject();
 	{
 		writer.String("apikey");
-		std::string strapikey = "192.168.0.157:4568";
+		//std::string strapikey = "192.168.0.157:4568";
+		std::string strapikey = strLocalHttpIps;
+		strapikey += ":4568";
 		strapikey += VERBCK;
 		writer.String(strapikey.c_str());		
 		writer.String("recnum");
@@ -385,7 +416,7 @@ void CAIServerTestDemoDlg::OnBnClickedButton3()
 
 	std::string strSendData = buffer.GetString();
 	CString strHostPath;
-	m_pEditServerAPIPath.GetWindowTextW(strHostPath);
+	m_pEditStartVerHttpAPI.GetWindowTextW(strHostPath);
 	std::string strHost = U2A(strHostPath);
 	SendCallBackMessage(strHost.c_str(), strSendData.c_str());
 }
@@ -394,4 +425,181 @@ void CAIServerTestDemoDlg::OnBnClickedButton3()
 void CAIServerTestDemoDlg::SendCallBackMessage(const char* host, const char* message)
 {
 	CHttpHandler::Instance(NULL).post(host, message, 5000);
+}
+
+//图片识别文件添加按钮
+void CAIServerTestDemoDlg::OnBnClickedButton4()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	// TODO:  在此添加控件通知处理程序代码
+	CString filter;
+	filter = L"1080P图片|*.jpg|*.png|*.bmp";
+
+	CFileDialog dlg(TRUE, NULL, NULL, OFN_HIDEREADONLY, filter);
+	if (dlg.DoModal() == IDOK)
+	{
+		CString strFile;
+		strFile = dlg.GetPathName();
+		m_pEditVerPicPath.SetWindowTextW(strFile);
+	}
+}
+
+
+//264识别
+void CAIServerTestDemoDlg::OnBnClickedButton5()
+{
+	CString strLocalHttpIp;
+	m_pEditLocalHttpIP.GetWindowTextW(strLocalHttpIp);
+	std::string strLocalHttpIps = U2A(strLocalHttpIp);
+	std::string strapikey = strLocalHttpIps;
+	strapikey += ":4568";
+	strapikey += VERBCK;
+
+	CString strc264verNum;
+	m_p264verNum.GetWindowTextW(strc264verNum);
+	CString strc264verthrold;
+	m_p264verthrold.GetWindowTextW(strc264verthrold);
+	CString strc264verAuidoID;
+	m_p264verAuidoID.GetWindowTextW(strc264verAuidoID);
+	CString strc264verVideoID;
+	m_p264verVideoID.GetWindowTextW(strc264verVideoID);
+	CString strc264verNodeID;
+	m_p264verNodeID.GetWindowTextW(strc264verNodeID);
+	CString strc264verMcuIp;
+	m_p264verMcuIp.GetWindowTextW(strc264verMcuIp);
+	CString strc264verMcuPort;
+	m_p264verMcuPort.GetWindowTextW(strc264verMcuPort);
+	CString strc264verMcuID;
+	m_p264verMcuID.GetWindowTextW(strc264verMcuID);
+	CString strc264verLocalport;
+	m_p264verLocalport.GetWindowTextW(strc264verLocalport);
+	CString strc264verLocalIp;
+	m_p264verLocalIp.GetWindowTextW(strc264verLocalIp);
+	CString strc264verNatport;
+	m_p264verNatport.GetWindowTextW(strc264verNatport);
+	CString strc264verNatIp;
+	m_p264verNatIp.GetWindowTextW(strc264verNatIp);
+
+	std::string str264verNum = U2A(strc264verNum);
+	std::string str264verthrold = U2A(strc264verthrold);
+	std::string str264verAuidoID = U2A(strc264verAuidoID);
+	std::string str264verVideoID = U2A(strc264verVideoID);
+	std::string str264verNodeID = U2A(strc264verNodeID);
+	std::string str64verMcuIp = U2A(strc264verMcuIp);
+	std::string str264verMcuPort = U2A(strc264verMcuPort);
+	std::string str264verMcuID = U2A(strc264verMcuID);
+	std::string str264verLocalport = U2A(strc264verLocalport);
+	std::string str264verLocalIp = U2A(strc264verLocalIp);
+	std::string str264verNatport = U2A(strc264verNatport);
+	std::string str264verNatIp = U2A(strc264verNatIp);
+
+
+	StringBuffer buffer;
+	Writer<StringBuffer> writer(buffer);
+	writer.StartObject();
+	{
+		writer.String("apikey");		
+		writer.String(strapikey.c_str());
+		writer.String("recnum");
+		writer.String(str264verNum.c_str());
+		writer.String("threshold");
+		writer.String(str264verthrold.c_str());
+
+		writer.String("datatype");
+		writer.String("stream");
+
+		writer.String("dataparam");
+		writer.StartObject();
+		{
+			writer.String("audioid");
+			writer.String(str264verAuidoID.c_str());
+			writer.String("videoid");
+			writer.String(str264verVideoID.c_str());
+
+			writer.String("nodeid");
+			writer.String(str264verNodeID.c_str());
+			writer.String("natip");
+			writer.String(str264verNatIp.c_str());
+
+			writer.String("natport");
+			writer.String(str264verNatport.c_str());
+			writer.String("localip");
+			writer.String(str264verLocalIp.c_str());
+
+
+			writer.String("localport");
+			writer.String(str264verLocalport.c_str());
+			writer.String("mcuid");
+			writer.String(str264verMcuID.c_str());
+
+
+			writer.String("mcuip");
+			writer.String(str64verMcuIp.c_str());
+			writer.String("mcuport");
+			writer.String(str264verMcuPort.c_str());
+
+		}
+		writer.EndObject();
+	}
+	writer.EndObject();
+
+	std::string strSendData = buffer.GetString();
+	CString strHostPath;
+	m_pEditStartVerHttpAPI.GetWindowTextW(strHostPath);
+	std::string strHost = U2A(strHostPath);
+	SendCallBackMessage(strHost.c_str(), strSendData.c_str());
+}
+
+
+void CAIServerTestDemoDlg::OnBnClickedButton7()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	CString strLocalHttpIp;
+	m_pEditLocalHttpIP.GetWindowTextW(strLocalHttpIp);
+	std::string strLocalHttpIps = U2A(strLocalHttpIp);
+	std::string strapikey = strLocalHttpIps;
+	strapikey += ":4568";
+	strapikey += VERBCK;
+	StringBuffer buffer;
+	Writer<StringBuffer> writer(buffer);
+	writer.StartObject();
+	{
+		writer.String("apikey");
+		writer.String(strapikey.c_str());
+	}
+	writer.EndObject();
+
+	std::string strSendData = buffer.GetString();
+	CString strHostPath;
+	m_pEditStopVerHttpAPI.GetWindowTextW(strHostPath);
+	std::string strHost = U2A(strHostPath);
+	SendCallBackMessage(strHost.c_str(), strSendData.c_str());
+
+}
+
+
+void CAIServerTestDemoDlg::OnBnClickedButton6()
+{
+	// TODO:  在此添加控件通知处理程序代码
+	CString strLocalHttpIp;
+	m_pEditLocalHttpIP.GetWindowTextW(strLocalHttpIp);
+	std::string strLocalHttpIps = U2A(strLocalHttpIp);
+	std::string strapikey = strLocalHttpIps;
+	strapikey += ":4568";
+	strapikey += VERBCK;
+
+	StringBuffer buffer;
+	Writer<StringBuffer> writer(buffer);
+	writer.StartObject();
+	{
+		writer.String("apikey");
+		writer.String(strapikey.c_str());
+	}
+	writer.EndObject();
+
+	std::string strSendData = buffer.GetString();
+	CString strHostPath;
+	m_pEditStopVerHttpAPI.GetWindowTextW(strHostPath);
+	std::string strHost = U2A(strHostPath);
+	SendCallBackMessage(strHost.c_str(), strSendData.c_str());
 }

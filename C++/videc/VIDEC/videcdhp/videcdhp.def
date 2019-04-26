@@ -1,0 +1,8 @@
+; videcdhp.def : 声明 DLL 的模块参数。
+
+LIBRARY      "videcdhp"
+
+EXPORTS
+    VIDEC_DH264PlayerOpen
+    VIDEC_DH264PlayerInputData
+    VIDEC_DH264PlayerClose

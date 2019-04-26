@@ -1,0 +1,41 @@
+; HPAVC.def : 声明 DLL 的模块参数。
+
+LIBRARY      "HPAVC"
+
+EXPORTS
+    HPAVC_PlayerOpen
+	HPAVC_PlayerClose
+	HPAVC_PlayerPlayData
+	HPAVC_PlayerGetVideoWidth
+	HPAVC_PlayerGetVideoHeigh
+	HPAVC_PlayerCaptureToBMPFile
+	HPAVC_PlayerSetWindowPos
+	HPAVC_PlayerGetWnd
+	HPAVC_PlayerSetVideoParam
+	
+    HPAVC_CaptureOpen
+	HPAVC_CaptureClose
+	HPAVC_CaptureEncodeData
+	HPAVC_CaptureGetVideoWidth
+	HPAVC_CaptureGetVideoHeigh
+	HPAVC_CaptureCaptureToBMPFile
+	HPAVC_CaptureSetWindowPos
+	HPAVC_CaptureSetVideoParam
+	
+	HPAVC_EncoderSetMaxCount
+	HPAVC_EncoderTry
+	HPAVC_EncoderOpen
+	HPAVC_EncoderClose
+	HPAVC_EncoderEncoding
+	HPAVC_EncoderSetVideoParam
+	
+	HPAVC_D3DRenderOpen
+	HPAVC_D3DRenderClose
+	HPAVC_D3DRenderPlayFrame
+	HPAVC_D3DRenderPlaySurface
+	HPAVC_D3DRenderSetWindowPos
+	HPAVC_D3DRenderGetWnd
+	HPAVC_D3DRenderSkipDisplay
+	HPAVC_D3DRenderCaptureToBMPFile
+	
+	

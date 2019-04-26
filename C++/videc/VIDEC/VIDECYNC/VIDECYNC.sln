@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VIDECYNC", "VIDECYNC.vcproj", "{C8669F99-4451-43FB-A3C4-859E7C22D385}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SyncTest", "..\SyncTest\SyncTest.vcproj", "{7E453FCB-7F86-4BFD-98DA-2721097951CF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C8669F99-4451-43FB-A3C4-859E7C22D385} = {C8669F99-4451-43FB-A3C4-859E7C22D385}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8669F99-4451-43FB-A3C4-859E7C22D385}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C8669F99-4451-43FB-A3C4-859E7C22D385}.Debug|Win32.Build.0 = Debug|Win32
+		{C8669F99-4451-43FB-A3C4-859E7C22D385}.Release|Win32.ActiveCfg = Release|Win32
+		{C8669F99-4451-43FB-A3C4-859E7C22D385}.Release|Win32.Build.0 = Release|Win32
+		{7E453FCB-7F86-4BFD-98DA-2721097951CF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7E453FCB-7F86-4BFD-98DA-2721097951CF}.Debug|Win32.Build.0 = Debug|Win32
+		{7E453FCB-7F86-4BFD-98DA-2721097951CF}.Release|Win32.ActiveCfg = Release|Win32
+		{7E453FCB-7F86-4BFD-98DA-2721097951CF}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

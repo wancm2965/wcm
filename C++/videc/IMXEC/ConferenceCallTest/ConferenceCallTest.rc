@@ -1,0 +1,368 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\ConferenceCallTest.rc2""  // ??è? Microsoft Visual C++ ?¨¤?§?è?-|¨???¨￠?§o???\r\n"
+    "#include ""l.CHS\\afxres.rc""      // ?¨¤?§o?¨￠??¨￠?§|?t\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\ConferenceCallTest.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_IMXECTEST_DIALOG DIALOGEX 0, 0, 471, 194
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "IMXECCall"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "呼叫(&C)...",IDC_BUTTON_MAKE_CALL,414,7,50,14
+    PUSHBUTTON      "接受(&A)",IDC_BUTTON_ACCEPT_CALL,414,21,50,14
+    PUSHBUTTON      "挂断(&H)",IDC_BUTTON_HANGUP_CALL,414,36,50,14
+    PUSHBUTTON      "网络设置...",IDC_BUTTON_NETWORK_SETTING,414,50,50,14
+    PUSHBUTTON      "音频设置...",IDC_BUTTON_AUDIO_SETTING,414,65,50,14
+    PUSHBUTTON      "视频设置...",IDC_BUTTON_VIDEO_SETTING,414,80,50,14
+    PUSHBUTTON      "呼叫信息...",IDC_BUTTON_CALL_INFO,414,95,50,14
+    PUSHBUTTON      "<",IDC_BUTTON_LEFT,414,109,14,13
+    PUSHBUTTON      ">",IDC_BUTTON_RIGHT,432,109,14,13
+    PUSHBUTTON      "A",IDC_BUTTON_UP,450,109,14,13
+    PUSHBUTTON      "T",IDC_BUTTON_ZOOM_IN,414,123,14,13
+    PUSHBUTTON      "W",IDC_BUTTON_ZOOM_OUT,432,123,14,13
+    PUSHBUTTON      "V",IDC_BUTTON_DOWN,450,123,14,13
+    CONTROL         "视频辅流",IDC_CHECK_SECOND_VIDEO,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,414,149,50,14
+    CONTROL         "自动应答(&S)",IDC_CHECK_AUTO_ANSWER,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,414,162,50,14
+    LTEXT           "",IDC_STATIC_STATUS,7,176,458,11,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "Dial Pad...",IDC_BUTTON_DIALPAD,414,136,50,14
+END
+
+IDD_DIALOG_CALL DIALOGEX 0, 0, 251, 68
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "呼叫"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,140,47,50,14
+    PUSHBUTTON      "取消",IDCANCEL,195,47,50,14
+    LTEXT           "对方帐号或IP地址：",IDC_STATIC,7,10,72,8
+    EDITTEXT        IDC_EDIT_PEER_IP,95,7,150,14,ES_AUTOHSCROLL
+    LTEXT           "呼叫协议：",IDC_STATIC,7,29,86,8
+    COMBOBOX        IDC_COMBO_PROTO,95,26,150,168,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_VIDEO DIALOGEX 0, 0, 316, 185
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CLIPCHILDREN | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_NETWORK_SETTING DIALOGEX 0, 0, 214, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "网络设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "H323端口：",IDC_STATIC,9,9,42,8
+    EDITTEXT        IDC_EDIT_H323_LISTEN_PORT,107,7,100,15,ES_AUTOHSCROLL
+    LTEXT           "RTP端口：",IDC_STATIC,9,27,38,8
+    EDITTEXT        IDC_EDIT_RTP_BASE_PORT,107,24,100,15,ES_AUTOHSCROLL
+    LTEXT           "本机IP地址：",IDC_STATIC,9,44,48,8
+    DEFPUSHBUTTON   "确定",IDOK,107,82,50,14
+    PUSHBUTTON      "取消",IDCANCEL,157,82,50,14
+    CONTROL         "",IDC_LOCAL_IPADDRESS,"SysIPAddress32",WS_TABSTOP,107,41,100,15
+    CONTROL         "启用H239",IDC_CHECK_SUPPORT_H239,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,63,100,10
+END
+
+IDD_DIALOG_AUDIO_SETTING DIALOGEX 0, 0, 220, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "音频设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,109,42,50,14
+    PUSHBUTTON      "取消",IDCANCEL,163,42,50,14
+    LTEXT           "音频编码：",IDC_STATIC,8,9,41,8
+    COMBOBOX        IDC_COMBO_AUDIO_CODEC,87,7,125,217,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG_VIDEO_SETTING DIALOGEX 0, 0, 316, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "视频设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_DEV,104,16,201,196,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_FRAMERATE,104,31,201,223,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_BITRATE,104,47,201,208,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_CODEC,104,64,201,204,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_FORMAT,104,80,201,193,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SECOND_DEV,104,119,201,196,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SECOND_FRAMERATE,104,134,201,223,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SECOND_BITRATE,104,150,201,208,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SECOND_CODEC,104,167,201,204,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_SECOND_FORMAT,104,183,201,193,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确定",IDOK,205,210,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,210,50,14
+    LTEXT           "视频设备：",IDC_STATIC,11,17,84,8
+    LTEXT           "视频帧率：",IDC_STATIC,11,33,84,8
+    LTEXT           "视频码流：",IDC_STATIC,11,49,84,8
+    LTEXT           "视频编码：",IDC_STATIC,11,66,84,8
+    LTEXT           "视频格式：",IDC_STATIC,11,82,84,8
+    GROUPBOX        "主流视频设置",IDC_STATIC,7,3,302,98
+    LTEXT           "视频设备：",IDC_STATIC,11,120,84,8
+    LTEXT           "视频帧率：",IDC_STATIC,11,136,84,8
+    LTEXT           "视频码流：",IDC_STATIC,11,152,84,8
+    LTEXT           "视频编码：",IDC_STATIC,11,169,84,8
+    LTEXT           "视频格式：",IDC_STATIC,11,185,84,8
+    GROUPBOX        "辅流视频设置",IDC_STATIC,7,106,302,98
+END
+
+IDD_DIALOG_CALL_INFO DIALOGEX 0, 0, 316, 274
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "呼叫信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_STATIC_LOCAL_VIDEO_INFO,14,17,288,58,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_REMOTE_LOCAL_VIDEO_INFO,14,100,288,58,0,WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "确定",IDOK,205,253,50,14
+    PUSHBUTTON      "取消",IDCANCEL,259,253,50,14
+    LTEXT           "",IDC_SECOND_VIDEO_INFO,14,183,288,58,0,WS_EX_STATICEDGE
+    GROUPBOX        "本地视频",IDC_STATIC,7,3,302,79
+    GROUPBOX        "远程视频",IDC_STATIC,7,86,302,79
+    GROUPBOX        "辅流视频",IDC_STATIC,7,169,302,79
+END
+
+IDD_DIALOG_SECOND_VIDEO DIALOGEX 0, 0, 316, 180
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_DIALPAD DIALOGEX 0, 0, 165, 86
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dial Pad"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "1",IDC_BUTTON1,7,7,50,18
+    PUSHBUTTON      "2",IDC_BUTTON2,58,7,50,18
+    PUSHBUTTON      "3",IDC_BUTTON3,108,7,50,18
+    PUSHBUTTON      "4",IDC_BUTTON4,7,25,50,18
+    PUSHBUTTON      "5",IDC_BUTTON5,58,25,50,18
+    PUSHBUTTON      "6",IDC_BUTTON6,108,25,50,18
+    PUSHBUTTON      "7",IDC_BUTTON7,7,43,50,18
+    PUSHBUTTON      "8",IDC_BUTTON8,58,43,50,18
+    PUSHBUTTON      "9",IDC_BUTTON9,108,43,50,18
+    PUSHBUTTON      "*",IDC_BUTTON_STAR,7,61,50,18
+    PUSHBUTTON      "0",IDC_BUTTON0,58,61,50,18
+    PUSHBUTTON      "#",IDC_BUTTON12,108,61,50,18
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "ConferenceCallTest.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "ConferenceCallTest.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_IMXECTEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 464
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_DIALOG_CALL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 61
+    END
+
+    IDD_DIALOG_VIDEO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_DIALOG_NETWORK_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_DIALOG_AUDIO_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_DIALOG_VIDEO_SETTING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+
+    IDD_DIALOG_CALL_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_DIALOG_SECOND_VIDEO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_DIALOG_DIALPAD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 158
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\ConferenceCallTest.rc2"  // ??è? Microsoft Visual C++ ?¨¤?§?è?-|¨???¨￠?§o???
+#include "l.CHS\afxres.rc"      // ?¨¤?§o?¨￠??¨￠?§|?t
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

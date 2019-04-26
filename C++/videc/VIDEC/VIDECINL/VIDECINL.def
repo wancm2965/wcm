@@ -1,0 +1,12 @@
+; VIDECINL.def : 声明 DLL 的模块参数。
+
+LIBRARY      "VIDECINL"
+
+EXPORTS
+    VIDECINL_EncoderSetMaxCount
+    VIDECINL_EncoderTry
+    VIDECINL_EncoderOpen
+    VIDECINL_EncoderClose
+    VIDECINL_EncoderEncoding
+
+    

@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C18E98BD-7922-4D47-A986-1368620E0152}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>VIDEC_avc</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_NONSTDC_NO_WARNINGS;NDEBUG;_WINDOWS;HAVE_AV_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../../inc;../../../src;C:\Program Files (x86)\Visual Leak Detector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_NONSTDC_NO_WARNINGS;NDEBUG;_WINDOWS;HAVE_AV_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../../inc;../../../src;C:\Program Files (x86)\Visual Leak Detector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>../../../../../bin/x64d/$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>../../../../../lib/x64d/VIDEC_avc.lib</ImportLibrary>
+      <ModuleDefinitionFile>.\avc.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;VIDEC_AVC_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;VIDEC_AVC_EXPORTS;HAVE_AV_CONFIG_H;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../../inc;../../../src;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Visual Leak Detector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>../../../../../bin/x64r/$(TargetName)$(TargetExt)</OutputFile>
+      <ModuleDefinitionFile>.\avc.def</ModuleDefinitionFile>
+      <ImportLibrary>../../../../../lib/x64r/VIDEC_avc.lib</ImportLibrary>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\aandcttab.c" />
+    <ClCompile Include="..\..\..\src\allcodecs.c" />
+    <ClCompile Include="..\..\..\src\avc.c" />
+    <ClCompile Include="..\..\..\src\avstring.c" />
+    <ClCompile Include="..\..\..\src\bitstream.c" />
+    <ClCompile Include="..\..\..\src\cabac.c" />
+    <ClCompile Include="..\..\..\src\crc.c" />
+    <ClCompile Include="..\..\..\src\dsputil.c" />
+    <ClCompile Include="..\..\..\src\error_resilience.c" />
+    <ClCompile Include="..\..\..\src\eval.c" />
+    <ClCompile Include="..\..\..\src\faandct.c" />
+    <ClCompile Include="..\..\..\src\golomb.c" />
+    <ClCompile Include="..\..\..\src\h263.c" />
+    <ClCompile Include="..\..\..\src\h263dec.c" />
+    <ClCompile Include="..\..\..\src\h263_parser.c" />
+    <ClCompile Include="..\..\..\src\h264.c" />
+    <ClCompile Include="..\..\..\src\h264idct.c" />
+    <ClCompile Include="..\..\..\src\h264pred.c" />
+    <ClCompile Include="..\..\..\src\h264_parser.c" />
+    <ClCompile Include="..\..\..\src\imgconvert.c" />
+    <ClCompile Include="..\..\..\src\jfdctfst.c" />
+    <ClCompile Include="..\..\..\src\jfdctint.c" />
+    <ClCompile Include="..\..\..\src\jrevdct.c" />
+    <ClCompile Include="..\..\..\src\log.c" />
+    <ClCompile Include="..\..\..\src\lzo.c" />
+    <ClCompile Include="..\..\..\src\mathematics.c" />
+    <ClCompile Include="..\..\..\src\mem.c" />
+    <ClCompile Include="..\..\..\src\mjpeg.c" />
+    <ClCompile Include="..\..\..\src\mjpegdec.c" />
+    <ClCompile Include="..\..\..\src\mjpegenc.c" />
+    <ClCompile Include="..\..\..\src\motion_est.c" />
+    <ClCompile Include="..\..\..\src\mpegvideo.c" />
+    <ClCompile Include="..\..\..\src\mpegvideo_enc.c" />
+    <ClCompile Include="..\..\..\src\options.c" />
+    <ClCompile Include="..\..\..\src\parser.c" />
+    <ClCompile Include="..\..\..\src\random_seed.c" />
+    <ClCompile Include="..\..\..\src\ratecontrol.c" />
+    <ClCompile Include="..\..\..\src\rational.c" />
+    <ClCompile Include="..\..\..\src\ravepostproc.c" />
+    <ClCompile Include="..\..\..\src\simple_idct.c" />
+    <ClCompile Include="..\..\..\src\utils.c" />
+    <ClCompile Include="..\..\..\src\w32thread.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\avc.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\aandcttab.h" />
+    <ClInclude Include="..\..\..\src\avcodec.h" />
+    <ClInclude Include="..\..\..\src\avstring.h" />
+    <ClInclude Include="..\..\..\src\avutil.h" />
+    <ClInclude Include="..\..\..\src\bitstream.h" />
+    <ClInclude Include="..\..\..\src\bswap.h" />
+    <ClInclude Include="..\..\..\src\bytestream.h" />
+    <ClInclude Include="..\..\..\src\cabac.h" />
+    <ClInclude Include="..\..\..\src\common.h" />
+    <ClInclude Include="..\..\..\src\config.h" />
+    <ClInclude Include="..\..\..\src\config_postproc.h" />
+    <ClInclude Include="..\..\..\src\cpudetect.h" />
+    <ClInclude Include="..\..\..\src\crc.h" />
+    <ClInclude Include="..\..\..\src\crc_data.h" />
+    <ClInclude Include="..\..\..\src\dsputil.h" />
+    <ClInclude Include="..\..\..\src\eval.h" />
+    <ClInclude Include="..\..\..\src\faandct.h" />
+    <ClInclude Include="..\..\..\src\faanidct.h" />
+    <ClInclude Include="..\..\..\src\fastmemcpy.h" />
+    <ClInclude Include="..\..\..\src\get_bits.h" />
+    <ClInclude Include="..\..\..\src\golomb.h" />
+    <ClInclude Include="..\..\..\src\h263.h" />
+    <ClInclude Include="..\..\..\src\h263data.h" />
+    <ClInclude Include="..\..\..\src\h263_parser.h" />
+    <ClInclude Include="..\..\..\src\h264.h" />
+    <ClInclude Include="..\..\..\src\h264data.h" />
+    <ClInclude Include="..\..\..\src\h264pred.h" />
+    <ClInclude Include="..\..\..\src\h264_parser.h" />
+    <ClInclude Include="..\..\..\src\imgconvert.h" />
+    <ClInclude Include="..\..\..\src\internal.h" />
+    <ClInclude Include="..\..\..\src\intreadwrite.h" />
+    <ClInclude Include="..\..\..\src\lfg.h" />
+    <ClInclude Include="..\..\..\src\lls.h" />
+    <ClInclude Include="..\..\..\src\log.h" />
+    <ClInclude Include="..\..\..\src\lzo.h" />
+    <ClInclude Include="..\..\..\src\mangle.h" />
+    <ClInclude Include="..\..\..\src\mathematics.h" />
+    <ClInclude Include="..\..\..\src\mathops.h" />
+    <ClInclude Include="..\..\..\src\md5.h" />
+    <ClInclude Include="..\..\..\src\mem.h" />
+    <ClInclude Include="..\..\..\src\mjpeg.h" />
+    <ClInclude Include="..\..\..\src\mjpegdec.h" />
+    <ClInclude Include="..\..\..\src\mjpegenc.h" />
+    <ClInclude Include="..\..\..\src\mpeg12data.h" />
+    <ClInclude Include="..\..\..\src\mpeg4data.h" />
+    <ClInclude Include="..\..\..\src\mpegvideo.h" />
+    <ClInclude Include="..\..\..\src\mpegvideo_common.h" />
+    <ClInclude Include="..\..\..\src\parser.h" />
+    <ClInclude Include="..\..\..\src\postprocess_internal.h" />
+    <ClInclude Include="..\..\..\src\put_bits.h" />
+    <ClInclude Include="..\..\..\src\random.h" />
+    <ClInclude Include="..\..\..\src\random_seed.h" />
+    <ClInclude Include="..\..\..\src\ratecontrol.h" />
+    <ClInclude Include="..\..\..\src\rational.h" />
+    <ClInclude Include="..\..\..\src\rectangle.h" />
+    <ClInclude Include="..\..\..\src\rl.h" />
+    <ClInclude Include="..\..\..\src\simple_idct.h" />
+    <ClInclude Include="..\..\..\src\timer.h" />
+    <ClInclude Include="..\..\..\src\unary.h" />
+    <ClInclude Include="..\..\..\src\x86_cpu.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

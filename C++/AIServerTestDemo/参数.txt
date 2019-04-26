@@ -10,3 +10,9 @@ http://192.168.0.234:8088/ai/facecollect
 
 ²É¼¯
 {"user_id":"wcm","data":"3","datalen":"2","width":"1920","height":"1080","aligned":"0"}
+
+
+
+192.168.0.157   54164  V1:1782403106  A2:2238653496  0-80D8E086-37FE2CA5@jx   MCU-001@jx  192.168.1.209  4222
+
+http://192.168.0.234:8088/ai/stoprecogntion
