@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVCONWB", "AVCONWB\AVCONWB.vcproj", "{BDC2B4FA-FF7E-4DA7-9983-54BD6B6C1EEB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PLCore", "..\PLCore\PLCore\PLCore.vcproj", "{1A597613-A03F-4796-9B93-4A4B7AC1753B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Plugin_WB_Main", "Plugin_WB_Main\Plugin_WB_Main.vcproj", "{BCE25016-C07F-407F-A99F-D7C6B33774C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDC2B4FA-FF7E-4DA7-9983-54BD6B6C1EEB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BDC2B4FA-FF7E-4DA7-9983-54BD6B6C1EEB}.Debug|Win32.Build.0 = Debug|Win32
+		{BDC2B4FA-FF7E-4DA7-9983-54BD6B6C1EEB}.Release|Win32.ActiveCfg = Release|Win32
+		{BDC2B4FA-FF7E-4DA7-9983-54BD6B6C1EEB}.Release|Win32.Build.0 = Release|Win32
+		{1A597613-A03F-4796-9B93-4A4B7AC1753B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1A597613-A03F-4796-9B93-4A4B7AC1753B}.Debug|Win32.Build.0 = Debug|Win32
+		{1A597613-A03F-4796-9B93-4A4B7AC1753B}.Release|Win32.ActiveCfg = Release|Win32
+		{1A597613-A03F-4796-9B93-4A4B7AC1753B}.Release|Win32.Build.0 = Release|Win32
+		{BCE25016-C07F-407F-A99F-D7C6B33774C6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BCE25016-C07F-407F-A99F-D7C6B33774C6}.Debug|Win32.Build.0 = Debug|Win32
+		{BCE25016-C07F-407F-A99F-D7C6B33774C6}.Release|Win32.ActiveCfg = Release|Win32
+		{BCE25016-C07F-407F-A99F-D7C6B33774C6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

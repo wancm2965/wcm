@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<lang name="language">
+    <language language="zh-CN">
+        <Plugin name="LANGUAGE">
+            <string name="DLG_TITLE_OPEN" value="打开文件" />
+            <string name="BTN_OPEN" value="打开" />
+            <string name="DLG_TITLE_SAVE" value="保存文件" />
+            <string name="BTN_SAVE" value="保存" />
+            <string name="CONTROL_INIT_FAILED" value="文件类型格式错误" />
+            <string name="FILESHARE_ALL_FILE" value="所有文件(*.*)" />
+            <string name="FILEERROR_NAMETOOLONG" value="文件名太长!" />
+            <string name="FILEERROR_UNABLEOPEN" value="无法打开该目录" />
+            <string name="FILEERROR_NAMEEMPTY_UNABLESAVE" value="文件名为空，无法保存!" />
+            <string name="FILEERROR_UNABLESAVE_RETRAY" value="无法将文件保存在选择的目录，请重新选择!" />
+            <string name="FILEERROR_NAMEILLEGAL" value="文件名含有非法字符!" />
+            <string name="FILESHARE_RECENTDOC" value="最近文档" />
+            <string name="FILESHARE_MYDOC" value="我的文档" />
+            <string name="FILESHARE_DESKTOP" value="桌面" />
+            <string name="FILESHARE_MYCOMPUTER" value="我的电脑" />
+            <string name="FILESHARE_VOLUME" value="可移动磁盘" />
+            <string name="FILE_NEWFOLDER" value="新建文件夹" />
+            <string name="FILEEROR_FILEEXIST_ASK" value="文件存在，要替换它吗？" />
+            <string name="BTN_UPWARD" value="向上" />
+            <string name="BTN_NEWF" value="新建" />
+            <string name="BTN_CANCEL" value="取消" />
+            <string name="BTN_CLOSE" value="关闭" />
+            <string name="LBL_SEARCH" value="查找范围" />
+            <string name="LBL_FILENAME" value="文件名" />
+            <string name="LBL_FILENAME1" value="文件名：" />
+            <string name="LBL_FILETYPE" value="文件类型：" />
+            <string name="LBL_ICON" value="图标" />
+            <string name="LBL_FILESIZE" value="文件大小" />
+            <string name="MY_COMPUTER" value="我的电脑" />
+        </Plugin>
+    </language>
+    <language language="en-US">
+        <Plugin name="LANGUAGE">
+            <string name="DLG_TITLE_OPEN" value="Open" />
+            <string name="BTN_OPEN" value="Open" />
+            <string name="DLG_TITLE_SAVE" value="Save" />
+            <string name="BTN_SAVE" value="Save" />
+            <string name="CONTROL_INIT_FAILED" value="File format error." />
+            <string name="FILESHARE_ALL_FILE" value="All files(*.*)" />
+            <string name="FILEERROR_NAMETOOLONG" value="File name too long!" />
+            <string name="FILEERROR_UNABLEOPEN" value="Unable to open the directory" />
+            <string name="FILEERROR_NAMEEMPTY_UNABLESAVE" value="File name is empty, cannot save!" />
+            <string name="FILEERROR_UNABLESAVE_RETRAY" value="Cannot save the file in the choice of the directory, please select again!" />
+            <string name="FILEERROR_NAMEILLEGAL" value="File name contains illegal characters!" />
+            <string name="FILESHARE_RECENTDOC" value="Recent documents" />
+            <string name="FILESHARE_MYDOC" value="My documents" />
+            <string name="FILESHARE_DESKTOP" value="Desktop" />
+            <string name="FILESHARE_MYCOMPUTER" value="Computer" />
+            <string name="FILESHARE_VOLUME" value="Removable disk" />
+            <string name="FILE_NEWFOLDER" value="New folder" />
+            <string name="FILEEROR_FILEEXIST_ASK" value="File exists, do you want to replace it?" />
+            <string name="BTN_UPWARD" value="Goback" />
+            <string name="BTN_NEWF" value="NewFile" />
+            <string name="BTN_CANCEL" value="Cancel" />
+            <string name="BTN_CLOSE" value="Close" />
+            <string name="LBL_SEARCH" value="Search" />
+            <string name="LBL_FILENAME" value="FileName" />
+            <string name="LBL_FILENAME1" value="FileName：" />
+            <string name="LBL_FILETYPE" value="FileType：" />
+            <string name="LBL_ICON" value="Icon" />
+            <string name="LBL_FILESIZE" value="FileSize" />
+            <string name="MY_COMPUTER" value="My computer" />
+        </Plugin>
+    </language>
+</lang>

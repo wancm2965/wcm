@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="150,500">
+  <VerticalLayout width="150" height="500" bkcolor="#FF1C1C1C"  bkcolor2="#FF1A1A1A"  bordercolor="#104E8B">
+    <HorizontalLayout name="HorizontalLayoutUI1"  height="30">
+
+      <HorizontalLayout name="HorizontalLayoutUI5" width="95" height="21">
+      </HorizontalLayout>
+
+      <HorizontalLayout name="HorizontalLayoutUI2" width="21" height="21">
+        <Button name="ButtonAdd" text="" tooltip="添加" width="21" height="21"      normalimage="file='add.png' source='0,0,21,21'" hotimage="file='add.png' source='21,0,42,21'" />
+      </HorizontalLayout>
+
+      <HorizontalLayout name="HorizontalLayoutUI3" width="10" height="21">
+      </HorizontalLayout>
+
+      <HorizontalLayout name="HorizontalLayoutUI4" width="21" height="21">
+        <Button name="ButtonDelete" text="" tooltip="删除选中项" width="21" height="21"      normalimage="file='delete.png' source='0,0,21,21'" hotimage="file='delete.png' source='21,0,42,21'" pushedimage="file='delete.png' source='42,0,63,21'"/>
+      </HorizontalLayout>
+
+    </HorizontalLayout>
+
+    <List name ="ListUI1" width="150" height="500" float="false" bkcolor="#FF121212"  bkcolor2="#FF1A1A1A" itemtextcolor="#7A7A7A" itemselectedtextcolor="#00FFFF" itemhotbkcolor="#FF3B3B3B" itemhottextcolor="#FF545454" itemselectedbkcolor="#009ACD" itemlinecolor="#FF2E2E2E" scrollselect="true" mouse="false" vscrollbar="true">
+      <ListHeader text="" height="0" visible="false" borderround="2,2">
+        <ListHeaderItem text="" extcolor="#FF4D4D4D"/>
+      </ListHeader>
+    </List >
+
+  </VerticalLayout>
+</Window>

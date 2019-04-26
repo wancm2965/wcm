@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\RegularDllCallDlg.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\RegularDllCallDlg.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_More.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_File.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Page.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Select.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Line.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_Curve.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Graphics.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_PictureLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Pen.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Rubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Delete.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Undo.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Redo.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_FullScreen.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Text.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_Picture.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_NewFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_OpenFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_SaveFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_ReSaveFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_PringFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_CloseFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\page\IDC_WB_NewPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\page\IDC_WB_ForePage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\page\IDC_WB_NextPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\page\IDC_WB_FirstPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\page\IDC_WB_LastPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pictureLayer\IDB_WB_ForeLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pictureLayer\IDB_WB_TOPLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pictureLayer\IDB_WB_BottonLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pictureLayer\IDB_WBNextLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\rubber\IDB_WB_LitterRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\rubber\IDB_WB_BigRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\rubber\IDB_WB_SingleObjectRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\rubber\IDB_WB_CurveSelectRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\graphics\IDB_WB_Rectangle.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\graphics\IDB_WB_Round.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\graphics\IDB_WB_Triangle.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\graphics\IDB_WB_Rhombus.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\graphics\IDB_WB_Polygon.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\char\IDB_WB_Text.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\char\IDB_WB_Font.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_Video.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_CutScreen.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_Document.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Flash.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_ResourceCategory.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_UCC.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\type\IDB_WB_LineType1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\type\IDB_WB_LineType2.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\type\IDB_WB_LineType3.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\type\IDB_WB_LineType4.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\type\IDB_WB_LineType5.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_ArrowLeft.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_ArrowRight.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_ArrowLR.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth2.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth3.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth4.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth5.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth6.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth7.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor1.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor2.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor3.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor4.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor5.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor6.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\TEST\ID_UCC.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\TEST\IDUndo.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RegularDllCallDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RegularDllCallDlgDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FullMenuDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="RegularDllCallDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RegularDllCallDlgDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FullMenuDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RegularDllCallDlg.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

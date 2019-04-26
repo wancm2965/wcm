@@ -1,0 +1,1 @@
+<Config>	<Plugin>		<Name>Plugin_WB_Main</Name> 		<ExtendPoint>AVCONPlugin::IPlugin_WB_Main</ExtendPoint>		<Dll>Plugin_WB_Main.dll</Dll>	</Plugin></Config>

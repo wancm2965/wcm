@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="300,39">
+    <VerticalLayout width="300" height="39" bkcolor="0xFF000000">
+      <HorizontalLayout width="300" height="5"/>
+        <HorizontalLayout width="300" height="29">
+            <HorizontalLayout width="179" height="29" bkimage ="AVCON.png"/>
+        </HorizontalLayout>
+      <HorizontalLayout width="300" height="5"/>
+    </VerticalLayout>
+</Window>

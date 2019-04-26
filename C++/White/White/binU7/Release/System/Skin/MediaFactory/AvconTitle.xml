@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1440,50">
+  <HorizontalLayout width="1440" height="50" bkcolor="#FF2B2B2B">
+    <VerticalLayout>
+      <HorizontalLayout height="5"/>
+      <HorizontalLayout width="100" height="15">
+        <HorizontalLayout width="97" height="15" bkimage="AVCON.png" />
+      </HorizontalLayout>
+    </VerticalLayout>
+    <Button name="ButtonUI_CLOSE" tooltip="关闭" width="39" height="29" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="center"
+                normalimage="file='exit.png' source='0,0,39,29'"
+                hotimage="file='exit.png' source='39,0,78,29'"/>
+  </HorizontalLayout>
+</Window>

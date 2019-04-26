@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="130,105">
+    <Font name="微软雅黑" size="12" bold="false" italic="false" default="true" />
+    <VerticalLayout width="128" height="105" bkimage="file=&apos;menubk.png&apos; source=&apos;0,0,58,23&apos; corner=&apos;26,3,3,3&apos;">
+        <HorizontalLayout width="126" height="2" />
+        <HorizontalLayout width="126" height="25">
+            <VerticalLayout width="25" height="25">
+                <Option name="OptCirculation" width="25" height="25" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="left" selectedimage="RBtnClick.png" />
+            </VerticalLayout>
+            <Button name="BtnCirculation" text="循环播放" height="25" textpadding="3,0,0,0" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="left" />
+        </HorizontalLayout>
+        <HorizontalLayout width="126" height="25">
+            <VerticalLayout width="25" height="25">
+                <Option name="OptSmoothShow" width="25" height="25" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="left" selectedimage="RBtnClick.png" />
+            </VerticalLayout>
+            <Button name="BtnSmoothShow" text="视频平滑显示" height="25" textpadding="3,0,0,0" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="left" />
+        </HorizontalLayout>
+	<HorizontalLayout width="126" height="1">
+	    <HorizontalLayout width="25" height="1" />
+	    <Label width="80" height="2" bkimage="file=&apos;splitmenu.png&apos; source=&apos;0,0,70,2&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" />
+	</HorizontalLayout>
+	<HorizontalLayout width="126" height="25">
+            <VerticalLayout width="25" height="25">
+                <Option name="OptFrameFill" width="25" height="25" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="left" selectedimage="RBtnClick.png" />
+            </VerticalLayout>
+            <Button name="BtnFrameFill" text="画面填充效果" height="25" textpadding="3,0,0,0" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="left" />
+        </HorizontalLayout>
+        <HorizontalLayout width="126" height="25">
+            <VerticalLayout width="25" height="25">
+                <Option name="OptFrameAuto" width="25" height="25" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="left" selectedimage="RBtnClick.png" />
+            </VerticalLayout>
+            <Button name="BtnFrameAuto" text="画面比例显示" height="25" textpadding="3,0,0,0" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="left" />
+        </HorizontalLayout>
+        <HorizontalLayout width="126" height="2" />
+    </VerticalLayout>
+</Window>

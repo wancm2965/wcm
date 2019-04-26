@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="340,570" caption="0,0,0,44" roundcorner="6,6">
+    <Default name="VScrollBar" value="button1normalimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;0,90,16,106&apos;&quot; button1hotimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;18,90,34,106&apos;&quot; button1pushedimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;36,90,52,106&apos;&quot; button1disabledimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;54,90,70,106&apos;&quot; button2normalimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;0,108,16,124&apos;&quot; button2hotimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;18,108,34,124&apos;&quot; button2pushedimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;36,108,52,124&apos;&quot; button2disabledimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;54,108,70,124&apos;&quot; thumbnormalimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;0,126,16,142&apos; corner=&apos;2,2,2,2&apos;&quot; thumbhotimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;18,126,34,142&apos; corner=&apos;2,2,2,2&apos;&quot; thumbpushedimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;36,126,52,142&apos; corner=&apos;2,2,2,2&apos;&quot; thumbdisabledimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;54,126,70,142&apos; corner=&apos;2,2,2,2&apos;&quot; railnormalimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;0,144,16,160&apos; corner=&apos;2,2,2,2&apos;&quot; railhotimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;18,144,34,160&apos; corner=&apos;2,2,2,2&apos;&quot; railpushedimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;36,144,52,160&apos; corner=&apos;2,2,2,2&apos;&quot; raildisabledimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;54,144,70,160&apos; corner=&apos;2,2,2,2&apos;&quot; bknormalimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;0,162,16,178&apos; corner=&apos;2,2,2,2&apos;&quot; bkhotimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;18,162,34,178&apos; corner=&apos;2,2,2,2&apos;&quot; bkpushedimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;36,162,52,178&apos; corner=&apos;2,2,2,2&apos;&quot; bkdisabledimage=&quot;file=&apos;..\CommRes\ScrollBar.png&apos; source=&apos;54,162,70,178&apos; corner=&apos;2,2,2,2&apos;&quot;" />
+	<Font name="微软雅黑" size="17" bold="false" default="true" />
+	<Font name="微软雅黑" size="12" bold="false" />
+    <VerticalLayout name="VLayoutBack" bkcolor="#ffe9f3fa" bordercolor="#0099B7D9" bordersize="1">
+        <HorizontalLayout name="HLayoutTitle" height="40" bkimage="file=&apos;..\CommRes\DialogBg_Title.png&apos; corner=&apos;10,0,10,0&apos;">
+            <HorizontalLayout name="HLayoutText" height="40">
+                <Label name="lblTitle" text="会议列表" float="true" pos="50,0,0,0" width="175" height="40" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" />
+                <Label name="lblIcon" float="true" pos="10,0,0,0" width="40" height="40" bkimage="IconMeeting.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            </HorizontalLayout>
+            <HorizontalLayout name="HLayoutLogout" width="80" height="40">
+                <Button name="btnLogout" text="注销" float="true" keyboard="false" pos="0,5,0,0" width="80" height="30" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;..\CommRes\Btn.png&apos; dest=&apos;0,0,80,30&apos; source=&apos;0,0,80,30&apos;" hotimage="file=&apos;..\CommRes\Btn.png&apos; dest=&apos;0,0,80,30&apos; source=&apos;80,0,160,30&apos;" pushedimage="file=&apos;..\CommRes\Btn.png&apos; dest=&apos;0,0,80,30&apos; source=&apos;160,0,240,30&apos;" disabledimage="file=&apos;..\CommRes\Btn.png&apos; dest=&apos;0,0,80,30&apos; source=&apos;240,0,320,30&apos;" />
+            </HorizontalLayout>
+			<HorizontalLayout width="8"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="10" />
+        <HorizontalLayout>
+            <HorizontalLayout width="10" />
+            <Container name="ContainerClient" relativepos="0,0,100,100" bkcolor="#ffe9f3fa" >
+				<Tree name="meetings" float="true" itemshowhtml="true" relativepos="0,0,100,100" vscrollbar="true"/>
+            </Container>
+            <HorizontalLayout width="10" />
+        </HorizontalLayout>
+        <HorizontalLayout name="HLayoutBottom" height="5" />
+    </VerticalLayout>
+</Window>

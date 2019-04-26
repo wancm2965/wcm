@@ -1,0 +1,7 @@
+<Config>
+	<Plugin>
+		<Name>Plugin_U7T_TipWindow</Name> 
+		<ExtendPoint>AVCONPlugin::IPlugin_U7T_TipWindow</ExtendPoint>
+		<Dll>Plugin_U7T_TipWindow.dll</Dll>
+	</Plugin>
+</Config>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="669,80" sizebox="4,4,6,6" roundcorner="4,4">
+  <Font name="微软雅黑" size="12" bold="false" italic="false" default="true" />
+  <VerticalLayout name="VerPlayerCtrol" height="80" bkimage="PlayCtrol.png" bkcolor="#FF060606">
+    <HorizontalLayout height="3" />
+    <HorizontalLayout height="10">
+      <Slider name="ProgressPlay" height="9" bkimage="file=&apos;progress0.png&apos; source=&apos;0,6,1440,9&apos;" relativepos="0,0,0,0" textcolor="#FFF0F0F0" disabledtextcolor="#00FFFBF0" align="center" foreimage="file=&apos;progress0.png&apos; source=&apos;0,1,1440,4&apos; corner=&apos;5,0,0,0&apos;" min="0" max="100" value="0" hor="true" thumbimage="file=&apos;Pro_thumb.png&apos; source=&apos;0,0,16,9&apos;" thumbhotimage="file=&apos;Pro_thumb.png&apos; source=&apos;16,0,32,9&apos;" thumbsize="16,9" />
+    </HorizontalLayout>
+    <HorizontalLayout height="3" />
+    <HorizontalLayout height="60">
+      <VerticalLayout width="59" height="60">
+        <VerticalLayout height="10"/>
+        <Text name="TxtVersion" width="50" height="40" text="" textcolor="#FFF0F0F0"/>
+      </VerticalLayout>
+      <HorizontalLayout height="60" />
+      <HorizontalLayout width="500" height="60">
+        <VerticalLayout width="230" height="60">
+          <HorizontalLayout width="230" height="12" />
+          <HorizontalLayout width="230" height="30">
+            <HorizontalLayout />
+            <HorizontalLayout width="10" />
+            <VerticalLayout width="115" height="30">
+              <HorizontalLayout height="7" />
+              <Text name="TextTime" width="115" height="16" minwidth="115" minheight="16" textpadding="2,0,2,0" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="wrap" />
+              <HorizontalLayout height="7" />
+            </VerticalLayout>
+            <HorizontalLayout width="30" height="30" />
+            <Button name="Btn_Stop" width="30" height="30" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;stop.png&apos; source=&apos;0,0,30,30&apos;" hotimage="file=&apos;stop.png&apos; source=&apos;30,0,60,30&apos;" pushedimage="file=&apos;stop.png&apos; source=&apos;60,0,90,30&apos;" disabledimage="file=&apos;stop.png&apos; source=&apos;90,0,120,30&apos;" />
+            <HorizontalLayout width="30" height="30" />
+          </HorizontalLayout>
+          <HorizontalLayout width="210" height="3" />
+        </VerticalLayout>
+        <Button name="Btn_Play" width="55" height="55" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;Play.png&apos; source=&apos;0,0,55,55&apos;" hotimage="file=&apos;Play.png&apos; source=&apos;55,0,110,55&apos;" pushedimage="file=&apos;Play.png&apos; source=&apos;110,0,165,55&apos;" disabledimage="file=&apos;Play.png&apos; source=&apos;165,0,220,55&apos;" />
+        <VerticalLayout width="230" height="40">
+          <HorizontalLayout width="230" height="12" />
+          <HorizontalLayout width="230" height="30">
+            <HorizontalLayout width="30" height="30" />
+            <Option name="Btn_AudioVol" width="28" height="31" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;Audio.png&apos; source=&apos;0,0,28,31&apos;" hotimage="file=&apos;Audio.png&apos; source=&apos;28,0,56,31&apos;" pushedimage="file=&apos;Audio.png&apos; source=&apos;56,0,84,31&apos;" disabledimage="file=&apos;Audio.png&apos; source=&apos;84,0,112,31&apos;" />
+            <HorizontalLayout width="20" height="30" />
+            <VerticalLayout width="100" height="30">
+              <HorizontalLayout height="13" />
+              <HorizontalLayout height="10">
+                <Slider name="VolSlider" width="65" height="6" bkimage="file=&apos;Vol.png&apos; source=&apos;1,4,66,7&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="center" foreimage="file=&apos;Vol.png&apos; source=&apos;1,0,66,3&apos;" min="0" max="100" value="0" hor="true" thumbimage="file=&apos;slider_thumb.png&apos; source=&apos;0,0,12,12&apos;" thumbhotimage="file=&apos;slider_thumb.png&apos; source=&apos;12,0,24,12&apos;" thumbsize="12,6" />
+              </HorizontalLayout>
+              <HorizontalLayout height="10" />
+            </VerticalLayout>
+          </HorizontalLayout>
+          <HorizontalLayout height="3" />
+        </VerticalLayout>
+      </HorizontalLayout>
+      <HorizontalLayout height="60" />
+      <HorizontalLayout width="50" height="60">
+        <VerticalLayout width="50" height="60">
+          <HorizontalLayout height="12"/>
+          <Button name="btn_fillscreen" width="39" height="31"
+                  normalimage="file='fill.png' source='0,0,39,31'"
+                  hotimage="file='fill.png' source='39,0,78,31'"
+                  pushedimage="file='fill.png' source='78,0,117,31'"
+                  disablediamge="file='fill.png' source='117,0,156,31'"/>
+          <HorizontalLayout height="29"/>
+        </VerticalLayout>
+      </HorizontalLayout>
+    </HorizontalLayout>
+    <HorizontalLayout height="4" />
+  </VerticalLayout>
+</Window>

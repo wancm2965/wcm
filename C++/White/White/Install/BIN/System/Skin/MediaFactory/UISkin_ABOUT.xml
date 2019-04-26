@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="290,202" roundcorner="4,4" caption="0,0,0,25">
+  <Container name="ContainerUI1" width="290" height="202" bkimage="file=&apos;PlayBK2.bmp&apos;">
+    <VerticalLayout width="290" height="202">
+      <HorizontalLayout width="290" height="25" bkcolor="FF222222">
+        <Label width="127" height="15" text="关于" textcolor="#FFF0F0F0" padding="3,5,0,0"/>
+        <Button name="Btn_Close" width="23" height="23" padding="135,1,0,0" 
+                normalimage="file='closesetting.png' source='0,0,23,23'" 
+                hotimage="file='closesetting.png' source='23,0,46,23'"/>
+      </HorizontalLayout>
+      <Label name="LabelUI2" text="Copyright 2012 AVCON All Rights Resverved." width="261" height="19" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" padding="5,40,0,0"/>
+      <Text name="TextUI_VER" text="版本号：1.1.0.20120307" width="189" height="15" textpadding="2,0,2,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="wrap" padding="5,20,0,0"/>
+      <Button name="ButtonUI_OK" text="确  定"  width="59" height="25" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" align="center" padding="220,50,0,0"
+              normalimage="file='listbutton.png' source='0,0,59,25'"
+              hotimage="file='listbutton.png' source='59,0,118,25'"
+              selectedimage="file='listbutton.png' source='118,0,177,25'"
+              disabledimage="file='listbutton.png' source='177,0,236,25'"/>
+    </VerticalLayout>
+  </Container>
+</Window>

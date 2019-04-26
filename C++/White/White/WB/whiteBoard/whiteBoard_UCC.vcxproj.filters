@@ -1,0 +1,1783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="WBMedia">
+      <UniqueIdentifier>{37e5ce13-6741-48c8-a4c9-b7057c5dd256}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WBRes">
+      <UniqueIdentifier>{a00447f2-dd0f-4081-8f6f-bca39d21d7bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MTTouch">
+      <UniqueIdentifier>{0c86a179-352b-4c23-b192-5bf35467f027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FunctionBoard">
+      <UniqueIdentifier>{92ad5269-2fdc-4596-aaf7-cd99bee08004}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="whiteBoard.def">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_More.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_File.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_Page.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_Select.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_Line.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDB_WB_Curve.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_Graphics.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDB_WB_PictureLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_Pen.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_Rubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_Delete.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_Undo.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_Redo.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_FullScreen.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDC_WB_Text.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDB_WB_Picture.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\file\IDC_WB_NewFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\file\IDC_WB_OpenFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\file\IDC_WB_SaveFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\file\IDC_WB_ReSaveFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\file\IDC_WB_PringFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\file\IDC_WB_CloseFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\page\IDC_WB_NewPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\page\IDC_WB_ForePage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\page\IDC_WB_NextPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\page\IDC_WB_FirstPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\page\IDC_WB_LastPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pictureLayer\IDB_WB_ForeLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pictureLayer\IDB_WB_TOPLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pictureLayer\IDB_WB_BottonLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pictureLayer\IDB_WBNextLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\rubber\IDB_WB_LitterRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\rubber\IDB_WB_BigRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\rubber\IDB_WB_SingleObjectRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\rubber\IDB_WB_CurveSelectRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\graphics\IDB_WB_Rectangle.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\graphics\IDB_WB_Round.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\graphics\IDB_WB_Triangle.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\graphics\IDB_WB_Rhombus.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\graphics\IDB_WB_Polygon.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\char\IDB_WB_Text.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\char\IDB_WB_Font.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\icon1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineType1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\icon1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineType2 .bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineType2.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineType3.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineType4.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineType5.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\arrow\IDB_WB_ArrowLeft.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\arrow\IDB_WB_ArrowRight.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\arrow\IDB_WB_ArrowLR.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\type\IDB_WB_LineType1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\type\IDB_WB_LineType2.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\type\IDB_WB_LineType3.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\type\IDB_WB_LineType4.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\type\IDB_WB_LineType5.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineWidth1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineWidth2.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineWidth3.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineWidth4.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineWidth5.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineWidth6.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\pen\width\IDB_WB_LineWidth7.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDB_WB_Video.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDB_WB_CutScreen.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\image\IDB_WB_Document.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_More.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_File.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Page.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Select.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Line.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_Curve.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Graphics.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_PictureLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Pen.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Rubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Delete.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Undo.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Redo.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_FullScreen.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Text.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_Picture.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_NewFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_OpenFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_SaveFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_ReSaveFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_PringFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\file\IDC_WB_CloseFile.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\page\IDC_WB_NewPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\page\IDC_WB_ForePage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\page\IDC_WB_NextPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\page\IDC_WB_FirstPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\page\IDC_WB_LastPage.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pictureLayer\IDB_WB_ForeLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pictureLayer\IDB_WB_TOPLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pictureLayer\IDB_WB_BottonLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pictureLayer\IDB_WBNextLayer.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\rubber\IDB_WB_LitterRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\rubber\IDB_WB_BigRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\rubber\IDB_WB_SingleObjectRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\rubber\IDB_WB_CurveSelectRubber.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\graphics\IDB_WB_Rectangle.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\graphics\IDB_WB_Round.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\graphics\IDB_WB_Triangle.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\graphics\IDB_WB_Rhombus.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\graphics\IDB_WB_Polygon.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\char\IDB_WB_Text.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\char\IDB_WB_Font.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_Video.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_CutScreen.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDB_WB_Document.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\type\IDB_WB_LineType1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\type\IDB_WB_LineType2.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\type\IDB_WB_LineType3.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\type\IDB_WB_LineType4.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\type\IDB_WB_LineType5.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_ArrowLeft.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_ArrowRight.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_ArrowLR.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth2.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth3.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth4.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth5.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth6.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\IDB_WB_LineWidth7.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor2.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor3.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor4.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor5.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor6.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_Flash.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_ResourceCategory.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\IDC_WB_UCC.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cursor7.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\arrow_m.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\bitmap3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\关闭.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\删除资源.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\添加资源.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\设置默认资源文件夹.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\关闭.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\删除资源.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\添加资源.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\设置默认资源文件夹.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\1.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\bitmap9.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\Catch.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\图片解锁.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\图片设置.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\图片锁定.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\图片旋转.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\图片移动.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\按下播放按钮.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\按下停止.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\按下循环.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\按下暂停.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\播放.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\皮肤.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\皮肤0.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\上一页.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\首页.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\停止.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\图片缩放.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\尾页.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\下一页.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\循环.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\已经停止.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\已经循环.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\暂停.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\left.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\icon1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Catch.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_NoArrow.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\截图.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\无限克隆.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_RoundL.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_RoundLR.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_roundr.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_squareL.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_squareLR.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_squarer.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Catch.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_NoArrow.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\截图.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\无限克隆.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\cur00001.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\aero_arrow.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\width\aero_link.cur">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\标注尖角.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_FONTBOLD.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_FONTNOTBOLD.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_FONTITALIC.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_FONTNOTITALIC.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_FONTNOTUNDERLINE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\IDB_WB_FONTUNDERLINE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\LeftHandle.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\TopHandle.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\RightHandle.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\BottomHandle.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Play2.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Play.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="PlayDown.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\PlayDown.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Play.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Pause .bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Play.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Pause .bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="DownPause.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="DownStop.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Pause.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Stop.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Stoped.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\DownPause.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\DownStop.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Pause.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Stop.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Stoped.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\DownPlay.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UnDownStop.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UnStop.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="UnStoped.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\UnDownStop.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\UnStop.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\UnStoped.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\EmptyMenuItem.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Cycle.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Cycle.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Speaker.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Speaker_Mute.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Speaker.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Speaker_Mute.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\CheckedMenuItem.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Screenshots.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\BaffleCloseBtn.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaLoop.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\NotSetMute.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\SetMute.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaFrameCapture.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaLoopDown.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaSinglePlay.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaSinglePlaydown.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\ID_OBMENU_PASTE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\bitmap4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\ID_OBMENU_SELECTALL.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\MAQNClose.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="image\MAQNClose2.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\MAQNClose2.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\FlashFrameCapture.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\FlashLoop.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\FlashLoopDown.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\FlashSinglePlay.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\FlashStop.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\FlashStopDown.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\FlashStoped.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_ANNOTATION.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_ATTRIBUTE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_BOTTPMLAYER.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_CHECKED.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_CLONE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_COMBINE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_COPY.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_CUT.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DEASIL45.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DEASIL90.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DELALL.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DELETE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DELETEBACKGROUND.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DOC_FIRSTPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DOC_LASTPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DOC_NEXTPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DOC_PREPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_EDIT.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_EQUALSCALEZOOM.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_INFINITECLONE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_LOCK.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_MEDIA_CATCHFRAME.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_MEDIA_NOSETMUTE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_MEDIA_SETMUTE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_MOVIE_CIRCLE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_MOVIE_PALY.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_MOVIE_PAUSE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_MOVIE_STOP.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_PASTE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_ROTATION180.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_SELECTALL.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_SETASBACKGROUND.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_TOPLAYER.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_UNCOMBINE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_UNDERLAYER.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_UNLOCK.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_UNSELECT.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_UPLAYER.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_WIDDERSHINS45.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_WIDDERSHINS90.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_PREVIEWDLG_DELETEPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_PREVIEWDLG_FIRSTPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_PREVIEWDLG_INSERTPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_PREVIEWDLG_LASTPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_PREVIEWDLG_NEWPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_PREVIEWDLG_NEXTPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_PREVIEWDLG_PREPAGE.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_ROTATION_HIRIZONTAL.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_ROTATION_VERTICAL.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\new皮肤.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_AUDIOSET.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_VIDEOSET.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\FolderClosed.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\pen\arrow\icon2.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\FolderOpened.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\DocConvertTip.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\DocTip.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_WATERF.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_WATERT.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\光标.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\取消光标.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\DownPause.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\DownPlay.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaCtrlBG.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaFrameCapture.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaLoop.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaLoopDown.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaSinglePlay.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaSinglePlaydown.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaStop.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\MediaStoped.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\NotSetMute.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\Pause.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\SetMute.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="common\WBMedia\StopDown.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\Cursor.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\CancelCursor.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DOC_PRINTCUR.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Menu\IDB_OBMENU_DOC_PRINTALL.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\DocTipEN.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\PushPlay.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\PushPause.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Play.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\NewSkin.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\PrePage.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\FirstPage.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Unlock.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Set.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Zoom.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Lock.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Rotation.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\BottomPage.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\NextPage.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Pause.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Clone.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\Annotations.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\PrintCurPage.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\image\1.cur">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="whiteBoard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WhiteBoardDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBFullDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\define.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\exec.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WBCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WBData.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBTextAttributeDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XYIniReader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CShockwaveFlash.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTracker.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CatchScreenDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shai\AVDataPacket.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="shai\XMemIni.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapTabCtr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageEx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WndVedio.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WMBtn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBPreviewView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AlphaDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenDrawDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawCtl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LayeredWindowHelperST.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WhiteBoardView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotlightDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBAttributeStatic.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBImageSliderCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WBMedia\AVCapture.cpp">
+      <Filter>WBMedia</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WBMedia\Markup.cpp">
+      <Filter>WBMedia</Filter>
+    </ClCompile>
+    <ClCompile Include="TransparentButtonEx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBFileDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBGraphicsDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBLineDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBResourseBarDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBRubberDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBTextDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBToolbarCtrlDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBToolbarDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WBMedia\WBWindows.cpp">
+      <Filter>WBMedia</Filter>
+    </ClCompile>
+    <ClCompile Include="WBColorPaletteDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBColorPatetteBtn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBToolboxDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBPromptFontSetDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBRedoAndUndoDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBPageDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WBMedia\WBGlobalMediaCtrl.cpp">
+      <Filter>WBMedia</Filter>
+    </ClCompile>
+    <ClCompile Include="WBDesktopDrawDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBToolDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WBMedia\DlgCameraAudioSetting.cpp">
+      <Filter>WBMedia</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WBMedia\DlgCameraVideoSetting.cpp">
+      <Filter>WBMedia</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WBMedia\DlgCamera.cpp">
+      <Filter>WBMedia</Filter>
+    </ClCompile>
+    <ClCompile Include="WBRichEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBRNameEdit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MySliderControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBImageSliderControl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBToolTip.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBEagelEye.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBPreviewSingleView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBAboutDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UndoRedo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XAutoLock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XCritSec.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XBufferPool.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XDataBuffer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XListPtr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MedioVideoScreenDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyBitMap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgPrintLoadingMsg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBFullScreen.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Track.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WVedio.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MTAuthorize.cpp">
+      <Filter>MTTouch</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewMTObject.cpp">
+      <Filter>MTTouch</Filter>
+    </ClCompile>
+    <ClCompile Include="WBResFunc.cpp">
+      <Filter>WBRes</Filter>
+    </ClCompile>
+    <ClCompile Include="CWaterRoutine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DIBSectionLite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SemiTransWnd.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Transparent_Dlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBFunctionBtn.cpp">
+      <Filter>FunctionBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="WBMTObject.cpp">
+      <Filter>MTTouch</Filter>
+    </ClCompile>
+    <ClCompile Include="WBBackgroundDlg.cpp">
+      <Filter>FunctionBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="WBDesignFillPad.cpp">
+      <Filter>FunctionBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="WBFillPadBtn.cpp">
+      <Filter>FunctionBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="WBFunctionAttributeDlg.cpp">
+      <Filter>FunctionBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="WBFunctionDlg.cpp">
+      <Filter>FunctionBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="WBPreviewDlg.cpp">
+      <Filter>FunctionBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="WBOptionDlg.cpp">
+      <Filter>FunctionBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="ScreenDrawMgr.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LimitLocalObjOperate.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBMTDrawObjectTally.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TouchAPI.cpp">
+      <Filter>MTTouch</Filter>
+    </ClCompile>
+    <ClCompile Include="WBTeachToolDlg.cpp">
+      <Filter>FunctionBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="MyDropTarget.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBRollCallDialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBRollCallShowDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonCloseDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBFunctionResDlg.cpp">
+      <Filter>FunctionBoard</Filter>
+    </ClCompile>
+    <ClCompile Include="common\WBMedia\CameraSettingIni.cpp">
+      <Filter>WBMedia</Filter>
+    </ClCompile>
+    <ClCompile Include="tstring.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="WBSavePictureDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="whiteBoard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WhiteBoardDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBFullDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WhiteBoardView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\exec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBCtrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBData.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBTextAttributeDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XYIniReader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CShockwaveFlash.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyTracker.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CatchScreenDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="shai\AVDataPacket.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="shai\XMemIni.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapTabCtr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageEx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WndVedio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WMBtn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBPreviewView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AlphaDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenDrawDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawCtl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LayeredWindowHelperST.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SpotlightDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBAttributeStatic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBImageSliderCtrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\AVCapture.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\AVDefine.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\Markup.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="TransparentButtonEx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBFileDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBGraphicsDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBLineDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBResourseBarDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBRubberDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBTextDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBToolbarCtrlDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBToolbarDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\ResourceWBMedia.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\WBWindows.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="WBColorPaletteDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBColorPatetteBtn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBToolboxDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBPromptFontSetDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBRedoAndUndoDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBPageDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\WBGlobalMediaCtrl.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="WBDesktopDrawDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBToolDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\DlgCameraVideoSetting.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\DlgCameraAudioSetting.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\DlgCamera.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\CameraData.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="WBRichEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBRNameEdit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MySliderControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBImageSliderControl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ResData.h">
+      <Filter>WBRes</Filter>
+    </ClInclude>
+    <ClInclude Include="threadhelper.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBToolTip.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBEagelEye.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBPreviewSingleView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBAboutDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UndoRedo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XAutoLock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XCritSec.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XBufferPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XDataBuffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XListPtr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MedioVideoScreenDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyBitMap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgPrintLoadingMsg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBFullScreen.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Track.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WVedio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MTAuthorize.h">
+      <Filter>MTTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="MTGestureImport.h">
+      <Filter>MTTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewMTObject.h">
+      <Filter>MTTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="WBResFunc.h">
+      <Filter>WBRes</Filter>
+    </ClInclude>
+    <ClInclude Include="Transparent_Dlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WaterDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SemiTransWnd.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DIBSectionLite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CWaterRoutine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBFunctionBtn.h">
+      <Filter>FunctionBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="WBMTObject.h">
+      <Filter>MTTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="WBBackgroundDlg.h">
+      <Filter>FunctionBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="WBDesignFillPad.h">
+      <Filter>FunctionBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="WBFillPadBtn.h">
+      <Filter>FunctionBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="WBFunctionAttributeDlg.h">
+      <Filter>FunctionBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="WBFunctionDlg.h">
+      <Filter>FunctionBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="WBPreviewDlg.h">
+      <Filter>FunctionBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="WBOptionDlg.h">
+      <Filter>FunctionBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="ScreenDrawMgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LimitLocalObjOperate.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBMTDrawObjectTally.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\includeUCC\WB\WBDefine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TouchAPI.h">
+      <Filter>MTTouch</Filter>
+    </ClInclude>
+    <ClInclude Include="WBTeachToolDlg.h">
+      <Filter>FunctionBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="MyDropTarget.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="common\DragDropDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBRollCallDialog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBRollCallShowDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonCloseDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBFunctionResDlg.h">
+      <Filter>FunctionBoard</Filter>
+    </ClInclude>
+    <ClInclude Include="common\WBMedia\CameraSettingIni.h">
+      <Filter>WBMedia</Filter>
+    </ClInclude>
+    <ClInclude Include="tstring.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="WBSavePictureDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="whiteBoard.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="common\WBMedia\WBMedia.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

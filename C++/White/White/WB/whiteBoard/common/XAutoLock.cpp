@@ -1,0 +1,20 @@
+// AutoLock.cpp: implementation of the AutoLock class.
+//
+//////////////////////////////////////////////////////////////////////
+#include "stdafx.h"
+
+#include "XAutoLock.h"
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+XAutoLock::XAutoLock(const XCritSec&rXCritSec)
+:m_rXCritSec(const_cast<XCritSec&>(rXCritSec))
+{
+	m_rXCritSec.Lock();
+}
+
+XAutoLock::~XAutoLock()
+{
+	m_rXCritSec.UnLock();
+}

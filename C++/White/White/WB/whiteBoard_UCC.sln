@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项目", "解决方案项目", "{AFF710BF-78E1-401A-B26F-9121AA0DE1C8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "whiteBoard", "whiteBoard\whiteBoard_UCC.vcxproj", "{7E6B7275-6CCD-4B2F-8754-F10DBEDA6C63}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DESEncrypt", "DESEncrypt\DESEncrypt\DESEncrypt.vcxproj", "{91BC5AE2-E37E-4BA2-A85F-3EAD9FA5F8B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E6B7275-6CCD-4B2F-8754-F10DBEDA6C63}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7E6B7275-6CCD-4B2F-8754-F10DBEDA6C63}.Debug|Win32.Build.0 = Debug|Win32
+		{7E6B7275-6CCD-4B2F-8754-F10DBEDA6C63}.Release|Win32.ActiveCfg = Release|Win32
+		{7E6B7275-6CCD-4B2F-8754-F10DBEDA6C63}.Release|Win32.Build.0 = Release|Win32
+		{91BC5AE2-E37E-4BA2-A85F-3EAD9FA5F8B7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{91BC5AE2-E37E-4BA2-A85F-3EAD9FA5F8B7}.Debug|Win32.Build.0 = Debug|Win32
+		{91BC5AE2-E37E-4BA2-A85F-3EAD9FA5F8B7}.Release|Win32.ActiveCfg = Release|Win32
+		{91BC5AE2-E37E-4BA2-A85F-3EAD9FA5F8B7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

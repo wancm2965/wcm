@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5E112F0E-EF27-4049-A0B0-5393571F7CAE}</ProjectGuid>
+    <RootNamespace>RegularDllCallDlg</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>RegularDllCallDlg</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\bin\debug</OutDir>
+    <IntDir>..\..\obj\Test\Debug</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\bin\release</OutDir>
+    <IntDir>..\..\obj\Test\release</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\image\bitmap2.bmp" />
+    <None Include="res\image\char\IDB_WB_Font.bmp" />
+    <None Include="res\image\char\IDB_WB_Text.bmp" />
+    <None Include="res\image\file\IDC_WB_CloseFile.bmp" />
+    <None Include="res\image\file\IDC_WB_NewFile.bmp" />
+    <None Include="res\image\file\IDC_WB_OpenFile.bmp" />
+    <None Include="res\image\file\IDC_WB_PringFile.bmp" />
+    <None Include="res\image\file\IDC_WB_ReSaveFile.bmp" />
+    <None Include="res\image\file\IDC_WB_SaveFile.bmp" />
+    <None Include="res\image\graphics\IDB_WB_Polygon.bmp" />
+    <None Include="res\image\graphics\IDB_WB_Rectangle.bmp" />
+    <None Include="res\image\graphics\IDB_WB_Rhombus.bmp" />
+    <None Include="res\image\graphics\IDB_WB_Round.bmp" />
+    <None Include="res\image\graphics\IDB_WB_Triangle.bmp" />
+    <None Include="res\image\IDB_WB_Curve.bmp" />
+    <None Include="res\image\IDB_WB_CutScreen.bmp" />
+    <None Include="res\image\IDB_WB_Document.bmp" />
+    <None Include="res\image\IDB_WB_Picture.bmp" />
+    <None Include="res\image\IDB_WB_PictureLayer.bmp" />
+    <None Include="res\image\IDB_WB_Video.bmp" />
+    <None Include="res\image\IDC_WB_Delete.bmp" />
+    <None Include="res\image\IDC_WB_File.bmp" />
+    <None Include="res\image\IDC_WB_Flash.bmp" />
+    <None Include="res\image\IDC_WB_FullScreen.bmp" />
+    <None Include="res\image\IDC_WB_Graphics.bmp" />
+    <None Include="res\image\IDC_WB_Line.bmp" />
+    <None Include="res\image\IDC_WB_More.bmp" />
+    <None Include="res\image\IDC_WB_Page.bmp" />
+    <None Include="res\image\IDC_WB_Pen.bmp" />
+    <None Include="res\image\IDC_WB_Redo.bmp" />
+    <None Include="res\image\IDC_WB_ResourceCategory.bmp" />
+    <None Include="res\image\IDC_WB_Rubber.bmp" />
+    <None Include="res\image\IDC_WB_Select.bmp" />
+    <None Include="res\image\IDC_WB_Text.bmp" />
+    <None Include="res\image\IDC_WB_UCC.bmp" />
+    <None Include="res\image\IDC_WB_Undo.bmp" />
+    <None Include="res\image\page\IDC_WB_FirstPage.bmp" />
+    <None Include="res\image\page\IDC_WB_ForePage.bmp" />
+    <None Include="res\image\page\IDC_WB_LastPage.bmp" />
+    <None Include="res\image\page\IDC_WB_NewPage.bmp" />
+    <None Include="res\image\page\IDC_WB_NextPage.bmp" />
+    <None Include="res\image\pen\arrow\IDB_WB_ArrowLeft.ico" />
+    <None Include="res\image\pen\arrow\IDB_WB_ArrowLR.ico" />
+    <None Include="res\image\pen\arrow\IDB_WB_ArrowRight.ico" />
+    <None Include="res\image\pen\type\IDB_WB_LineType1.ico" />
+    <None Include="res\image\pen\type\IDB_WB_LineType2.ico" />
+    <None Include="res\image\pen\type\IDB_WB_LineType3.ico" />
+    <None Include="res\image\pen\type\IDB_WB_LineType4.ico" />
+    <None Include="res\image\pen\type\IDB_WB_LineType5.ico" />
+    <None Include="res\image\pen\width\cursor1.cur" />
+    <None Include="res\image\pen\width\cursor2.cur" />
+    <None Include="res\image\pen\width\cursor3.cur" />
+    <None Include="res\image\pen\width\cursor4.cur" />
+    <None Include="res\image\pen\width\cursor5.cur" />
+    <None Include="res\image\pen\width\cursor6.cur" />
+    <None Include="res\image\pen\width\IDB_WB_LineWidth1.ico" />
+    <None Include="res\image\pen\width\IDB_WB_LineWidth2.ico" />
+    <None Include="res\image\pen\width\IDB_WB_LineWidth3.ico" />
+    <None Include="res\image\pen\width\IDB_WB_LineWidth4.ico" />
+    <None Include="res\image\pen\width\IDB_WB_LineWidth5.ico" />
+    <None Include="res\image\pen\width\IDB_WB_LineWidth6.ico" />
+    <None Include="res\image\pen\width\IDB_WB_LineWidth7.ico" />
+    <None Include="res\image\pictureLayer\IDB_WBNextLayer.bmp" />
+    <None Include="res\image\pictureLayer\IDB_WB_BottonLayer.bmp" />
+    <None Include="res\image\pictureLayer\IDB_WB_ForeLayer.bmp" />
+    <None Include="res\image\pictureLayer\IDB_WB_TOPLayer.bmp" />
+    <None Include="res\image\rubber\IDB_WB_BigRubber.bmp" />
+    <None Include="res\image\rubber\IDB_WB_CurveSelectRubber.bmp" />
+    <None Include="res\image\rubber\IDB_WB_LitterRubber.bmp" />
+    <None Include="res\image\rubber\IDB_WB_SingleObjectRubber.bmp" />
+    <None Include="res\image\TEST\IDUndo.bmp" />
+    <None Include="res\image\TEST\ID_UCC.bmp" />
+    <None Include="res\RegularDllCallDlg.ico" />
+    <None Include="res\RegularDllCallDlg.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FullMenuDlg.h" />
+    <ClInclude Include="RegularDllCallDlg.h" />
+    <ClInclude Include="RegularDllCallDlgDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FullMenuDlg.cpp" />
+    <ClCompile Include="RegularDllCallDlg.cpp" />
+    <ClCompile Include="RegularDllCallDlgDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="RegularDllCallDlg.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="RegularDllCallDlg.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

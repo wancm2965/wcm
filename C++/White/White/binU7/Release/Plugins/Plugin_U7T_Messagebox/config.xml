@@ -1,0 +1,7 @@
+<Config>
+	<Plugin>
+		<Name>Plugin_U7T_Messagebox</Name> 
+		<ExtendPoint>AVCONPlugin::IPlugin_U7T_Messagebox</ExtendPoint>
+		<Dll>Plugin_U7T_Messagebox.dll</Dll>
+	</Plugin>
+</Config>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="80,60">
+  <Font name="宋体" size="12" bold="false" italic="false" default="true" />
+  <VerticalLayout width="80" height="60" bkcolor="#FF1E1E1E"   bordercolor="#FF104E8B">
+    
+    <HorizontalLayout name="HorizontalLayoutUI1"  height="20">
+      <Button name="PlayPlayerList" text="播放" width="30" height="20" textcolor="#FFFFFFFF" hottextcolor="#FF363636" itemhotbkcolor="#ff98FB98" align="left" />
+    </HorizontalLayout>
+    
+    <HorizontalLayout name="HorizontalLayoutUI2"  height="20">
+      <Button name="Start" text="重新播放"  width="50" height="20" textcolor="#FFFFFFFF" hottextcolor="#FF363636"  itemhotbkcolor="#ff98FB98" align="left" />
+    </HorizontalLayout>
+    
+    <HorizontalLayout name="HorizontalLayoutUI3"  height="20">
+      <Button name="ClearAt" text="删除选中条目"  width="80" height="20" textcolor="#FFFFFFFF"  hottextcolor="#FF363636"  itemhotbkcolor="#ff98FB98" align="left"  />
+    </HorizontalLayout>
+
+  </VerticalLayout>
+</Window>

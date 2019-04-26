@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window size="368,266" caption="0,0,0,30">
+  <Font name="微软雅黑" size="12" bold="false" italic="false" default="true" />
+  <VerticalLayout width="368" height="266" bkimage="file='setwnd.png'">
+    <HorizontalLayout height="30">
+      <HorizontalLayout width="340"/>
+      <VerticalLayout height="30">
+        <VerticalLayout height="5"/>
+        <Button name="Btn_Close" width="23" height="23" align="center"
+                normalimage="file='closesetting.png' source='0,0,23,23'"
+                hotimage="file='closesetting.png' source='23,0,46,23'"/>
+      </VerticalLayout>
+    </HorizontalLayout>
+    <HorizontalLayout height="20"/>
+    <HorizontalLayout height="30">
+      <HorizontalLayout width="20" height="30"/>
+      <Edit name="Edt_Path" width="220" height="30" bkcolor="#FF000000" textcolor="#FF000000"
+            normalimage="file='edit.png' source='4,4,224,34'"
+            hotimage="file='edit.png' source='4,44,224,74'"/>
+      <HorizontalLayout width="20" height="30"/>
+      <Button name="Btn_Path" text="保存路径" width="82" height="27" textcolor="#FFF0F0F0"
+              normalimage="file='button.png' source='6,2,76,26'"
+              hotimage="file='button.png' source='6,28,76,50'"
+              pushedimage="file='button.png' source='6,52,76,76'"
+              disabledimage="file='button.png' source='6,78,76,100'"/>
+      <HorizontalLayout height="30"/>
+    </HorizontalLayout>
+    <HorizontalLayout height="20"/>
+    <HorizontalLayout height="20">
+      <HorizontalLayout width="20" height="20"/>
+      <Option name="Btn_AutoTrans" width="16" height="17" normalimage="file='choose.png' source='0,0,16,17'" selectedimage="file='choose.png' source='16,0,32,17'"/>
+      <HorizontalLayout width="20" height="20"/>
+      <Text text="播放同时进行媒体格式转换" height="20" textcolor="#FFF0F0F0"/>
+    </HorizontalLayout>
+    <HorizontalLayout height="10"/>
+    <HorizontalLayout height="20">
+      <HorizontalLayout width="20" height="20"/>
+      <Option name="Btn_AutoPlay" width="16" height="17" normalimage="file='choose.png' source='0,0,16,17'" selectedimage="file='choose.png' source='16,0,32,17'"/>
+      <HorizontalLayout width="20" height="20"/>
+      <Text text="按播放列表顺序播放" height="20" textcolor="#FFF0F0F0"/>
+    </HorizontalLayout>
+    <HorizontalLayout height="20"/>
+    <HorizontalLayout height="20">
+      <HorizontalLayout width="20" height="20"/>
+      <Text text="录像质量" height="20" textcolor="#FFF0F0F0"/>
+    </HorizontalLayout>
+    <HorizontalLayout height="10"/>
+    <HorizontalLayout height="20">
+      <HorizontalLayout width="20" height="20"/>
+      <Option name="Btn_High" text="高" textcolor="#FFF0F0F0" width="56" height="17" align="center" normalimage="file='radio.png' dest='0,0,16,17' source='16,0,32,17'" selectedimage="file='radio.png' dest='0,0,16,17' source='0,0,16,17'"/>
+      <HorizontalLayout width="5" height="20"/>
+      <Option name="Btn_Mid" text="中" textcolor="#FFF0F0F0" width="56" height="17" align="center" normalimage="file='radio.png' dest='0,0,16,17' source='16,0,32,17'" selectedimage="file='radio.png' dest='0,0,16,17' source='0,0,16,17'"/>
+      <HorizontalLayout width="5" height="20"/>
+      <Option name="Btn_Low" text="低" textcolor="#FFF0F0F0" width="56" height="17" align="center" normalimage="file='radio.png' dest='0,0,16,17' source='16,0,32,17'" selectedimage="file='radio.png' dest='0,0,16,17' source='0,0,16,17'"/>
+      <HorizontalLayout height="20"/>
+    </HorizontalLayout>
+    <HorizontalLayout height="10"/>
+    <HorizontalLayout height="25">
+      <HorizontalLayout width="220" height="25"/>
+      <Button name="Btn_Ok" text="确定" width="59" height="25" textcolor="#FFF0F0F0" disabledtextcolor="#FF818181"
+              normalimage="file='listbutton.png' source='0,0,59,25'"
+              hotimage="file='listbutton.png' source='59,0,118,25'"
+              selectedimage="file='listbutton.png' source='118,0,177,25'"
+              disabledimage="file='listbutton.png' source='177,0,236,25'"/>
+      <HorizontalLayout width="15" height="25"/>
+      <Button name="Btn_Cancel" text="取消" width="59" height="25" textcolor="#FFF0F0F0" disabledtextcolor="#FF818181"
+              normalimage="file='listbutton.png' source='0,0,59,25'"
+              hotimage="file='listbutton.png' source='59,0,118,25'"
+              selectedimage="file='listbutton.png' source='118,0,177,25'"
+              disabledimage="file='listbutton.png' source='177,0,236,25'"/>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

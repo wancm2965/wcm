@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window size="50,30" bkcolor="#FFFFFFFF">
+  <Font name="Microsoft Sans Serif" size="10" default="true" />
+  <HorizontalLayout width="50" height="30">
+    <Text name="txt_playtime" textcolor="#FFF0F0F0" bkimage="file='背景tip.png'"/>
+  </HorizontalLayout>
+</Window>

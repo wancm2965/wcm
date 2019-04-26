@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="400,294" caption="0,0,0,60" roundcorner="6,6">
+    <Font name="微软雅黑" size="12" bold="false" italic="false" default="true" />
+    <VerticalLayout name="VLayoutBack" width="400" height="300" bkimage="file=&apos;bg.png&apos; corner=&apos;6,6,6,6&apos;">
+        <HorizontalLayout name="HLayout1" width="400" height="30">
+            <Label name="Lab5" text="白板登录界面" float="true" pos="4,3,0,0" width="100" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+            <Button name="btnClose" tooltip="关闭" float="true" pos="355,0,0,0" width="45" height="29" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;close.png&apos; source=&apos;0,0,45,29&apos; corner=&apos;4,4,4,4&apos;"  hotimage="file=&apos;close.png&apos; source=&apos;45,0,90,29&apos; corner=&apos;4,4,4,4&apos;" pushedimage="file=&apos;close.png&apos; source=&apos;90,0,135,29&apos; corner=&apos;4,4,4,4&apos;" keyboard="false" />
+        </HorizontalLayout>
+        <VerticalLayout name="VLayoutBottom" width="400" height="272">
+            <Label name="LabAdr" text="服务器地址：" float="true" pos="54,83,0,0" width="73" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="right" />
+            <Label name="LabAct" text="登录  帐号：" float="true" pos="54,121,0,0" width="73" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="right" />
+            <Label name="LabPsd" text="登录  密码：" float="true" pos="54,159,0,0" width="73" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="right" />
+           <Container pos="136,83,0,0" float="true" width="200" height="30" bkimage="file=&apos;coin.png&apos; corner=&apos;9,9,9,9&apos;">
+				<RichEdit name="EditServer" multiline="false"float="true" wanttab="false" pos="11,4,190,30"   bkcolor="#00FFFFFF" textpadding="0,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			</Container>
+			<Container pos="136,121,0,0" float="true" width="200" height="30" bkimage="file=&apos;coin.png&apos; corner=&apos;9,9,9,9&apos;">
+			  <RichEdit name="EditAccount" multiline="false" float="true" wanttab="false" pos="11,4,190,30" bkcolor="#00FFFFFF" textpadding="0,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+			</Container>
+			<Container float="true" pos="136,159,0,0" width="200" height="30" bkimage="file=&apos;coin.png&apos; corner=&apos;9,9,9,9&apos;">
+			<RichEdit name="EditPassword" multiline="false" float="true" wanttab="false" pos="11,4,190,30"  bkcolor="#00FFFFFF" textpadding="0,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" password="true" />
+            </Container>
+			<Button name="btnNetLogin" text="联机登录" float="true" pos="159,210,0,0" width="82" height="27" bkimage="button_bg.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>

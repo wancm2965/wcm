@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="400,75" roundcorner="6,6">
+    <Font name="微软雅黑" size="19" bold="false" italic="false" default="true"/>
+	<VerticalLayout bkcolor="#FF1E1E1E" bkimage="file='InfoBK1.png' corner='6,6,6,6'" inset="10,10,10,10">
+		<VerticalLayout bkimage="file='InfoBK2.png' corner='6,6,6,6'">
+			<Control />
+				<Text name="TextTip" textcolor="#FFC8C8C8" align="center"/>
+			<Control />
+		</VerticalLayout>
+	</VerticalLayout>
+</Window>

@@ -1,0 +1,8 @@
+#pragma  once
+
+#define AVCON_FILEVERSION  1,3,3,1
+#define AVCON_PRODUCTVERSION  "1,2,4,1"
+#define AVCON_COMPANYNAME "AVCON"
+#define AVCON_FILEDESCRIPTION "»ªÆ½U7"
+#define AVCON_LEGALCOPYRIGHT "Copyright (C) 2014 AVCON All right reserved"
+#define AVCON_PRODUCTNAME "AVCON UCC7"

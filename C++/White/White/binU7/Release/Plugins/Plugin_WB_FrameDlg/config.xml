@@ -1,0 +1,1 @@
+<Config>	<Plugin>		<Name>Plugin_WB_FrameDlg</Name> 		<ExtendPoint>AVCONPlugin::IPlugin_WB_FrameDlg</ExtendPoint>		<Dll>Plugin_WB_FrameDlg.dll</Dll>	</Plugin></Config>

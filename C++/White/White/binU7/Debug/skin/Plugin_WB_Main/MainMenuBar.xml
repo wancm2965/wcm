@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="1024,31">
+	<Font name="微软雅黑" size="12" bold="false" italic="false" />
+	<VerticalLayout name="VLayoutMenuBar" width="1024" height="31" bkcolor="#ffe9f3fa" bordercolor="#0099B7D9"   bordersize="1" >
+		<HorizontalLayout name="HLayoutRemote" height="30" relativepos="0,0,100,100" bkimage="file=&apos;BgDlgBottom.png&apos; corner=&apos;5,5,5,5&apos;">
+			<HorizontalLayout name="HLayoutBottomLeft" width="400">
+				<Label name="netWork" text="0K/0K" float="true" pos="4,5,0,0" width="170" height="20" textcolor="#00C8C8C8" disabledtextcolor="#FFA7A6AA" align="center" />
+				<Label text="CPU" tooltip="cpu" float="true" pos="180,5,0,0" width="50" height="20" textcolor="#00C8C8C8" disabledtextcolor="#FFA7A6AA" />
+				<Progress name="CpuProgress" float="true" pos="230,5,0,0" width="140" height="20" bkimage="CPUSliderBk.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" foreimage="CPUSliderFore.png" min="0" max="100" value="10" hor="true" />
+			</HorizontalLayout>
+			<HorizontalLayout name="HLayoutBottomMid">
+				<Option name="OptPrompt" float="true" pos="22,5,0,0" width="20" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="plog.png" selectedimage="plogsel.png" />
+				<Label name="lbRemote" float="true" pos="52,0,0,0" width="1000" height="30" textcolor="#00C8C8C8" disabledtextcolor="#FFA7A6AA" />
+				<Option name="OptQuestion" float="true" pos="0,5,0,0" width="20" height="20" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="question.png" selectedimage="questionsel.png" />
+			</HorizontalLayout>
+			<HorizontalLayout name="HLayoutBottomRight" width="540">
+				<HorizontalLayout padding="0,3,0,0" width="250" height="24" bkimage="StatusBK.png">
+					<Option name="OptMediaVol" float="true" pos="5,0,0,0" width="24" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" foreimage="file='Vol.png' dest='2,2,22,22'" disabledimage="file='VolDisable.png' dest='2,2,22,22'" selectedforeimage="file='VolMute.png' dest='2,2,22,22'" hotimage="file='BtnBK.png' source='34,0,68,34' corner='2,2,2,2'" pushedimage="file='BtnBK.png' source='68,0,102,34' corner='2,2,2,2'" />
+					<Button name="BtnSpeakerMinus" float="true" pos="30,0,0,0" width="24" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"  foreimage="file='Minus.png' fade='128' source='5,5,29,29'" hotimage="file='BtnBK.png' source='34,0,68,34' corner='2,2,2,2'" pushedimage="file='BtnBK.png' source='68,0,102,34' corner='2,2,2,2'" />
+					<Slider name="SliderSpeaker" mouse="false" keyboard="false" float="true" pos="59,0,0,0" width="100" height="24" bkimage="SpeakerBK.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"  thumbimage="file='vernier.png' source='2,0,12,24'" thumbsize="10,24" min="0" max="10" value="0" hor="true" isstretchfore="false" />
+					<Label name="LblSpeakerdB" text="-26dB" float="true" pos="164,0,0,0" width="34" height="24" textcolor="#0000FF00" disabledtextcolor="#FFA7A6AA" font="0" align="center" />
+					<Button name="BtnSpeakerAdd" float="true" pos="198,0,0,0" width="24" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"  foreimage="file='Add.png' fade='128' source='5,5,29,29'" hotimage="file='BtnBK.png' source='34,0,68,34' corner='2,2,2,2'" pushedimage="file='BtnBK.png' source='68,0,102,34' corner='2,2,2,2'" />
+					<Button name="BtnSpeakerReset" float="true" pos="222,0,0,0" width="24" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"  foreimage="file='Reset.png' fade='128' source='5,5,29,29'" hotimage="file='BtnBK.png' source='34,0,68,34' corner='2,2,2,2'" pushedimage="file='.png' source='68,0,102,34' corner='2,2,2,2'" />
+				</HorizontalLayout>
+				<HorizontalLayout padding="2,3,0,0" width="250" height="24" bkimage="StatusBK.png">
+					<Option name="OptMediaMic" float="true" pos="5,0,0,0" width="24" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" foreimage="file='Mic.png' dest='2,2,22,22'" disabledimage="file='MicDisable.png' dest='2,2,22,22'" selectedforeimage="file='MicMute.png' dest='2,2,22,22'" hotimage="file='BtnBK.png' source='34,0,68,34' corner='2,2,2,2'" pushedimage="file='BtnBK.png' source='68,0,102,34' corner='2,2,2,2'" />
+					<Button name="BtnMicMinus" float="true" pos="30,0,0,0" width="24" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"  foreimage="file='Minus.png' fade='128' source='5,5,29,29'" hotimage="file='BtnBK.png' source='34,0,68,34' corner='2,2,2,2'" pushedimage="file='BtnBK.png' source='68,0,102,34' corner='2,2,2,2'" />
+					<Slider name="SliderMic" float="true" mouse="false" keyboard="false" pos="59,0,0,0" width="100" height="24" bkimage="MicBK.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" thumbimage="file='vernier.png' source='2,0,12,24'" thumbsize="10,24" min="0" max="10" value="0" hor="true" isstretchfore="false" />
+					<Label name="LblMicdB" text="-26dB" float="true" pos="164,0,0,0" width="34" height="24" textcolor="#0000FF00" disabledtextcolor="#FFA7A6AA" font="0" align="center" />
+					<Button name="BtnMicAdd" float="true" pos="198,0,0,0" width="24" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"  foreimage="file='Add.png' fade='128' source='5,5,29,29'" hotimage="file='BtnBK.png' source='34,0,68,34' corner='2,2,2,2'" pushedimage="file='BtnBK.png' source='68,0,102,34' corner='2,2,2,2'" />
+					<Button name="BtnMicReset" float="true" pos="222,0,0,0" width="24" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"  foreimage="file='Reset.png' fade='128' source='5,5,29,29'" hotimage="file='BtnBK.png' source='34,0,68,34' corner='2,2,2,2'" pushedimage="file='BtnBK.png' source='68,0,102,34' corner='2,2,2,2'" />
+				</HorizontalLayout>
+				<Option name="OptAutomaticMic" float="true" pos="505,3,0,0" width="24" height="24" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;AutoMicOff.png&apos; source=&apos;0,0,24,24&apos;" />
+			</HorizontalLayout>
+		</HorizontalLayout>
+	</VerticalLayout>
+</Window>

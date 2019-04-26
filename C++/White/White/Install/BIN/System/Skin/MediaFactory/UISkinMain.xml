@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="669,600" mininfo="550,450"  caption="0,0,0,33" sizebox="4,4,6,6">
+  <Font name="微软雅黑" size="12" bold="false" italic="false" default="true" />
+  <VerticalLayout name="VerTol" width="669" height="600" bkimage="file='PlayBK2.bmp'">
+    
+    <HorizontalLayout name="hlCaption" height="33" bkcolor="#FF222222">
+      <HorizontalLayout height="33" width="10"/>
+      <VerticalLayout height="33">
+        <HorizontalLayout height="10"/>
+        <HorizontalLayout width="97" height="15" bkimage ="LOGO.png"/>
+      </VerticalLayout>
+      <HorizontalLayout height="33"/>
+      <HorizontalLayout width="196" height="33">
+        <HorizontalLayout height="33" />
+        <Button name="ButtonUI_MENU" tooltip="菜单" width="39" height="29" align="center"
+                normalimage="file='about.png' source='0,0,39,29'"  
+                hotimage="file='about.png' source='39,0,78,29'" 
+                pushedimage="file='about.png' source='78,0,117,29'" />
+        <Button name="ButtonUI_MIN" tooltip="最小化" width="39" height="29" align="center"
+                normalimage="file='min.png' source='0,0,39,29'" 
+                hotimage="file='min.png' source='39,0,78,29'" 
+                pushedimage="file='min.png' source='78,0,117,29'"/>
+        <Button name="ButtonUI_CLOSE" tooltip="关闭" width="39" height="29" align="center"
+                normalimage="file='exit.png' source='0,0,39,29'"  
+                hotimage="file='exit.png' source='39,0,78,29'"/>
+        <HorizontalLayout height="33" width="5"/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+    
+    <VerticalLayout name="whileBk" bkimage="file=&apos;PlayBK2.bmp&apos; corner=&apos;20,20,20,20&apos;">
+      <HorizontalLayout>
+        <HorizontalLayout name="HorMainList" width="308" />
+        <Button text="添加文件" visible="false" float="true" pos="18,22,0,0" width="98" height="32" bkimage="file=&apos;openfile.png&apos; source=&apos;0,0,98,32&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="center" hotimage="file=&apos;openfile.png&apos; source=&apos;98,0,196,32&apos;" pushedimage="file=&apos;openfile.png&apos; source=&apos;196,0,294,32&apos;" />
+        <Button text="打开" visible="false" float="true" pos="643,22,0,0" width="76" height="32" bkimage="file=&apos;opendir.png&apos; source=&apos;0,0,76,32&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="center" hotimage="file=&apos;opendir.png&apos; source=&apos;76,0,152,32&apos;" pushedimage="file=&apos;opendir.png&apos; source=&apos;152,0,228,32&apos;" />
+        <Button text="设置" visible="false" float="true" pos="556,22,0,0" width="76" height="32" bkimage="file=&apos;opendir.png&apos; source=&apos;0,0,76,32&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="center" hotimage="file=&apos;opendir.png&apos; source=&apos;76,0,152,32&apos;" pushedimage="file=&apos;opendir.png&apos; source=&apos;152,0,228,32&apos;" />
+        <Option text="开始转换" visible="false" float="true" pos="354,424,0,0" width="123" height="41" bkimage="file=&apos;StartButton.png&apos; source=&apos;0,0,123,41&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="center" selectedimage="file=&apos;StartButton.png&apos; source=&apos;369,0,492,41&apos;" />
+        <Button text="停止转换" visible="false" float="true" pos="437,391,0,0" width="123" height="41" bkimage="file=&apos;StartButton.png&apos; source=&apos;369,0,492,41&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="center" hotimage="file=&apos;StartButton.png&apos; source=&apos;246,0,368,41&apos;" />
+        <VerticalLayout>
+          <HorizontalLayout height="5" />
+          <HorizontalLayout>
+            <HorizontalLayout width="5" />
+            <HorizontalLayout>
+              <Container name="ContainerUI1" bkimage="file=&apos;PlayBK.bmp&apos; mask=&apos;0xfffffbf0&apos;" />
+            </HorizontalLayout>
+            <HorizontalLayout width="5" />
+          </HorizontalLayout>
+          <HorizontalLayout height="10" />
+          <VerticalLayout name="VerOper" height="156">
+            <HorizontalLayout height="15">
+              <HorizontalLayout width="10" />
+              <VerticalLayout>
+                <HorizontalLayout width="3" />
+                <Slider name="ProgressUI_PLAY" height="14" bkimage="file=&apos;progress0.png&apos; source=&apos;0,6,1440,9&apos; corner=&apos;3,0,3,0&apos; mask=&apos;0xffff0000&apos;" relativepos="0,0,0,0" textcolor="#FFF0F0F0" disabledtextcolor="#00FFFBF0" align="center" foreimage="file=&apos;progress0.png&apos; source=&apos;0,1,1440,4&apos; corner=&apos;5,0,0,0&apos; mask=&apos;0xffff0000&apos;" min="0" max="100" value="0" hor="true" />
+              </VerticalLayout>
+              <HorizontalLayout width="20" />
+              <HorizontalLayout width="110">
+                <Text name="TextUI2" text="剩余时间 00:00:00" width="110" height="15" textpadding="2,0,2,0" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="wrap" />
+              </HorizontalLayout>
+              <HorizontalLayout width="20" />
+            </HorizontalLayout>
+            <HorizontalLayout height="10" />
+            <HorizontalLayout height="50">
+              <VerticalLayout height="50" width="150" >
+                <HorizontalLayout height="20">
+                  <HorizontalLayout width="20" />
+                  <HorizontalLayout width="70">
+                    <Option name="OptionUI_PREVIEW" text="预览" bkimage="file=&apos;choose.png&apos; dest=&apos;0,0,16,17&apos; source=&apos;0,0,16,17&apos; mask=&apos;0xffff0000&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="right" selectedimage="file=&apos;choose.png&apos; dest=&apos;0,0,16,17&apos; source=&apos;16,0,32,17&apos;" />
+                  </HorizontalLayout>
+                  <HorizontalLayout />
+                </HorizontalLayout>
+                <HorizontalLayout height="10" />
+                <HorizontalLayout height="20">
+                  <HorizontalLayout width="20" />
+                  <HorizontalLayout width="130">
+                    <Option name="OptionUI_SHUTDOWN" text="转换完成后关机" bkimage="file=&apos;choose.png&apos; dest=&apos;0,0,16,17&apos; source=&apos;0,0,16,17&apos; mask=&apos;0xffff0000&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="right" selectedimage="file=&apos;choose.png&apos; dest=&apos;0,0,16,17&apos; source=&apos;16,0,32,17&apos;" />
+                  </HorizontalLayout>
+                  <HorizontalLayout />
+                </HorizontalLayout>
+              </VerticalLayout>
+              <HorizontalLayout height="50" >
+                <HorizontalLayout />
+                <HorizontalLayout width="250" >
+                  <Button name="ButtonUI_AOTOSHUTDOWN" text="转换完成,将在 20 秒后自动关机,点此取消" visible="false" float="false" width="250" height="50" bkimage="file=&apos;openfile.png&apos; source=&apos;0,0,98,32&apos; corner=&apos;10,10,10,10&apos;" textcolor="#FF000000" disabledtextcolor="#00FF0000" align="center" endellipsis="true" hotimage="file=&apos;openfile.png&apos; source=&apos;98,0,196,32&apos; corner=&apos;10,10,10,10&apos;" pushedimage="file=&apos;openfile.png&apos; source=&apos;196,0,294,32&apos; corner=&apos;10,10,10,10&apos;" />
+                </HorizontalLayout>
+                <HorizontalLayout />
+              </HorizontalLayout>
+            </HorizontalLayout>
+            <HorizontalLayout height="5" />
+            <HorizontalLayout height="20" >
+              <VerticalLayout width="10" height="20" />
+              <Text text="画面质量：" width="50" height="20" textpadding="2,0,2,0" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="wrap" />
+              <Option text="高" name="OptionUI_High" width="40" height="20" bkimage="file=&apos;choose.png&apos; dest=&apos;0,0,16,17&apos; source=&apos;0,0,16,17&apos; mask=&apos;0xffff0000&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="right" selectedimage="file=&apos;choose.png&apos; dest=&apos;0,0,16,17&apos; source=&apos;16,0,32,17&apos;" />
+              <HorizontalLayout width="20" />
+              <Option text="中" name="OptionUI_Mid" width="40" height="20" bkimage="file=&apos;choose.png&apos; dest=&apos;0,0,16,17&apos; source=&apos;0,0,16,17&apos; mask=&apos;0xffff0000&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="right" selectedimage="file=&apos;choose.png&apos; dest=&apos;0,0,16,17&apos; source=&apos;16,0,32,17&apos;" />
+              <HorizontalLayout width="20" />
+              <Option text="低" name="OptionUI_Low" width="40" height="20" bkimage="file=&apos;choose.png&apos; dest=&apos;0,0,16,17&apos; source=&apos;0,0,16,17&apos; mask=&apos;0xffff0000&apos;" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="right" selectedimage="file=&apos;choose.png&apos; dest=&apos;0,0,16,17&apos; source=&apos;16,0,32,17&apos;" />
+              <HorizontalLayout />
+            </HorizontalLayout>
+            <HorizontalLayout height="5" />
+            <HorizontalLayout height="41">
+              <HorizontalLayout />
+              <HorizontalLayout name="HorWaring" width="300" height="41">
+                <HorizontalLayout />
+                <HorizontalLayout name="HorStart" width="123" height="41">
+                  <Button name="ButtonUI_START" text="开始转换" textcolor="#FFF0F0F0" disabledtextcolor="#00C8C8C8" align="center" padding="0,5,0,0"
+                          normalimage="file=&apos;StartButton.png&apos; source=&apos;0,0,123,41&apos;" 
+                          hotimage="file=&apos;StartButton.png&apos; source=&apos;123,0,246,41&apos;"
+                          disabledimage="file=&apos;StartButton.png&apos; source=&apos;492,0,615,41&apos;"/>
+                </HorizontalLayout>
+                <HorizontalLayout />
+              </HorizontalLayout>
+              <HorizontalLayout />
+            </HorizontalLayout>
+            <HorizontalLayout height="15" />
+          </VerticalLayout>
+        </VerticalLayout>
+      </HorizontalLayout>
+
+      <HorizontalLayout name="HorBottom" height="20">
+        <HorizontalLayout width="10" />
+        <HorizontalLayout name="HorFilePath" height="26">
+          <Edit name="EditUI_FILEPATH" height="26" bkcolor="#FF000000" textpadding="4,3,4,3" textcolor="#FFFFFFFF" disabledtextcolor="#FFFFFFFF" readonly="true"/>
+        </HorizontalLayout>
+        <HorizontalLayout name="HorFullHide" height="15">
+          <HorizontalLayout width="10" />
+          <VerticalLayout>
+            <HorizontalLayout width="3" />
+            <Slider name="ProgressUI_PLAY2" height="12"
+                      bkimage="file='progress0.png' source='0,6,1440,9' corner=&apos;3,0,3,0&apos; mask=&apos;0xffff0000&apos;" relativepos="0,0,0,0" textcolor="#FFF0F0F0" disabledtextcolor="#00FFFBF0" align="center"
+                      foreimage="file='progress0.png' source='0,1,1440,4' corner=&apos;5,0,0,0&apos; mask=&apos;0xffff0000&apos;" min="0" max="100" value="0" hor="true" />
+          </VerticalLayout>
+          <HorizontalLayout width="20" />
+          <VerticalLayout width="110">
+            <Text name="TimeText" text="剩余时间 00:00:00" width="110" height="15" textpadding="2,0,2,0" textcolor="#FFF0F0F0" disabledtextcolor="#FFA7A6AA" align="wrap" />
+            <HorizontalLayout width="5" />
+          </VerticalLayout>
+          <HorizontalLayout width="20" />
+        </HorizontalLayout>
+        <HorizontalLayout width="10" />
+      </HorizontalLayout>
+      <HorizontalLayout height="2" />
+    </VerticalLayout>
+    <HorizontalLayout height="2" />
+  </VerticalLayout>
+</Window>

@@ -1,0 +1,80 @@
+#ifndef __HPRECORD_H__
+#define __HPRECORD_H__
+
+//------------------------------------------------------------------
+/*编译宏开关*/
+#define _FOR_MON/*监控录像*/
+//#define _FOR_NVS/*第三方设备录像*/
+//#define _USE_TIMESTAMP/*打时间帧*/
+
+//------------------------------------------------------------------
+/*文件头定义*/
+#define AVF_SYNC_TIME				350 /*音频同步用，等待音频的时间*/
+#define AVF_FILE_LEN				300 /*文件分割大小*/
+
+#define AVF_RECORD_NORMAL			0/*常规录像*/
+#define AVF_RECORD_ALERT			1/*报警录像*/
+
+#define	AVF_FRAME_TYPE_VIDEO		3/*视频流*/
+#define	AVF_FRAME_TYPE_AUDIO		4/*音频流*/
+
+#define	AVF_HEADER_PWD				2   //MD5密码			[128字节]
+#define	AVF_HEADER_RECORD_TYPE		3   //录像类型			[1字节]		[0:常规录像,1:报警录像]
+#define AVF_HEADER_START_TIME		4   //开始时间			[12字节]
+#define AVF_HEADER_STOP_TIME		5   //结束时间			[12字节]
+#define AVF_HEADER_DEV				6	//设备				[128字节]
+#define AVF_HEADER_CHN				7	//通道				[1字节]
+#define	AVF_HEADER_DESC				8	//录像描述			[256字节]
+#define	AVF_HEADER_PREV_FILE		9	//上一个文件名称	[128字节]
+#define	AVF_HEADER_NEXT_FILE		10	//下一个文件名称	[128字节]
+#define	AVF_HEADER_UPLOAD_STATE     11	//上传状态			[1字节]		[0=未上传,1=正上传,2=上传完,3=校正完]
+#define	AVF_HEADER_UPLOAD_BYTES     12	//上传字节数		[4字节]
+#define	AVF_HEADER_TIMESTAMP		14	//开始时间戳		[4字节]
+#define	AVF_HEADER_VERSION			15  //产品版本号		[128字节]	[如:(AVCON4.x.xx AVCON5.x.xx AVCON6.x.xx NDVR2.x.xx)]
+/*不用输入，库里定
+#define AVF_HEADER_SIZE				0   //结构体长度
+#define AVF_HEADER_FLAG				1   //录像版本号
+#define	AVF_HEADER_CHECKSUM			13	//篡改校验码		[32字节]	
+*/
+
+//-------------------------------------------------------------------
+/*录像回调事件*/
+class IAVFRecordEvent { 
+public:
+	virtual void OnAVCRecordFactoryEvent_FullFile() = 0;/*录像文件满*/
+};
+
+//-------------------------------------------------------------------
+/*单路流录像接口*/
+class IAVFRecordSingleStream { 
+public: 
+	virtual void WriteData(char* pData, int nLen, bool bKeyFrame) = 0;
+	virtual void NotifyStreamClose() = 0;
+	virtual void WriteData(char* pData, int nLen, bool bKeyFrame, unsigned long ulTimestamp) = 0;
+};
+
+//-------------------------------------------------------------------
+/*普通录像接口*/
+class IAVFRecordFactory { 
+public:
+	virtual bool Connect(const char* strAVCFile) = 0;
+	virtual void ReleaseConnections() = 0;
+	virtual bool CreateRecordSingleStream(char frameType, unsigned long ulSessionId, unsigned long cid, IAVFRecordSingleStream **ppSingleStream) = 0;
+	virtual bool WriteHeader(void *data, int len, unsigned long dwFlag) = 0;/*写文件头*/
+	virtual bool Connect(const char* strAVCFile, bool bSyncAudio/*硬件采集声音时true， mic采集声音时false*/, bool bUpfrontStream/*是否有预录流*/) = 0;
+	virtual void CombineUpFrontStream(unsigned long ulTimestamp, unsigned long ulSessionId, char* pData, int nLen) = 0;/*合并预录流*/
+	virtual bool Connect(const char* strAVCFile, unsigned long ulTimestamp) = 0; 
+};
+AFX_EXT_API bool CreateAVFRecordFactory(IAVFRecordFactory** ppARF, IAVFRecordEvent * pEvent);
+
+
+/*预录像接口*/
+class IAVFPreRecordFactory { 
+public: virtual ~IAVFPreRecordFactory() {};
+	virtual bool Connect(const char*lpszFileName, int nLen, bool bSyncAudio/*硬件采集声音时true， mic采集声音时false*/) = 0;
+	virtual void ReleaseConnections() = 0;
+	virtual void WriteData(char* pData, int nLen,bool bKeyFrame, int nFrameType) = 0;
+	virtual bool CombinFrameData(IAVFRecordFactory* pRecordFactory, int nLen) = 0; /*合并预录流*/
+};
+AFX_EXT_CLASS bool CreateAVFPreRecordFactory(IAVFPreRecordFactory** ppARF);
+#endif//__HPRECORD_H__

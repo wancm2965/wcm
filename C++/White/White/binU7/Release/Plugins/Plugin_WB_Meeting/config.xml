@@ -1,0 +1,1 @@
+<Config>	<Plugin>		<Name>Plugin_WB_Meeting</Name> 		<ExtendPoint>AVCONPlugin::IPlugin_WB_Meeting</ExtendPoint>		<Dll>Plugin_WB_Meeting.dll</Dll>	</Plugin></Config>

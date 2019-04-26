@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<lang name="language">
+    <language language="zh-CN">
+        <Plugin name="LANGUAGE">
+            <string name="STOP" value="终止" />
+            <string name="RETRY" value="重试" />
+            <string name="IGNORE" value="忽略" />
+        </Plugin>
+    </language>
+    <language language="en-US">
+        <Plugin name="LANGUAGE">
+            <string name="STOP" value="Stop" />
+            <string name="RETRY" value="Retry" />
+            <string name="IGNORE" value="Ignore" />
+        </Plugin>
+    </language>
+</lang>

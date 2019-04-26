@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+	<TreeItem name="ListContainerElement" height="60">
+		<HorizontalLayout name="HLayoutItem" pos="0,0,0,0" height="50" mouse="false">
+				<VerticalLayout name="VLayoutText" pos="0,0,50,50" width="50" height="50">
+					<Label name="lblLogo" bordersize="0" float="true" pos="5,5,45,45" mouse="false" textcolor="#FF000000"  disabledtextcolor="#FFA7A6AA"/>
+				</VerticalLayout>
+				<VerticalLayout name="VLayoutMid" pos="0,0,0,50" height="50">
+					<Label name="lblName" float="true" pos="0,0,110,50" mouse="false" relativepos="0,20,100,80" textcolor="#FF000000"  disabledtextcolor="#FFA7A6AA" />
+				</VerticalLayout>
+				<VerticalLayout name="VLayoutBtn" pos="0,5,52,50" width="52" height="50">
+					<Button name="optSet" float="true" pos="0,5,52,44" textcolor="#FF000000"  disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;enterButton.png&apos; source=&apos;0,0,52,39&apos;" hotimage="file=&apos;enterButton.png&apos; source=&apos;52,0,104,39&apos;"pushedimage="file=&apos;enterButton.png&apos; source=&apos;104,0,156,39&apos;" />
+				</VerticalLayout>
+			</HorizontalLayout>
+	</TreeItem>
+</Window>

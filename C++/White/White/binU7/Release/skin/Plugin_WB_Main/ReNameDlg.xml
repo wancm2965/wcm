@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="475,170" caption="0,0,0,30" roundcorner="6,6">
+    <Font name="微软雅黑" size="16" bold="false" italic="false" />
+    <HorizontalLayout name="ReNameDlg" width="475" height="170" bkimage="DialogBg.png">
+        <Label name="LabelTitleBk" float="true" pos="0,0,0,0" width="475" height="44" bkimage="DialogBg_Title.png" textcolor="#FFC8C8C8" disabledtextcolor="#FFA7A6AA" />
+        <Label name="LabelIcon" float="true" pos="20,7,0,0" width="30" height="30" bkimage="logoIco.png" textcolor="#FFC8C8C8" disabledtextcolor="#FFA7A6AA" />
+        <Label name="LabelTextReName" text="重命名" float="true" pos="60,13,0,0" width="53" height="20" textcolor="#FFC8C8C8" disabledtextcolor="#FFA7A6AA" font="0" />
+        <Button name="ok" text="确定" float="true" pos="305,7,0,0" width="80" height="30" textcolor="#FFC8C8C8" disabledtextcolor="#FFA7A6AA" font="0" align="center" normalimage="file=&apos;BtnGray.png&apos; source=&apos;0,0,100,34&apos;" hotimage="file=&apos;BtnGray.png&apos; source=&apos;100,0,200,34&apos;" pushedimage="file=&apos;BtnGray.png&apos; source=&apos;200,0,300,34&apos;" />
+        <Button name="cancel" text="取消" float="true" pos="395,7,0,0" width="80" height="30" textcolor="#FFC8C8C8" disabledtextcolor="#FFA7A6AA" font="0" align="center" normalimage="file=&apos;BtnGray.png&apos; source=&apos;0,0,100,34&apos;" hotimage="file=&apos;BtnGray.png&apos; source=&apos;100,0,200,34&apos;" pushedimage="file=&apos;BtnGray.png&apos; source=&apos;200,0,300,34&apos;" />
+        <Label name="InPutNamew" text="请输入新的名称" float="true" pos="75,92,0,0" width="130" height="30" textcolor="#FFC8C8C8" disabledtextcolor="#FFA7A6AA" font="0" />
+        <RichEdit name="ReNameEdit"  float="true" pos="230,87,0,0" width="170" height="40" textcolor="FFC8C8C8" bkcolor="#FFF1EDED"  multiline="true" />
+    </HorizontalLayout>
+</Window>
