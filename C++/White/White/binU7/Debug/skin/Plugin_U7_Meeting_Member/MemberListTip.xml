@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<Window size="74,32" roundcorner="0,0" caption="32,0,0,32" defaultfontcolor="#FF3C3C3C" >    
-	<HorizontalLayout name="VLayoutBack" bkimage="bkTip.png" bkcolor="#FFFFFFFF" bkcolor2="#00FFFFFF" bordercolor="#00FFFFFF">
-	
-        <Button name="btnShowMemberList" float="true" pos="0,0,32,32" bkcolor="#FFFFFFFF" bkcolor2="#00FFFFFF" bordercolor="#00FFFFFF" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;UseTip.png&apos; source=&apos;0,0,32,32&apos; corner=&apos;4,4,4,4&apos;" hotimage="file=&apos;UseTip.png&apos; source=&apos;74,0,106,32&apos; corner=&apos;4,4,4,4&apos;" pushedimage="file=&apos;UseTip.png&apos; source=&apos;148,0,180,32&apos; corner=&apos;4,4,4,4&apos;" keyboard="false"/>
-   
-   </HorizontalLayout>	 
-</Window>

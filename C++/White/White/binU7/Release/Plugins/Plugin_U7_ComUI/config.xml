@@ -1,1 +1,0 @@
-<Config>	<Plugin>		<Name>Plugin_U7_ComUI</Name> 		<ExtendPoint>AVCONPlugin::IPlugin_U7_ComUI</ExtendPoint>		<Dll>Plugin_U7_ComUI.dll</Dll>	</Plugin></Config>

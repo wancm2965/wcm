@@ -1,1 +1,0 @@
-<Config>	<Plugin>		<Name>Plugin_WB_Login</Name> 		<ExtendPoint>AVCONPlugin::IPlugin_WB_Login</ExtendPoint>		<Dll>Plugin_WB_Login.dll</Dll>	</Plugin></Config>

@@ -1,5 +1,0 @@
-; MPVideo.def : Declares the module parameters for the DLL.
-
-LIBRARY      "MPVideo"
-
-EXPORTS

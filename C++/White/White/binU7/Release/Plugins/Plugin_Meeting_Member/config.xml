@@ -1,1 +1,0 @@
-<Config>	<Plugin>		<Name>Plugin_Meeting_Member</Name> 		<ExtendPoint>AVCONPlugin::IPlugin_Meeting_Member</ExtendPoint>		<Dll>Plugin_Meeting_Member.dll</Dll>	</Plugin></Config>

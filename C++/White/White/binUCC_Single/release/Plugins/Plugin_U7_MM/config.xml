@@ -1,1 +1,0 @@
-<Config>	<Plugin>		<Name>Plugin_U7_MM</Name> 		<ExtendPoint>AVCONPlugin::IPlugin_U7_MM</ExtendPoint>		<Dll>Plugin_U7_MM.dll</Dll>	</Plugin></Config>

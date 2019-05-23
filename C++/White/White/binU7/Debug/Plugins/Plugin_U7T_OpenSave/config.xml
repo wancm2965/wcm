@@ -1,7 +1,0 @@
-<Config>
-	<Plugin>
-		<Name>Plugin_U7T_OpenSave</Name> 
-		<ExtendPoint>AVCONPlugin::IPlugin_U7T_OpenSave</ExtendPoint>
-		<Dll>Plugin_U7T_OpenSave.dll</Dll>
-	</Plugin>
-</Config>

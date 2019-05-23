@@ -1,1 +1,0 @@
-config:x86:x86_32:generic:mingw32:gcc 4.9.3 (GCC):--enable-static --enable-memalign-hack --enable-gpl --enable-libx264 --extra-cflags=-I/usr/local/include --extra-ldflags=-L/usr/local/lib
