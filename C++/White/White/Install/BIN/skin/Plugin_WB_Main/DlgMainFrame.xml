@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<Window size="1024,600" >
-    <Font name="微软雅黑" size="19" bold="false" italic="false" />
-    <HorizontalLayout name="HorizontalLayoutUI1" pos="266,238,326,268" width="60" height="30">
-	<HWnd name="hwndObj"/>
-   </HorizontalLayout>
-</Window>
